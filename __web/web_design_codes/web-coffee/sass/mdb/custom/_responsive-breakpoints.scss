@@ -1,0 +1,227 @@
+/*** Media Queries ***/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+//gap
+@media (max-width: 575px) 
+{
+    section.section-3, section.section-4, section.section-5, section.section-6
+    {
+        @include __padding_tb(2.8rem !important, 2.8rem !important);
+    } 
+}
+
+/*** Header ***/
+header.header 
+{
+
+    @media (max-width: 991px)
+    {
+       @include __display(none);
+    }
+}
+
+header.m-header
+{
+
+  @include __background_color($color-a);
+  @include __padding_tb(0.8rem, 0.8rem);
+  @include __position(fixed);
+  @include __z_index(999);
+  @include __width(100%);
+
+    @media (min-width: 992px)
+    {
+       @include __display(none);
+    }
+
+    & .navicon-icon
+    {
+      @include __color($color-b);
+    }
+
+    .m-nav
+    {
+      @include __background_color($color-b);
+      @include __width(100%);
+      @include __height(100%);
+      @include __position(fixed);
+      @include __top(55px);
+      @include __z_index(9999);
+      @include __display(none);
+
+        & .m-navi-menu-wrapper 
+        {
+          
+            @extend .__class_list;
+            & ul.m-navi-menu-ul 
+            {   
+                @include __position(fixed);
+                @include __left(0);
+                @include __top(25%);
+                @include __width(100%);
+
+                //@extend .__class_mp_0;
+                @include __font(18px, 500, normal, $color-a);          
+
+                & li.m-navi-menu-item 
+                {
+                    @include __link($color-a, $color-a);       
+                    @include __padding_tb(1.2rem, 1.2rem);
+                    @include __border(1px, solid, $color-c, bottom);
+
+                    a.btn-unique
+                    {
+                        @include __color($color-b);
+                        @include __background_color($color-a);                          
+                        @include __padding_tb(9px, 9px);
+                        @include __padding_lr(20px, 20px);
+                        @include __border_radius(20px);
+                    }
+                }
+
+                li.m-navi-menu-item:last-child
+                {
+                    @include __border(0px, solid, $color-a, bottom);
+                } 
+            }
+        }
+    }
+}
+
+section.section-1
+{
+    @media (max-width:575px)
+    {
+        & .big-fonts-wrapper
+        {   
+           @include __padding(1rem !important, bottom);
+        }
+
+        & .figure-wrapper
+        {
+            @include __margin(2rem !important, bottom);
+        }
+    }
+
+    @media (max-width:767px)
+    {
+        & .arrow-down-wrapper
+        {
+            //@include __display(none);
+            @include __left(47% !important);
+
+            & .fa-angle-down
+            {
+                @include __font_size(3.2rem);
+            }
+        }
+    }
+
+    @media (max-height:767px)
+    {
+        & .figure-wrapper
+        {
+            width:100%;
+            margin:0 auto;
+        }
+    }
+    
+    /** hero image size control **/
+    /**height**/
+    @media (max-height:567px)
+    {
+        & .figure-wrapper
+        {
+            width:40%;
+            margin:0 auto;
+        }
+    }
+    
+    /** width **/
+    @media (max-width:567px)
+    {
+        & .figure-wrapper
+        {
+            width:100%;
+            margin:0 auto;
+        }
+    }
+    
+    /** width and height **/
+    @media (max-width:567px) and (max-height:467px)
+    {
+        & .figure-wrapper
+        {
+            width:20%;
+            margin:0 auto;
+        }
+    }
+
+}
+
+section.section-2 
+{   
+    @include __padding_tb(4.2rem !important, 2.8rem !important);
+
+    @media (max-width: 767px) 
+    {
+        & .figure-wrapper
+        {
+            @include __margin(3rem, bottom);
+        } 
+    }
+
+    @media (max-width: 575px) 
+    {
+        & .figure-wrapper
+        {
+            @include __margin(3rem, bottom);
+        } 
+    }
+}     
+     
+section.section-3 
+{
+    @media (max-width: 575px) 
+    {
+
+       & .figure-wrapper
+       {
+            @include __margin(3rem, top);
+       } 
+    }
+}   
+
+section.section-4 
+{
+    @media (max-width: 575px) 
+    {
+
+       & .figure-wrapper
+       {
+            @include __margin(3rem, bottom);
+       } 
+    }
+}      
+
+section.section-6 
+{
+    @media (max-width: 575px) 
+    {
+
+       & .figure-wrapper
+       {
+            @include __margin(3rem, bottom);
+       } 
+    }
+}  

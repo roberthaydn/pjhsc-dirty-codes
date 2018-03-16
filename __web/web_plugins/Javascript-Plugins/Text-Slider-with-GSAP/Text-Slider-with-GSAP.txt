@@ -1,0 +1,9 @@
+https://codepen.io/solidpixel/pen/YxLzmP?page=1&
+
+//javascript
+Add External JavaScript
+These scripts will run in this order and before the code in the JavaScript editor. You can also link to another Pen here, and it will run the JavaScript from it. Also try typing the name of any popular library.
+
+1. > https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js
+2. > https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+3. > https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js

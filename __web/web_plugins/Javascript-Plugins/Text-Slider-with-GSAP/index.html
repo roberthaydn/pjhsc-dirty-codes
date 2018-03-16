@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+    <style type="text/css">
+        body,
+        html {
+            background: #222;
+            font-family: Montserrat;
+        }
+
+        body {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        /*  flex-wrap: wrap; */
+            height:100vh;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+        }
+
+        .line {
+        /*  flex-basis: 50%; */
+            font-size: 40px;
+            color: #14f7c1;
+            letter-spacing: 10px;
+            position: absolute;
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Add as many .line elements as you want.
+    These can contain any kind of content. -->
+    <div class="line">
+        YOU MUST BE
+    </div>
+
+    <div class="line">
+        THE CHANGE
+    </div>
+
+    <div class="line">
+        YOU WISH TO SEE
+    </div>
+
+    <div class="line">
+        IN THE WORLD
+    </div>
+    <script type="text/javascript" src="tween-max.min.js"></script>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="split-text.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var line = $('.line');
+
+            var tl = new TimelineLite({
+                        onComplete: function(){
+                            tl.restart();
+                        }
+                    });
+
+             
+            TweenLite.defaultEase = Circ.easeInOut;
+
+            var time = 0.5;
+            var y = 100;
+
+            tl
+                .add ( TweenMax.staggerFromTo (
+                    line, time,
+                        {
+                            opacity: 0,
+                            y:y,
+                        },
+                        {   
+                            opacity: 1,
+                            y: 0,
+                        },
+                    2 ))
+                .add ( TweenMax.staggerTo (
+                    line, time,
+                        {
+                            delay: time,
+                            opacity: 0,
+                            y: -y,
+                        },
+                    2 ), 1.1)
+        });
+    </script>
+</body>
+</html>

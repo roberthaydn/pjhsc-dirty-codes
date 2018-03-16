@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>My Web Design</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.css">
+</head>
+
+<body>
+    
+    <section class="cards">
+        <div class="container">            
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card-custom mt-3 mb-3 z-depth-1">
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img src="img/imgs/jpg/11.jpg" class="img-fluid"/>
+                          </div>
+                        </div>
+                        <div class="figure-wrapper-group">
+                            <div class="row no-gutters">
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="text-center">
+                                <a href="#!" class="button button-tiny button-a mt-1 mb-1 waves-light">FULL PAGE JPEG IMAGE</a><a href="#!" class="button button-tiny button-b mt-1 mb-1 waves-light">DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card-custom mt-3 mb-3 z-depth-1">
+                        <div class="figure-wrapper">
+                          <div class="img-wrapper">
+                            <img src="img/imgs/jpg/11.jpg" class="img-fluid"/>
+                          </div>
+                        </div>
+                        <div class="figure-wrapper-group">
+                            <div class="row no-gutters">
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="img-wrapper">
+                                        <img src="img/imgs/jpg/12.jpg" class="img-fluid" style="width:100%;"/>
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="text-center">
+                                <a href="#!" class="button button-tiny button-a mt-1 mb-1 waves-light">FULL PAGE JPEG IMAGE</a><a href="#!" class="button button-tiny button-b mt-1 mb-1 waves-light">DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--
+    <div class="smooth-scroll">
+      <a href="#scroll-top">
+        <div class="back-to-top z-depth-1">
+            <i class="fa fa-arrow-up fa-2"></i>
+        </div>
+      </a>     
+    </div>-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Swiper -->
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+
+    <!-- init -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*** Var Colors ***/
+            var color_a = '#f57c00',
+                color_b = '#ffe3c5',
+                color_c = '#1c110b',
+                color_d = '#5d5d5d',
+                color_e = '#fff2e9';
+
+        /*** Header-m - Navicon toggle ***/
+        function navicon(navicon, nav) {
+            $(navicon).click(function() {
+                $(nav).slideToggle('fast');
+            });
+        }
+        //navicon('.navicon-icon', '.m-nav');
+
+        /*** back to top smooth-scroll ***/
+        function scrollBackToTop(backToTop, scrollSmooth) {
+            //scroll percentage
+            $(window).scroll(function() {
+                var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());               
+                if(scrollPercent > 2) {
+                   $(backToTop).css({'display' : 'block'}).addClass('animated fadeInDown');
+                   $(backToTop).addClass('animated fadeInUp'); 
+                } else {
+                   $(backToTop).slideUp(300);
+                }
+                //console.log($(window).scrollTop());
+                //console.log($(document).height());
+                //console.log($(window).height());
+            });
+            //scroll smooth
+            $(scrollSmooth).on('click', 'a', function (event) {
+                event.preventDefault();
+                var elAttr = $(this).attr('href'),
+                    offset = ($(this).data('offset') ? $(this).data('offset') : 0);
+                $('body,html').animate({
+                    scrollTop: $(elAttr).offset().top + offset
+                }, 700);
+            }); 
+        }
+        //scrollBackToTop('.back-to-top', '.smooth-scroll');
+
+        /*** Init Animation ***/
+        function removeAnimationIESafari() {
+            //If the user is using Internet Explorer or Safari
+            if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1) || (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1))
+            {
+
+            } 
+            else 
+            {
+                new WOW().init();
+            }
+        }
+        //removeAnimationIESafari();        
+
+        }); 
+    </script>
+</body>
+</html>

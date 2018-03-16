@@ -1,0 +1,3 @@
+<object type="image/svg+xml" data="img/imgs/playbutton.svg" class="img-fluid">
+      SVG not supported <!-- fallback image in CSS -->
+ </object>

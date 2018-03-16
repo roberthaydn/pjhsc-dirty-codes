@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<div class="slide">
+  <div class="slider-item">
+   Slide 1
+  </div>
+  <div class="slider-item">
+   Slide 2
+  </div>
+  <div class="slider-item">
+   Slide 3
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/text-slider.js"></script>
+<script type="text/javascript">
+	/* Initialize */
+	$('.slide').textSlider({
+		timeout: 5000,
+		slideTime: 750,
+		loop: 1
+	});
+</script>
+	
+</body>
+</html>

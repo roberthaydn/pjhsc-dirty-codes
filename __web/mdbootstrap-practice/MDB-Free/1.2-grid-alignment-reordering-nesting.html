@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start your project here-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="background-color:silver;">
+                <h2>Alignment</h2>
+            </div>
+        </div>
+        <div class="row align-items-start">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <div class="row">
+            <div class="col align-self-start" style="background-color:orange;">
+                One of three columns
+            </div>
+            <div class="col align-self-center" style="background-color:green;">
+                One of three columns
+            </div>
+            <div class="col align-self-end" style="background-color:lightblue;">
+                One of three columns
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Horizontal alignment</h2>
+        </div>
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-4" style="background-color:orange;">
+            One of two columns
+        </div>
+        <div class="col-4" style="background-color:orange;">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4" style="background-color:silver;">
+            One of two columns
+        </div>
+        <div class="col-4" style="background-color:silver;">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-4" style="background-color:lightblue;">
+            One of two columns
+        </div>
+        <div class="col-4" style="background-color:lightblue;">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-4" style="background-color:yellow;">
+            One of two columns
+        </div>
+        <div class="col-4" style="background-color:yellow;">
+            One of two columns
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-4" style="background-color:orange;">
+            One of two columns
+        </div>
+        <div class="col-4" style="background-color:orange;">
+            One of two columns
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>NO Gutter</h2>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-12 col-sm-6 col-md-8" style="background-color:yellow;">
+            .col-12 .col-sm-6 .col-md-8
+        </div>
+        <div class="col-6 col-md-4" style="background-color:orange;">
+            .col-6 .col-md-4
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col" style="background-color:orange;">1-4</div>
+        <div class="col" style="background-color:yellow;">1-4</div>
+        <div class="col" style="background-color:green;">1-4</div>
+        <div class="col" style="background-color:orange;">1-4</div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-12 col-sm-6 col-md-8" style="background-color:yellow;">
+            .col-12 .col-sm-6 .col-md-8
+        </div>
+        <div class="col-6 col-md-4" style="background-color:orange;">
+            .col-6 .col-md-4
+        </div>
+    </div>
+
+ <div class="row">
+    <div class="col-12" style="background-color:silver;">
+        <h2>Column wrapping</h2>
+    </div>
+    <div class="col-9" style="background-color:lightblue;">
+        .col-9
+    </div>
+    <div class="col-4" style="background-color:orange;">
+        .col-4<br>
+        Since 9 + 4 = 13 > 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.
+    </div>
+    <div class="col-6" style="background-color:yellow;">
+        .col-6<br>
+        Subsequent columns continue along the new line.
+    </div>
+</div>   
+       
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Column resets</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-sm-3">
+            .col-6 .col-sm-3
+        </div>
+        <div class="col-6 col-sm-3">
+            .col-6 .col-sm-3
+        </div>
+
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix d-none d-sm-block"></div>
+
+        <div class="col-6 col-sm-3">
+            .col-6 .col-sm-3
+        </div>
+        <div class="col-6 col-sm-3">
+            .col-6 .col-sm-3
+        </div>
+    </div>
+</div>       
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

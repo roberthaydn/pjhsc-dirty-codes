@@ -1,0 +1,349 @@
+/*** Media Queries ***/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+
+@media (max-width: 767px) {
+    section.section-1.hero {
+        @include __background('../img/imgs/jpg/section-1-hero-bg-767.jpg');
+    }
+    section.section-2 {
+        @include __background('../img/imgs/jpg/section-2-bg-767.jpg');
+    }
+}
+
+/*** Header ***/
+header.header 
+{
+    @media (max-width: 767px)
+    {
+       @include __display(none);
+    }
+}
+
+header.m-header 
+{
+    @media (min-width: 768px)
+    {
+       @include __display(none);
+    }
+
+    @media (max-width: 767px)
+    {
+        & .m-logo-wrapper
+        {
+            @include __margin(10px, top);
+            @include __margin(10px, bottom);
+        }
+
+        & .m-navicon-wrapper
+        {
+            @include __link($color-a, $color-f);    
+            @include __margin(10px, bottom);   
+        }
+        
+        & .m-nav
+        {
+            @include __display(none);
+        }
+
+        & .m-navi-menu-wrapper 
+        {
+            & .m-navi-menu-ul
+            {
+                margin:0;
+                padding:0;
+                @include __list_style_type(none);
+                @include ___font(18px, 300, normal);           
+                @include __padding(10px, top);
+                @include __padding(15px, bottom);
+                
+                & .m-navi-menu-item
+                {
+
+                    @include __link($color-d, $color-a);       
+                    @include __padding(4px, top);
+                    @include __padding(4px, bottom);
+                    @include __border(1px, dashed, $color-b, bottom);
+
+                    & .active 
+                    {
+                        @include __color($color-a !important);
+                        @include __font_weight(500);
+                    }
+                }
+
+                & .m-navi-menu-item:nth-child(1) 
+                {
+                    @include __border(1px, dashed, $color-b, top);
+                }
+            }
+        }
+
+        & .m-phone-wrapper
+        {
+            @include __margin(20px, top);
+            @include __margin(20px, bottom);
+
+            & h2 
+            {
+                @include ___font(18px, 400, normal);
+                @include __color($color-f);  
+
+                & span 
+                {
+                    @include __color($color-d);
+                }
+            }
+        }
+
+        & .m-social-icons-wrapper
+        {
+            @include __margin(20px, top);
+            @include __margin(20px, bottom);
+
+            & .m-social-icons-ul
+            {
+                margin:0;
+                padding:0;
+                @include __list_style_type(none);
+
+
+                & .m-item-li 
+                {
+                    @include __link($color-d, $color-c);  
+                    @include __display(inline-block);
+                    @include __padding(3px, left);
+                    @include __padding(3px, right);
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 767px) 
+    {
+        & .m-navicon-wrapper 
+        {
+            @include __margin(30px, top);
+        }
+    }
+
+    @media (max-width: 395px) 
+    {   
+        & .m-navicon-wrapper 
+        {
+            @include __margin(20px, top);
+        }
+    }
+    
+    @media (max-width: 345px) 
+    {   
+        & .m-phone-wrapper
+        {
+            & h2 
+            {
+                @include ___font(16px, 400, normal);
+            }
+        }
+    }
+
+    @media (max-width: 319px) 
+    {   
+        & .m-phone-wrapper
+        {
+            & h2 
+            {
+                @include ___font(14px, 400, normal);
+            }
+        }
+    }
+
+    @media (max-width: 294px) 
+    {   
+        & .m-phone-wrapper
+        {
+            & h2 
+            {
+                @include ___font(11px, 400, normal);
+            }
+        }
+    }
+}
+
+/*** Section 1 - Hero ***/
+section.section-1.hero 
+{
+    @media (max-width: 767px)
+    {
+        @include __text_align(center);
+
+        & .pad-hero 
+        {
+            @include __margin(2rem, top);
+            @include __margin(2rem, bottom);
+        }  
+    }
+
+    & .big-fonts-wrapper
+    {   
+        @mixin __big_font($font_a, $font_b)
+        {
+            & .font-a 
+            {
+                @include ___font($font_a, 200, normal);
+            }
+            & .font-b 
+            {
+                @include ___font($font_b, 500, normal);
+            }
+        }
+
+        @media (max-width: 767px) 
+        {   
+            @include __big_font(2.1rem, 3.6rem);
+        }
+
+        @media (max-width: 395px) 
+        {
+            @include __big_font(1.9rem, 2.6rem);
+        }
+    }
+
+    & .caption-wrapper
+    {
+        & .font-a 
+        {
+            @media (max-width: 767px) 
+            {   
+                @include ___font(1.9rem, 500, normal);
+            }
+
+            @media (max-width: 395px) 
+            {
+                @include ___font(1.6rem, 500, normal);
+            }
+        }    
+    }
+    
+    & .button-a
+    {
+        @include __margin(15px, bottom);
+    }
+}
+
+/*** Section Info 1 ***/
+section.section-info-1 
+{
+    & .button-wrapper 
+    {
+        @media (max-width: 767px) 
+        {
+            @include __text_align(center);
+        }
+    }
+}
+
+/*** Section Info 2 ***/
+section.section-info-2 
+{
+    & .button-wrapper 
+    {
+        @media (max-width: 767px) 
+        {
+            @include __text_align(center);
+        }
+    }
+}
+
+section.section-2
+{
+    @media (max-width: 767px) {    
+        & .big-fonts-wrapper
+        {
+
+            & .font-a
+            {
+                @include ___font(3.0rem, 700, normal);
+            }
+        }
+    }
+}
+
+section.section-3
+{
+    @media (max-width: 767px) {    
+        & .big-fonts-wrapper
+        {
+
+            & .font-a
+            {
+                @include ___font(3.0rem, 700, normal);
+            }
+        }
+    }
+}
+
+section.section-3 
+{
+    @media (max-width: 767px) 
+    {
+        & .figure-wrapper-coffee
+        {
+            @include __display(none);
+        }
+    } 
+}
+
+section.section-6
+{
+    @media (max-width: 480px)
+    {
+        & img
+        {
+            @include __width(30%);
+            @include __height(30%); 
+        }
+    }
+
+    @media (max-width: 320px)
+    {
+        & img
+        {
+            @include __width(30%);
+            @include __height(30%); 
+        }
+    }
+}
+
+footer.footer-main {
+    @media (max-width:575px)
+    {
+        @include __text_align(center);
+    }
+}
+
+/*
+Desktop View
+@media (max-width: 991px) {
+        display:none;
+}
+*/
+
+/*
+Mobile View
+@media(min-width:992px) {
+        display:none;
+}
+*/
+         
+
+

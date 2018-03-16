@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll</title>
+    <style type="text/css">
+        .box {
+            color:#fff;
+            width:300px;
+            height:200px;
+            right:0;
+            position:fixed;
+            background-color:black;
+            display:none;
+        }
+
+        .backToTop {
+           color:#fff;
+           position:fixed;
+           right:20px;
+           bottom:20px;
+           background-color:black;
+           padding:10px;
+           font-weight:bold;
+           border-radius:25px;
+           display:none;
+        }   
+    </style>
+</head>
+<body>
+
+<div id="log" style="position:fixed;background-color:yellow;">0% --- Please try to scroll the window</div>
+
+<div class="backToTop">
+  BACK TO TOP      
+</div>
+
+<div class="box">
+    NAVIGATION
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+            $('#log').html(scrollPercent.toFixed(2)+'% --- Please try to scroll the window');
+
+            //navigation
+            if(scrollPercent > 30) {
+                //$('.box').css({'background-color' : 'lightblue'});
+                //$('.box').css({'top' : '0px'}); 
+                //$('.box').stop().animate({top: '-200px'}, {duration:200});
+                $('.box').slideDown();
+            } else {
+               //alert('WEW');  
+               //$('.box').css({'background-color' : 'red'});
+               //$('.box').css({'top' : '-200px'});
+               //$('.box').stop().animate({top: '0'}, {duration:200});
+               $('.box').slideUp();
+            }
+            //backToTop
+            if(scrollPercent > 10) {
+                $('.backToTop').css({'display' : 'block'}); 
+            } else {
+                $('.backToTop').css({'display' : 'none'});
+            }
+        });
+    });
+</script>
+</body>
+</html>

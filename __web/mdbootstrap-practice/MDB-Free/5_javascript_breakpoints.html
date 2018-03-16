@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="box text-center pt-5 m-5" style="width:300px;height:300px;border:1px solid red;"> Hello Breakpoints </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Sticky JavaScript -->
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() { 
+            /* Based from bootstrap standard breakpoints */
+            //set resizable breakpoints
+            //set fixed breakpoints
+            $(window).resize(function() {
+                if ($(this).width() <= 575) {
+                    $('.box').css("background-color", "green");         
+                } 
+                if ($(this).width() >= 576 && $(this).width() <= 767) {
+                    $('.box').css("background-color", "orange");
+                }
+                if ($(this).width() >= 768 && $(this).width() <= 991) {
+                    $('.box').css("background-color", "blue"); 
+                }
+                if ($(this).width() >= 992 && $(this).width() <= 1199) {
+                    $('.box').css("background-color", "red");
+                }
+                if ($(this).width() >= 1200) {
+                    $('.box').css("background-color", "pink");        
+                } 
+            });
+            
+            //set fixed breakpoints
+            if ($(window).width() <= 575) {
+                $('.box').css("background-color", "green");       
+            } 
+            if ($(window).width() >= 576 && $(window).width() <= 767) {
+                $('.box').css("background-color", "orange");     
+            } 
+            if ($(window).width() >= 768 && $(window).width() <= 991) {
+                $('.box').css("background-color", "blue");
+            }
+            if ($(window).width() >= 992 && $(window).width() <= 1199) {
+                $('.box').css("background-color", "red");
+            }
+            if ($(window).width() >= 1200) {
+                $('.box').css("background-color", "pink"); 
+            }    
+        });  
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,551 @@
+/** COLOUR SETTINGS **/
+$primary-color:#0d0d0d; //MidnightBlue-7
+$white-color:#ffffff;
+$black-color:#000000;
+
+//Gray and Silver Family Colors - Flat UI Colors
+//CLOUDS                //SILVER                //CONCRETE                  //ASBESTOS
+$clouds-1:#fdfefe;      $silver-1:#f8f9f9;      $concrete-1:#f4f6f6;        $asbestos-1:#f2f4f4;        
+$clouds-2:#fbfcfc;      $silver-2:#f2f3f4;      $concrete-2:#eaeded;        $asbestos-2:#e5e8e8;
+$clouds-3:#f7f9f9;      $silver-3:#e5e7e9;      $concrete-3:#d5dbdb;        $asbestos-3:#ccd1d1;
+$clouds-4:#f4f6f7;      $silver-4:#d7dbdd;      $concrete-4:#bfc9ca;        $asbestos-4:#b2babb;
+$clouds-5:#f0f3f4;      $silver-5:#cacfd2;      $concrete-5:#aab7b8;        $asbestos-5:#99a3a4;
+$clouds-6:#ecf0f1;      $silver-6:#bdc3c7;      $concrete-6:#95a5a6;        $asbestos-6:#7f8c8d;
+$clouds-7:#d0d3d4;      $silver-7:#a6acaf;      $concrete-7:#839192;        $asbestos-7:#707b7c;
+$clouds-8:#b3b6b7;      $silver-8:#909497;      $concrete-8:#717d7e;        $asbestos-8:#616a6b;
+$clouds-9:#979a9a;      $silver-9:#797d7f;      $concrete-9:#5f6a6a;        $asbestos-9:#515a5a;
+$clouds-10:#7b7d7d;     $silver-10:#626567;     $concrete-10:#4d5656;       $asbestos-10:#424949;
+
+/** Header **/
+header {
+    //top navigation
+    .navi-top {
+        background-color:$primary-color;
+        width:100%;
+        ul {
+            list-style-type:none;
+            @include add-margin(0, all);
+            @include add-padding(10px, top);
+            @include add-padding(10px, bottom);
+            li {
+                a:link {
+                     color:$white-color;       
+                }
+                a:visited {
+                    color:$white-color;
+                }
+                a:hover {
+                    text-decoration:underline;
+                }
+            } 
+        }
+        .social-icons {
+            @include add-padding(10px, top);
+            ul {   
+                padding:0;
+                margin:0;        
+                li {                    
+                    display:inline-block;
+                    @include add-padding(3px, left);
+                    @include add-padding(3px, right);           
+                }
+            }
+        }
+
+        .header-top-msg {
+            color:$white-color;
+            font-weight:400;
+            font-size:13px;
+            @include add-padding(12px, top);
+        }
+
+        .user-account {
+            ul {
+                li {
+                    display:inline-block;
+                    @include add-padding(3px, left);
+                    @include add-padding(3px, right);
+                }
+            }
+            .total-item {
+                @include add-border-radius(5px);
+                padding-left:4px;
+                padding-right:4px;
+                padding-bottom:1px;
+                padding-top:1px;
+                //background-color:yellowgreen;
+                background-color:#f2d7d5;
+                color:black;
+            }
+
+            .my-cart, .user-account-item {
+                font-weight:400;
+                font-size:13px;   
+            }
+            //Sub navigation
+            .navi-sub {  
+                position:absolute;
+                background-color:$white-color;  
+                z-index:999999;
+                display:none;
+                list-style-type:none;
+                text-align:left;
+                width:280px;
+                margin-left:-150px;
+                @include add-border(6px, $primary-color, top);
+                ul.navi-sub-ul {
+                    font-size:14px;
+                    @include add-margin(0, all);
+                    @include add-padding(15px, top);
+                    @include add-padding(10px, bottom);
+                    @include add-padding(20px, left);
+                    @include add-padding(20px, right);
+                    li {
+                        @include add-padding(7px, top);
+                        @include add-padding(7px, bottom);
+                    }
+                }
+            }
+
+            .specific-item {
+                @include add-padding(20px, bottom);
+                @include add-margin(20px, bottom);
+                border-bottom:1px dashed $silver-5;
+                .img-wrapper {
+                    @include add-padding(15px, left);
+                    @include add-padding(5px, right);
+                }
+                .title-wrapper {
+                    @include add-padding(5px, left);
+                    @include add-padding(15px, right);
+                    .title-item {
+                        font-size:13px;
+                        font-weight:500;
+                        line-height:135%;                         
+                        a:link {
+                            color:$concrete-10;
+                        }   
+                        a:visited {
+                            color:$concrete-10;
+                        }  
+                    }
+                    .price-item {
+                        color:$clouds-10;
+                        font-size:13px;
+                        font-weight:400;
+                    }
+                    .quantity-item {
+                        color:$silver-8;
+                        font-size:12px;
+                        font-size:500;
+                        @include add-padding(5px, top);
+                    } 
+                    .remove-item {
+                        @include add-margin(-25px, top);  
+                        button:hover {
+                            color:$primary-color;
+                        } 
+                    }
+                    .btn-remove {
+                       color:gray;
+                       font-size:12px;
+                    }
+                }      
+            }
+
+            .btn-checkout {
+                font-size:14px;
+                font-weight:400;
+                @include add-margin(10px, bottom);
+            }
+        }
+    }
+
+    //Middle navigation
+    .navi-middle {
+        @include add-padding(10px, top);
+        @include add-padding(10px, bottom);
+        .logo {
+            color:gray;
+        }
+        .search-item {
+            @include add-padding(15px, top);
+            .btn-custom-color {
+                background-color:$primary-color;
+                color:$white-color;
+            }
+        }
+        .header-msg {
+            position:absolute;
+            z-index:-1;
+            .header-slide-text { 
+                //border:1px solid red;
+                @include add-margin(-30px, top)
+            }
+        }
+    }
+
+    //Main navigation
+    .navi-main {
+        font-weight:400;
+        background-color:$concrete-1;
+        width:100%;
+        @extend .z-depth-1;
+        .navi-menu {
+            ul {
+                list-style-type:none;
+                li {
+                    a:link {
+                        color:$primary-color;       
+                    }
+                    a:visited {
+                        color:$primary-color;
+                    }   
+                    a:hover {
+                        color:$concrete-6;
+                    }     
+                }
+            }          
+            ul.navi-menu-ul {
+                font-size:15px;
+                text-align:center;         
+                @include add-margin(0, all);
+                @include add-padding(12px, top);
+                @include add-padding(12px, bottom);
+                li.navi-menu-item {
+                    display:inline-block;
+                    @include add-padding(20px, left);
+                    @include add-padding(20px, right);         
+                }
+            }
+            //Sub main navigation
+            .navi-sub {
+                position:absolute;
+                background-color:$concrete-1;  
+                z-index:999;
+                display:none;
+                list-style-type:none;    
+                text-align:left; 
+                box-shadow: 0 3px 6px -2px gray;
+                @extend .z-depth-1;
+                ul.navi-sub-ul {
+                    font-size:14px;
+                    @include add-margin(0, all);
+                    @include add-padding(15px, top);
+                    @include add-padding(10px, bottom);
+                    @include add-padding(20px, left);
+                    @include add-padding(20px, right);
+                    li {
+                        @include add-padding(7px, top);
+                        @include add-padding(7px, bottom);
+                    }
+                }
+            }
+        }
+    }
+
+    //The sub navigation(dropdown) shows when hover over the selected menu item.
+    //user account sub navigation
+    .user-account ul li:hover > .navi-sub {
+        display:block;
+        -webkit-transition:max-height 0.4s ease-in;
+        -moz-transition:max-height 0.4s ease-in;
+        transition:max-height 0.4s ease-in;
+    }
+    //main sub navigation
+    .navi-main ul li:hover > .navi-sub {
+        display:block;
+        -webkit-transition:max-height 0.4s ease-in;
+        -moz-transition:max-height 0.4s ease-in;
+        transition:max-height 0.4s ease-in;
+    }
+
+} /** End of Header **/
+
+
+section.section-carousel {
+    @include add-margin(40px, bottom);
+}
+
+section {
+    .section-title {
+        @include add-margin(60px, top);
+        @include add-margin(30px, bottom);
+        h4 {
+            width: 100%; 
+            text-align: center; 
+            height:0.1em;
+            line-height:10%;
+            font-weight:700;  
+            font-size:18px; 
+            color:$primary-color;
+            @include add-border(1px, $concrete-4, bottom);
+        }   
+        span {
+            background-color:#fff; 
+            padding:0 8px; 
+        }
+        h4.title-h4-section-3 {
+            @include add-border(1px, $primary-color, bottom);
+        }
+        span.title-span-section-3 {
+            background-color:$clouds-4;
+        }
+    }
+}
+
+section.section-1 {
+    .button-prev-next-wrapper {          
+        .swiper-button-prev-custom {
+            cursor:pointer;
+            //underconstr...
+            font-size:40px;
+            margin:155px auto;
+        }
+        .swiper-button-next-custom {
+            cursor:pointer;
+           //underconstr...
+           font-size:40px;
+           margin:155px auto;
+        }
+    }
+    .swiper-container {
+        @include add-padding(7px, all);
+        .custom-card {
+            //@include add-padding();
+            .caption-overlay {
+                    position: absolute;
+                    top:8px;
+                    right:0;
+                    z-index:100;                   
+            }
+
+            .caption-wrapper {
+                @include add-padding(15px, top);
+                @include add-padding(15px, bottom);
+                @include add-padding(7px, left);
+                @include add-padding(7px, right);             
+                .caption-title-item {
+                    font-weight:700;
+                    font-size:13px;
+                    line-height:130%;
+                    a:link {
+                        color:$primary-color;   
+                    }
+                    a:visited {
+                        color:$primary-color;  
+                    }
+                    a:hover {
+                        text-decoration:underline;
+                    }
+                }
+
+                .caption-title-price {
+                    font-weight:400;
+                    font-size:14px;
+                    line-height:130%;
+                    color:$concrete-10; 
+                    @include add-margin(8px, top)    
+                }
+            }
+        }
+    }
+}
+
+section.section-2 {
+
+}
+
+section.section-3 {
+    background-color:$clouds-4;
+    margin-top:50px;
+    padding-bottom:50px;
+}
+
+section.section-4 {
+    h3 {
+        text-align: left; 
+        font-weight:700;  
+        font-size:18px; 
+        color:$primary-color;
+        line-height:125%;
+        @include add-margin(25px, top);
+        @include add-margin(10px, bottom);
+    }
+    p {
+        font-weight:400;
+        color:$concrete-10;
+        font-size:15px;
+    }
+}
+
+footer.page-footer {
+    
+    @include add-padding(40px, top);
+    background-color:$primary-color;
+
+    h5 {
+        text-align: left; 
+        font-weight:500;  
+        font-size:14px; 
+        color:$silver-2;
+        line-height:125%;
+        @include add-margin(25px, top);
+        @include add-margin(5px, bottom);
+        @include add-padding(8px, bottom);
+        a:link {
+            color:$silver-10;
+        }   
+        a:visited {
+            color:$silver-10;
+        }
+        border-bottom:2px solid #323232;
+    }
+    
+    ul.footer-list {
+        font-weight:400;
+        font-size:13px;     
+        li {
+            @include add-padding(5px, top);
+            @include add-padding(5px, bottom);
+            border-bottom:1px dashed #1f1f1f;
+            a:link {
+                color:$silver-6;
+            }   
+            a:visited {
+                color:$silver-6;
+            }
+            a:hover {
+                color:$white-color;
+            }
+        }  
+        li:last-child {
+            border-bottom:1px solid $primary-color;
+        }  
+    }
+
+    .social-icons-bottom {
+        ul {           
+            text-align:center;         
+            @include add-margin(30px, top);
+            @include add-padding(30px, top);
+            @include add-padding(15px, bottom); 
+            @include add-border(1px, #323232, top);   
+            li {
+                display:inline-block;
+                @include add-padding(10px, left);
+                @include add-padding(10px, right);        
+                a:link {
+                    color:$silver-5;
+                }   
+                a:visited {
+                    color:$silver-5;
+                }
+                a:hover {
+                    color:$white-color;
+                }
+            }
+        }
+    }
+
+    .input-email-text {
+        font-size:13px;
+        font-weight:400;
+        @include add-padding(8px, top); 
+        @include add-padding(8px, bottom);
+    }
+    .input-email {
+            background-color:transparent;
+            border:1px solid #222222;
+            font-size:13px;
+            color:$silver-2;
+    }
+    .btn-custom-color {
+        background-color:#222222;
+        color:$white-color;
+        font-size:13px;
+        font-weight:500;
+    }
+    .btn-custom-color:hover {
+        background-color:black;
+    }
+
+    .back-to-top {
+        font-size:14px;
+        font-weight:400;
+        cursor:pointer;
+    }
+
+    .footer-copyright {
+      font-size:11px;
+      font-weight:300;
+    }
+}
+
+
+
+/****************************************/
+/* Unstable Elements */
+/*
+* Text Slide
+*/
+.text-adjust {
+    font-weight:500;
+    color:$primary-color; 
+}
+
+header {
+    span.slide-text-1 {
+        font-size:25px;
+        .highlighted-text {
+            @extend .text-adjust;
+        }
+    }
+    span.slide-text-2 {
+        font-size:25px;
+        .highlighted-text {
+            @extend .text-adjust;
+        }
+    }
+    span.slide-text-3 {
+        font-size:24px;
+        .highlighted-text {
+            @extend .text-adjust;
+        }
+    }
+}
+/***************************************/
+
+
+//remove blue highlights outside of the input(text) when focused
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  /*border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);*/
+  border-color: $asbestos-10;
+  box-shadow: $silver-10;
+  outline: 0 none;
+}
+
+//remove radiuses outside of the element
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+

@@ -1,0 +1,516 @@
+/** COLOUR SETTINGS **/
+
+$color-a:#d98880;
+$color-b:#fbeee6;
+$color-c:#f6ddcc;
+$color-d:#bdbdbd;
+$color-e:#212121;
+$color-f:#34495e;
+
+$white-color:#ffffff;
+$black-color:#000000;
+
+//Gray and Silver Family Colors - flat UI colors
+//CLOUDS                //SILVER                //CONCRETE                  //ASBESTOS
+$clouds-1:#fdfefe;      $silver-1:#f8f9f9;      $concrete-1:#f4f6f6;        $asbestos-1:#f2f4f4;        
+$clouds-2:#fbfcfc;      $silver-2:#f2f3f4;      $concrete-2:#eaeded;        $asbestos-2:#e5e8e8;
+$clouds-3:#f7f9f9;      $silver-3:#e5e7e9;      $concrete-3:#d5dbdb;        $asbestos-3:#ccd1d1;
+$clouds-4:#f4f6f7;      $silver-4:#d7dbdd;      $concrete-4:#bfc9ca;        $asbestos-4:#b2babb;
+$clouds-5:#f0f3f4;      $silver-5:#cacfd2;      $concrete-5:#aab7b8;        $asbestos-5:#99a3a4;
+$clouds-6:#ecf0f1;      $silver-6:#bdc3c7;      $concrete-6:#95a5a6;        $asbestos-6:#7f8c8d;
+$clouds-7:#d0d3d4;      $silver-7:#a6acaf;      $concrete-7:#839192;        $asbestos-7:#707b7c;
+$clouds-8:#b3b6b7;      $silver-8:#909497;      $concrete-8:#717d7e;        $asbestos-8:#616a6b;
+$clouds-9:#979a9a;      $silver-9:#797d7f;      $concrete-9:#5f6a6a;        $asbestos-9:#515a5a;
+$clouds-10:#7b7d7d;     $silver-10:#626567;     $concrete-10:#4d5656;       $asbestos-10:#424949;
+
+body 
+{
+    font-family:Ubuntu, Sans-Serif;
+    @include  __background_color($white-color);
+
+}
+
+body, html
+{
+    height: 100%;
+    margin: 0;
+}
+
+/*** Extends ***/
+.__class_mp_0 
+{
+    margin:0;
+    padding:0;
+}
+
+.__class_list
+{
+    & ul 
+    {
+        @include __list_style_type(none);
+    }
+}
+
+.__class_list_inline 
+{
+    & ul 
+    {
+        @include __list_style_type(none);
+        & li 
+        {
+            @include __display(inline-block);
+        }
+    }
+}
+
+/*** Mixins ***/
+/*** custom font settings ***/
+@mixin __font($size, $weight, $style, $color) 
+{
+    @include ___font($size, $weight, $style);   
+    @include __color($color);
+    
+    @extend .__class_mp_0; 
+}
+
+/*** top and bottom padding ***/
+@mixin __padding_tb($size_top, $size_bottom) 
+{
+    @include __padding($size_top, top);
+    @include __padding($size_bottom, bottom);
+}
+
+/*** left and right padding ***/
+@mixin __padding_lr($size_left, $size_right) 
+{
+    @include __padding($size_left, left);
+    @include __padding($size_right, right);
+}
+
+/*** top and bottom margin ***/
+@mixin __margin_tb($size_top, $size_bottom) 
+{
+    @include __margin($size_top, top);
+    @include __margin($size_bottom, bottom);
+}
+
+/*** left and right margin ***/
+@mixin __margin_lr($size_left, $size_right) 
+{
+    @include __margin($size_left, left);
+    @include __margin($size_right, right);
+}
+
+/*** Header ***/
+header.header 
+{
+    @include __background_color($color-a);
+    @include __padding_tb(0.8rem, 0.8rem);
+    @include __position(fixed);
+    @include __z_index(999);
+    @include __width(100%);
+
+    & .navi-menu-wrapper 
+    {
+        @extend .__class_list_inline;
+        & ul.navi-menu-ul 
+        {   
+            //@extend .__class_mp_0;
+            @include __font(18px, 300, normal, $color-b);           
+
+            & li.navi-menu-item 
+            {
+                @include __link($color-b, $color-b);       
+                @include __padding(16px, right);
+                @include __padding(16px, left);
+
+                & .active 
+                {
+                    @include __color($color-b !important);
+                    @include __font_weight(500);
+                } 
+
+                a.btn-unique
+                {
+                    @include __color($color-a);
+                    @include __background_color($color-b);   
+                    @include __padding_tb(9px, 9px);
+                    @include __padding_lr(20px, 20px);
+                    @include __border_radius(20px);
+                }
+            }
+        }
+    }
+}
+
+/*** Section 1 - Hero ***/
+section.section-1.hero 
+{
+    @include __background_color($color-a);
+    position: relative;
+    height: 100%;
+
+    & .center-contents
+    {
+      position: absolute;
+      left: 0;
+      top: 20%;
+      width: 100%;
+      text-align: center;
+    }
+
+    & .big-fonts-wrapper
+    {   
+        & h2.font-a {
+            @include __font(3.2rem, 300, normal, $color-b);
+            @include  __margin(8px, bottom);
+        }
+
+        & h2.font-b {
+            @include __font(16px, 300, normal, $color-b);
+            @include __line_height(155%);
+        }   
+
+        & span {
+            @include __font_weight(500);
+        }
+    }
+
+    & .figure-wrapper
+    {
+        @include  __margin(40px, top)
+    } 
+    
+    & .arrow-down-wrapper
+    {
+        @include __position(absolute);
+        @include __left(50%);
+        @include __bottom(0);
+        @include __text_align(center);
+
+        & span {
+            @include __color($white-color);
+            @include __opacity(0.5);
+            & i {
+                @include __cursor(pointer);
+            }
+        }  
+    } 
+}
+
+/*** Section 2 ***/
+section.section-2 
+{
+    @include __background_color($color-b);
+    @include __padding_tb(6.5rem, 6.5rem);
+}
+
+/*** Section 3 ***/
+section.section-3 
+{
+    @include __background_color($color-c);  
+    @include __padding_tb(6.5rem, 6.5rem);
+}
+
+/*** Section 2 & 3 ***/
+section.section-2, section.section-3 
+{
+    & .figure-wrapper 
+    {
+        & .img-wrapper 
+        {
+            @include __margin(25px, bottom);
+        }
+        & .big-fonts-wrapper 
+            {
+                & .font-a 
+                {
+                    @include __font(24px, 500, normal, $black-color);
+                    @include __margin(5px, bottom);
+                }
+                & .font-b 
+                {
+                    @include __font(16px, 400, normal, $black-color);
+                }
+            }
+    }
+
+    & .big-fonts-wrapper {
+        & .font-a 
+        {
+            @include __font(2rem, 500, normal, $black-color);
+        }
+        & .font-b 
+        {
+            @include __font(16px, 400, normal, $black-color);
+            @include __margin(16px, top);
+        }
+    }
+
+    & .button-wrapper 
+    {
+        & .button-a
+        {
+            @include __color($black-color);
+            @include ___font(1.1rem, 400, normal);
+            @include __margin(50px, top);
+            @include __border(1px, solid, $black-color, all);
+            //@include __background_color($black-color);
+            @include __border_radius(0px);     
+        }
+    }    
+}
+
+/*** Section 4 ***/
+section.section-4 
+{
+    @include __background_color($color-a);
+    @include __padding_tb(6.5rem, 6.5rem);
+
+    & .big-fonts-wrapper 
+    {
+        & .font-a 
+        {
+            @include __font(2rem, 500, normal, $color-b);
+        }
+        & .font-b 
+        {
+            @include __font(16px, 400, normal, $color-b);
+            @include __margin(16px, top);
+        }
+    }
+
+    & .list-wrapper 
+    {
+        @extend .__class_list;
+        @include __padding_tb(1rem, 3rem);
+
+        & .list-ul 
+        {
+            @include __font(16px, 400, normal, $color-b);
+
+            & .item-li 
+            {    
+                @include __padding(8px, top);
+                @include __padding(8px, bottom);
+                //@include __border(1px, solid, $clouds-7, all);
+            }
+
+            .fa-check 
+            {
+                @include __color($color-b);
+                @include __margin(10px, right);
+            }
+        }
+    }
+
+    & .button-wrapper 
+    {
+        & .button-a {
+            @include __color($color-a);
+            @include __background_color($color-b);
+        }
+
+        & .button-b {
+            @include __color($color-b);
+        }
+
+        & .button-a,  & .button-b 
+        {
+            @include ___font(1rem, 400, normal);
+            @include __margin(25px, top);
+            @include __border(1px, solid, $color-b, all);
+            //@include __background_color($color-a);
+            @include __border_radius(0px);   
+        }
+    } 
+}
+
+/*** Section 5 ***/
+section.section-5
+{
+    @include __background_color($white-color);
+    @include __padding_tb(6.5rem, 6.5rem);
+    
+    & .big-fonts-wrapper 
+    {
+        & .font-a 
+        {
+            @include __font(2rem, 600, normal, $black-color);
+            @include  __margin(30px, bottom);
+        }
+    }
+
+    & .big-fonts-wrapper-b
+    {
+        @include __margin(5rem, top);
+    }
+
+    & .card-custom 
+    {
+        @include __padding(20px, left);
+        @include __padding(20px, right);
+        @include __padding(30px, top);
+        @include __padding(30px, bottom);
+        @include __margin(15px, top);
+        @include __margin(15px, bottom);
+        @include __border(1px, solid, $clouds-7, all);
+        @include __border_radius(0px);
+        @include __cursor(pointer);
+
+        & .item-wrapper 
+        {
+            @include __text_align(center);
+        }
+
+        & .card-txt 
+        {
+            @include __text_align(center);
+
+            & h2.font-a
+            {
+                @include __font(18px, 500, normal, $black-color);
+                @include __margin(30px, top);
+                @include __margin(8px, bottom);
+            }
+
+            & p 
+            {
+                @include __font(14px, 400, normal, $color-e);
+                @include __line_height(140%);
+            }
+        }
+    }
+
+    & .card-custom:hover
+    {
+        @include __border(1px, solid, $black-color, all);
+        @include __background_color(#fff7f3);
+    }    
+}
+
+/*** Section 6 ***/
+section.section-6 
+{
+    @include __background_color($color-b);
+    @include __padding_tb(6.5rem, 6.5rem);
+
+    & .figure-wrapper
+    {
+
+    }
+
+    & .big-fonts-wrapper 
+    {
+        & .font-a 
+        {
+            @include __font(2rem, 500, normal, $color-f);
+        }
+        & .font-b 
+        {
+            @include __font(16px, 400, normal, $color-f);
+            @include __margin(16px, top);
+        }
+    }
+
+    & .address-wrapper 
+    {
+        @include __margin(35px, top);
+        .address-txt 
+        {
+            & i {
+               @include __margin(20px, right); 
+            }
+            @include __font(18px, 400, normal, $color-f);
+        }
+    }
+
+    & .phone-wrapper
+    {
+        @include __margin(20px, top);
+        .phone-txt 
+        {
+            & i {
+               @include __margin(14px, right); 
+            }
+            @include __font(20px, 400, normal, $color-f);
+        }
+    }
+
+    & .social-icons-wrapper
+    {   
+
+        @extend .__class_list_inline;
+        @include __margin(20px, top);
+        
+        & ul.social-icons-ul 
+        {
+            @extend .__class_mp_0;
+            
+            @include __padding_tb(20px, 20px);
+            @include __margin(20px, top);
+
+            & li.item-li 
+            {
+                @include __link($color-f, $black-color); 
+                @include __padding(32px, right);
+                @include __margin(14px, top);
+            }   
+        }
+    }
+}
+
+/*** footer ***/
+footer.footer-main
+{
+   @include __background_color($color-a); 
+   @include __padding_tb(2rem, 2rem);          
+
+   & .navi-menu-wrapper 
+    {
+        @extend .__class_list_inline;
+        & ul.navi-menu-ul 
+        {   
+            //@extend .__class_mp_0;
+            @include __font(18px, 300, normal, $color-b);           
+
+            & li.navi-menu-item 
+            {
+                @include __link($color-b, $color-b);       
+                @include __padding(32px, right);          
+                & .active 
+                {
+                    @include __color($color-b !important);
+                    @include __font_weight(500);
+                } 
+            }
+        }
+    }     
+
+    & .footer-txt
+    {
+        & span 
+        {
+            @include __color($color-b);       
+        }
+    }
+}
+
+.back-to-top 
+{
+   @include __cursor(pointer);
+   @include __color($black-color);
+   @include __position(fixed);
+   @include __right(5px);
+   @include __bottom(5px);
+  // @include __background_color($color-a);
+   @include __z_index(999);
+   @include __display(none);
+   @include __padding(5px, left);
+   @include __padding(5px, right);
+   @include __padding(5px, top);
+   @include __padding(5px, bottom);
+   @include __border_radius(100%);
+} 
+
+

@@ -1,0 +1,272 @@
+// Media Queries
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { 
+    section.section-carousel {
+        margin-bottom:30px !important;
+    }
+    section.section-1 {
+        .section-title {
+            margin-top:30px !important;
+            margin-bottom:15px !important;
+        }
+        .button-prev-next-wrapper {
+            display:none;
+        }
+        .caption-title-item {
+            font-size:11px !important;
+        }
+        .caption-title-price {
+            font-size:11px !important;
+        }   
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+    section.section-1 {
+        .section-title {
+            margin-top:25px !important;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+    section.section-1 {   
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.section-1 {
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    section.section-1 {
+    }
+}
+
+//custom screen size
+@media (min-width:768px) and (max-width:1199px) {
+    .button-prev-next-wrapper {          
+        .swiper-button-prev-custom {
+            margin:120px auto !important;
+        }
+        .swiper-button-next-custom {
+           margin:120px auto !important;
+        }
+    }
+}                                    
+
+
+/*** HEADER Navigation, etc.. ***/
+.desktop-view {
+    @media (max-width: 991px) {
+        display:none;
+    }
+}
+
+.mobile-view { 
+    @media(min-width:992px) {
+        display:none;
+    }
+    width:100%;
+    .m-navi-main-transparent {
+        display:none;
+    }
+    ul {
+        list-style-type:none;
+        li {} 
+    }
+    .m-top {
+        background-color:$primary-color;
+    }
+
+    .header-top-msg {
+            color:$white-color;
+            font-weight:300;
+            font-size:13px;
+            @include add-padding(3px, top);
+            @include add-padding(3px, bottom);
+    }
+
+    .m-middle {
+        background-color:$white-color;
+        background:$white-color;
+        @include add-padding(8px, top);
+        @include add-padding(8px, bottom);
+        //@include add-border(2px, $primary-color, bottom);
+        ul {   
+            @include add-padding(5px, top);
+            @include add-padding(0, bottom);
+            @include add-padding(0, left);
+            @include add-padding(0, right);
+            margin:0;        
+            li {                      
+                display:inline-block;
+                @include add-padding(3px, left);
+                @include add-padding(3px, right);      
+                a:link {
+                    color:$primary-color;       
+                }
+                a:visited {
+                    color:$primary-color;
+                } 
+                .my-cart {
+                    font-weight:400;
+                    font-size:13px;
+                }        
+                .total-item {
+                    font-size:12px;
+                    @include add-border-radius(5px);
+                    padding-left:4px;
+                    padding-right:4px;
+                    padding-bottom:1px;
+                    padding-top:1px;
+                    //background-color:yellowgreen;
+                    background-color:$primary-color;
+                    color:$white-color;
+                }   
+            }
+        }
+    }
+    .navicon-menu {
+        @include add-margin(92px, top);
+        z-index:99;
+        .navicon {            
+            color:$primary-color;
+            background-color:$white-color; 
+            @include add-padding(16px, top);
+            @include add-padding(8px, bottom);
+            @include add-padding(8px, left);
+            @include add-padding(8px, right);
+            cursor:pointer;
+        }
+    }
+
+    .m-navi-main { 
+       //display:none; 
+        //background-color:$concrete-1;
+        background-color:$primary-color;
+        z-index:999999;
+        position:fixed;
+        overflow-y: auto;
+        max-height: 100%;   
+        left:-260px;
+        width:260px;
+        min-height:100%;
+        @include add-padding(20px, all); 
+        
+        ul {   
+            padding:0;
+            margin:0;        
+            li {                                     
+                @include add-padding(3px, left);
+                @include add-padding(3px, right);                 
+            }
+        }
+        
+        .main-menu-title {
+            color:$concrete-2;
+            font-weight:500;
+            font-size:17px;
+        }
+        
+        .navi-menu {
+            ul.navi-menu-ul {
+                @include add-margin(25px, top);
+                @include add-margin(28px, bottom);
+                font-size:17px;
+                font-weight:400;
+
+                a:link {
+                        color:$concrete-2;       
+                }
+                a:visited {
+                    color:$concrete-2;
+                }  
+
+                li.navi-menu-item {
+                    @include add-padding(4px, top);
+                    @include add-padding(8px, bottom);                 
+                }
+            
+            }
+
+            .navi-sub {
+                display:none;                
+                ul.navi-sub-ul {       
+                    font-size:16px;     
+                    font-weight:400;
+                    @include add-padding(18px, left);
+                    @include add-padding(2px, top);
+                    @include add-padding(18px, bottom);
+
+                    a:link {
+                        color:$concrete-3;       
+                        }
+                    a:visited {
+                        color:$concrete-3;
+                    } 
+
+                    li.navi-sub-item {
+                        @include add-padding(8px, top);
+                        @include add-padding(8px, bottom);
+                        border-bottom:1px dashed #1f1f1f;
+                        
+                    }
+
+                    li:last-child {
+                        //border-bottom:1px solid $primary-color;
+                    } 
+                }       
+            }
+        }
+
+        
+        .btn-close-top {
+            color:$concrete-7;
+            cursor:pointer;
+        }
+
+        .btn-close-bottom {
+            @include add-margin(10px, bottom);
+        }
+
+        /*.social-icons {
+            ul {           
+                text-align:center;         
+                @include add-margin(20px, top);
+                @include add-padding(15px, top);
+                @include add-padding(15px, bottom); 
+                @include add-border(1px, #323232, top);   
+                li {
+                    display:inline-block;
+                    @include add-padding(10px, left);
+                    @include add-padding(10px, right);        
+                    a:link {
+                        color:$silver-5;
+                    }   
+                    a:visited {
+                        color:$silver-5;
+                    }
+                    a:hover {
+                        color:$white-color;
+                    }
+                }
+            }
+
+            a:link {
+                color:$concrete-3;       
+            }
+            a:visited {
+                color:$concrete-3;
+            }
+        }*/
+    }
+}
+
+

@@ -1,0 +1,42 @@
+// Media Queries
+// Extra small devices (portrait phones, less than 576px)
+
+@media (max-width: 575px) { 
+    .test-box {
+        @include border-radius(10px);
+        @include add-background-color(green);
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+    .test-box {
+        @include border-radius(10px);
+        @include add-background-color(red);
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    .test-box {
+        @include border-radius(10px);
+        @include add-background-color(orange);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+    .test-box {
+        @include border-radius(10px);
+        @include add-background-color(blue);
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .test-box {
+        @include border-radius(10px);
+        @include add-background-color(pink);
+    }
+}
+                                    

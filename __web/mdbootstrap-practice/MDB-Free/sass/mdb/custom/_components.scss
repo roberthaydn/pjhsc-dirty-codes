@@ -1,0 +1,257 @@
+.navi-top {
+    background-color:#000000;
+    width:100%;
+    ul {
+        margin:0;
+        padding:0; 
+        list-style-type:none;
+        @include add-margin(0, all);
+        @include add-padding(10px, top);
+        @include add-padding(10px, bottom);
+        li {
+            a:link {
+                 color:#ffffff;       
+            }
+            a:visited {
+                color:#ffffff;
+            }
+            a:hover {
+                text-decoration:underline;
+            }
+        } 
+    }
+    .social-icons {
+        ul {           
+            li {
+                display:inline-block;
+                @include add-padding(3px, left);
+                @include add-padding(3px, right);           
+            }
+        }
+    }
+
+    .header-top-msg {
+        color:#ffffff;
+        font-weight:400;
+        font-size:13px;
+        @include add-padding(12px, top);
+    }
+
+    .user-account {
+        ul {
+            li {
+                display:inline-block;
+                @include add-padding(3px, left);
+                @include add-padding(3px, right);
+            }
+        }
+        .total-item {
+            @include add-border-radius(5px);
+            padding-left:4px;
+            padding-right:4px;
+            padding-bottom:1px;
+            padding-top:1px;
+            background-color:yellowgreen;
+            color:black;
+        }
+
+        .my-cart, .user-account-item {
+            font-weight:400;
+            font-size:13px;   
+        }
+        .navi-sub {  
+            position:absolute;
+            background-color:#ffffff;  
+            z-index:999999;
+            display:none;
+            list-style-type:none;
+            text-align:left;
+            width:280px;
+            margin-left:-150px;
+            @include add-border(6px, #000000, top);
+            ul.navi-sub-ul {
+                margin:0;
+                padding:0;
+                font-size:14px;
+                @include add-margin(0, all);
+                @include add-padding(15px, top);
+                @include add-padding(10px, bottom);
+                @include add-padding(20px, left);
+                @include add-padding(20px, right);
+                li {
+                    @include add-padding(7px, top);
+                    @include add-padding(7px, bottom);
+                }
+            }
+        }
+        .specific-item {
+            @include add-padding(20px, bottom);
+            @include add-margin(20px, bottom);
+            border-bottom:1px dashed silver;
+            .img-wrapper {
+                @include add-padding(15px, left);
+                @include add-padding(5px, right);
+            }
+            .title-wrapper {
+                @include add-padding(5px, left);
+                @include add-padding(15px, right);
+                .title-item {
+                    font-size:13px;
+                    font-weight:500;
+                    line-height:135%;
+                    @include add-padding(5px, top);   
+                    a:link {
+                        color:#000000;
+                    }   
+                    a:visited {
+                        color:#000000;
+                    }  
+                }
+                .price-item {
+                    color:gray;
+                    font-size:13px;
+                    font-weight:400;
+                }
+                .quantity-item {
+                    font-size:12px;
+                    font-size:400;
+                    @include add-padding(5px, top);
+                } 
+                .remove-item {
+                    @include add-margin(-25px, top);  
+                    button:hover {
+                        color:#000000;
+                    } 
+                }
+                .btn-remove {
+                   color:gray;
+                   font-size:12px;
+                }
+            }      
+        }
+
+        .btn-checkout {
+            font-size:14px;
+            font-weight:400;
+            @include add-margin(10px, bottom);
+        }
+    }
+}
+
+
+.navi-middle {
+    @include add-padding(10px, top);
+    @include add-padding(10px, bottom);
+    .logo {
+        color:gray;
+    }
+    .search-item {
+        @include add-padding(15px, top);
+        .btn-custom-color {
+            background-color:black;
+            color:#ffffff;
+        }
+    }
+    .header-msg {
+        @include add-padding(20px, top);
+    }
+}
+
+.navi-main {
+    font-weight:400;
+    background-color:pink;
+    width:100%;
+    .navi-menu {
+        ul {
+            margin:0;
+            padding:0; 
+            list-style-type:none;
+            li {
+                a:link {
+                    color:#000000;       
+                }
+                a:visited {
+                    color:#000000;
+                }
+            }
+        }          
+        ul.navi-menu-ul {
+            font-size:15px;
+            text-align:center;         
+            @include add-margin(0, all);
+            @include add-padding(12px, top);
+            @include add-padding(12px, bottom);
+            li.navi-menu-item {
+                display:inline-block;
+                @include add-padding(20px, left);
+                @include add-padding(20px, right);         
+            }
+        }
+        .navi-sub {
+            position:absolute;
+            background-color:pink;  
+            z-index:99999;
+            display:none;
+            list-style-type:none;
+            text-align:left;
+            ul.navi-sub-ul {
+                margin:0;
+                padding:0;
+                font-size:14px;
+                @include add-margin(0, all);
+                @include add-padding(15px, top);
+                @include add-padding(10px, bottom);
+                @include add-padding(20px, left);
+                @include add-padding(20px, right);
+                li {
+                    @include add-padding(7px, top);
+                    @include add-padding(7px, bottom);
+                }
+            }
+        }
+    }
+}
+
+.navi-main ul li:hover > .navi-sub {
+    display:block;
+    -webkit-transition:max-height 0.4s ease-in;
+    -moz-transition:max-height 0.4s ease-in;
+    transition:max-height 0.4s ease-in;
+}
+
+.user-account ul li:hover > .navi-sub {
+    display:block;
+    -webkit-transition:max-height 0.4s ease-in;
+    -moz-transition:max-height 0.4s ease-in;
+    transition:max-height 0.4s ease-in;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  /*border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);*/
+  border-color: gray;
+  box-shadow: gray;
+  outline: 0 none;
+}
+
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .col { border: 1px solid transparent; }
+        .col { flex: 1 0 50%; }
+    </style>
+</head>
+
+<body>
+    <!-- Start your project here-->  
+    <div class="container">
+      <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Basic Grid Example</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="background-color:lightblue;">
+          One of three columns
+        </div>
+        <div class="col" style="background-color:orange;">
+          One of three columns
+        </div>
+        <div class="col" style="background-color:green;">
+          One of three columns
+        </div>
+      </div>
+    </div>   
+
+    <div class="container">  
+      <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Equal-width</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="background-color:lightblue;">
+          1 of 2
+        </div>
+        <div class="col" style="background-color:lightblue;">
+          1 of 2
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="background-color:lightblue;">
+          1 of 3
+        </div>
+        <div class="col"  style="background-color:lightblue;">
+          1 of 3
+        </div>
+        <div class="col" style="background-color:lightblue;">
+          1 of 3
+        </div>
+      </div>
+    </div>           
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Equal-width multi-row</h2>
+        </div>
+      </div>
+      <!-- broken lines in safari -->
+      <div class="row">
+        <div class="col" style="background-color:red;">Column</div>
+        <div class="col" style="background-color:orange;">Column</div>
+        <div class="w-100"></div>
+        <div class="col" style="background-color:green;">Column</div>
+        <div class="col" style="background-color:yellow;">Column</div>
+      </div>
+      <!-- alternative -->
+      <!-- you can use 2 rows to separate columns -->
+      <div class="row">
+        <div class="col" style="background-color:red;">Column</div>
+        <div class="col" style="background-color:orange;">Column</div>
+      </div>
+      <div class="row">
+        <div class="col" style="background-color:green;">Column</div>
+        <div class="col" style="background-color:yellow;">Column</div>
+      </div>
+    </div>    
+
+    
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Setting one column width</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="background-color:lightblue;">
+            1 of 3
+        </div>
+        <div class="col-6" style="background-color:lightblue;">
+            2 of 3 (wider)
+        </div>
+        <div class="col" style="background-color:lightblue;">
+            3 of 3
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="background-color:lightblue;">
+            1 of 3
+        </div>
+        <div class="col-5" style="background-color:lightblue;">
+            2 of 3 (wider)
+        </div>
+        <div class="col" style="background-color:lightblue;">
+            3 of 3
+        </div>
+    </div>
+</div> 
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Variable width content</h2>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2" style="background-color:lightblue;">
+            1 of 3
+        </div>
+        <div class="col-12 col-md-auto" style="background-color:orange;">
+            Variable width content
+        </div>
+        <div class="col col-lg-2" style="background-color:lightblue;">
+            3 of 3
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="background-color:lightblue;">
+            1 of 3
+        </div>
+        <div class="col-12 col-md-auto" style="background-color:orange;">
+            Variable width content
+        </div>
+        <div class="col col-lg-2" style="background-color:lightblue;">
+            3 of 3
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-auto" style="background-color:orange">
+            hello bootstrap
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>All breakpoints</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="background-color:lightblue;">
+            col
+        </div>
+        <div class="col" style="background-color:green;">
+            col
+        </div>
+        <div class="col" style="background-color:lightblue;">
+            col
+        </div>
+        <div class="col" style="background-color:green;">
+            col
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8" style="background-color:yellow;">
+            col-8
+        </div>
+        <div class="col-4" style="background-color:lightblue;">
+            col-4
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Stacked to horizontal</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8" style="background-color:orange;">
+            col-sm-8
+        </div>
+        <div class="col-sm-4" style="background-color:orange;">
+            col-sm-4
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm" style="background-color:orange;">
+            col-sm
+        </div>
+        <div class="col-sm" style="background-color:orange;">
+            col-sm
+        </div>
+        <div class="col-sm" style="background-color:orange;">
+            col-sm
+        </div>
+    </div>
+</div>
+      
+
+<div class="container">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+        <div class="col-12" style="background-color:silver;">
+            <h2>Mix and match</h2>
+        </div>
+    </div>
+    <div class="row" style="background-color:lightblue;">
+        <div class="col col-md-8">
+            .col .col-md-8
+        </div>
+        <div class="col-6 col-md-4">
+            .col-6 .col-md-4
+        </div>
+    </div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row" style="background-color:lightblue;">
+    <div class="col-6 col-md-4">
+        .col-6 .col-md-4
+    </div>
+    <div class="col-6 col-md-4">
+        .col-6 .col-md-4
+    </div>
+    <div class="col-6 col-md-4">
+        .col-6 .col-md-4
+    </div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row" style="background-color:lightblue;">
+    <div class="col-6">
+        .col-6
+    </div>
+    <div class="col-6">
+        .col-6
+    </div>
+</div>
+</div>
+
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

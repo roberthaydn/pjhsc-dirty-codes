@@ -1,0 +1,297 @@
+/** COLOUR SETTINGS **/
+$primary-color:#ff6a5c;
+$white-color:#ffffff;
+$black-color:#000000;
+
+//Gray and Silver Family Colors - flat UI colors
+//CLOUDS                //SILVER                //CONCRETE                  //ASBESTOS
+$clouds-1:#fdfefe;      $silver-1:#f8f9f9;      $concrete-1:#f4f6f6;        $asbestos-1:#f2f4f4;        
+$clouds-2:#fbfcfc;      $silver-2:#f2f3f4;      $concrete-2:#eaeded;        $asbestos-2:#e5e8e8;
+$clouds-3:#f7f9f9;      $silver-3:#e5e7e9;      $concrete-3:#d5dbdb;        $asbestos-3:#ccd1d1;
+$clouds-4:#f4f6f7;      $silver-4:#d7dbdd;      $concrete-4:#bfc9ca;        $asbestos-4:#b2babb;
+$clouds-5:#f0f3f4;      $silver-5:#cacfd2;      $concrete-5:#aab7b8;        $asbestos-5:#99a3a4;
+$clouds-6:#ecf0f1;      $silver-6:#bdc3c7;      $concrete-6:#95a5a6;        $asbestos-6:#7f8c8d;
+$clouds-7:#d0d3d4;      $silver-7:#a6acaf;      $concrete-7:#839192;        $asbestos-7:#707b7c;
+$clouds-8:#b3b6b7;      $silver-8:#909497;      $concrete-8:#717d7e;        $asbestos-8:#616a6b;
+$clouds-9:#979a9a;      $silver-9:#797d7f;      $concrete-9:#5f6a6a;        $asbestos-9:#515a5a;
+$clouds-10:#7b7d7d;     $silver-10:#626567;     $concrete-10:#4d5656;       $asbestos-10:#424949;
+
+body {
+    font-family:Ubuntu, Sans-Serif;
+}
+
+/* fix header transformation */
+#extend {
+    display:none;
+    top:0;
+}
+.extend-1 {
+    position:fixed; 
+    background: url("../img/imgs/hero-bg-transparent.png")repeat !important;
+}
+.extend-2 {
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    li.navi-menu-item {
+        a:link {
+            color:$white-color !important;
+        }
+        a:visited {
+            color:$white-color !important;
+        }
+    }
+}
+/* end fix header transformation */
+
+.back-to-top {
+   cursor:pointer;
+   color:#fff;
+   position:fixed;
+   right:10px;
+   bottom:10px;
+   //background-color:$primary-color;
+   //padding:10px;
+   background: url("../img/imgs/hero-bg-transparent.png")repeat;
+   z-index:9999;
+   display:none;
+   @include add-padding(10px, left);
+   @include add-padding(10px, right);
+   @include add-padding(5px, top);
+   @include add-padding(5px, bottom);
+   @include border-radius(100%);
+} 
+
+header {
+   background:$white-color;
+   width:100%;
+   z-index:99999;
+   .navi-menu {
+        font-size:17px;
+        ul.navi-menu-ul {
+            list-style-type:none;
+            @include add-padding(0, left);
+            @include add-padding(0, right);
+            @include add-padding(20px, top);
+            @include add-padding(20px, bottom);
+            li.navi-menu-item {
+                @include add-padding(16px, left);
+                @include add-padding(16px, right);
+                display:inline-block;
+
+                a:link {
+                    color:#414141;
+                }
+                a:visited {
+                    color:#414141;
+                }
+                a:hover {}
+
+                a.active {
+                    font-weight:500;
+                }
+            }
+        }
+   }
+}
+
+section.section-hero {
+     
+    background: url("../img/imgs/hero.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+       
+    .hero {
+        background: url("../img/imgs/hero-bg-transparent.png")repeat;
+        @include add-padding(0, left);
+       
+        .hero-contents {
+
+            color:#ffffff;
+
+            .big-fonts {
+                h3 {
+                    font-size:2.2rem;
+                    font-weight:300;
+                }
+
+                h2 {
+                    font-size:3.3rem;
+                    font-weight:bold;
+                }
+                @include add-padding(150px, top);
+                @include add-padding(180px, bottom);
+            }
+
+            .line {
+                background-color:$white-color;
+                width:35px;
+                height:5px;
+                @include border-radius(10px);
+            }
+
+            p { 
+                //width:80%;
+                font-size:17px;
+                @include add-padding(25px, top);
+                @include add-padding(25px, bottom);
+            }
+
+            @include add-padding(30px, left);
+            @include add-padding(30px, right);
+            
+            .buttons {      
+                .button-medium {
+                    font-size:18px !important;
+                }    
+                .button-custom-1 {
+                    color:$white-color;
+                    border:1px solid $white-color;
+                    @include add-margin(5px, right);
+                }
+                .button-custom-2 {
+                    color:$primary-color;
+                    background-color:$white-color;
+                    @include add-margin(5px, left);
+                    .playbutton {
+                        //position:relative;
+                        //top:5px;
+                    }
+                }
+                @include add-padding(20px, top);
+                @include add-padding(150px, bottom);
+            }
+        }
+    }
+}
+
+section.section-1 {
+    background:$white-color;
+    @include add-padding(120px, top);   
+    @include add-padding(70px, bottom);
+    .card-custom {
+        .card-txt {
+            @include add-padding(25px, left);   
+            @include add-padding(25px, right); 
+            @include add-padding(25px, top); 
+            @include add-padding(30px, bottom); 
+            .title {
+                color:$primary-color;
+                font-weight:500;
+                font-size:20px;
+            }
+            .description {
+                color:#414141;
+                font-size:16px;
+                line-height:135%;
+            }
+        }
+    }
+
+    .btn-wrapper {
+        text-align:center;
+        @include add-padding(50px, top);
+        @include add-padding(50px, bottom);
+        .button-custom {
+            color:$white-color;
+            background-color:$primary-color;
+        }
+    }
+}
+
+
+footer.footer-main {
+    color:$white-color;
+    .footer-left {
+        background-color:$primary-color;
+        .logo {
+            @include add-padding(120px, top);
+            @include add-padding(60px, bottom);
+        }
+        .big-font {
+            h2 {
+                font-size:2.3rem;
+                font-weight:500;
+            }
+        }
+
+        p {
+            font-size:17px;
+            width:95%;
+        }
+
+        .btn-wrapper {
+            @include add-padding(20px, top);
+            @include add-padding(70px, bottom);
+            .button-custom {
+                color:$primary-color;
+                background-color:$white-color;
+            } 
+        }  
+    }
+
+    .footer-right {
+        background: url("../img/imgs/footer-img.jpg")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        .follow-wrapper {
+            @include add-padding(30px, left);
+            @include add-padding(252px, top);
+            ul.follow {
+                list-style-type:none;
+                @include add-margin(0, all);
+                @include add-padding(0, all);
+                li {
+                    display:inline-block;
+                    @include add-padding(40px, right);
+                    @include add-padding(40px, top);
+                    a:link {
+                        color:$white-color;
+                    } 
+                    a:visited {
+                        color:$white-color;
+                    }
+                    a:hover {
+                        color:$white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-txt-wrapper {
+        @include add-padding(150px, bottom); 
+        ul.footer-txt {
+            list-style-type:none;
+            @include add-margin(0, all);
+            @include add-padding(0, top);
+            @include add-padding(0, bottom);
+            @include add-padding(0, right);
+            @include add-padding(0px, left);
+            li {
+                display:inline-block;
+                @include add-padding(40px, right);
+                a:link {
+                    color:$white-color;
+                } 
+                a:visited {
+                    color:$white-color;
+                }
+                a:hover {
+                    color:$white-color;
+                }
+            } 
+        }
+        ul.add-pl {
+            @include add-padding(30px, left);
+        }
+    }
+}    
+    
+
+
+

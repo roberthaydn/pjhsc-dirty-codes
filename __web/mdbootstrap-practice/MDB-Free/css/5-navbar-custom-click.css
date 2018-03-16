@@ -1,0 +1,98 @@
+header .navi-main .logoo {
+    float:left;
+    height:40px;
+    padding-top:15px;
+    font-size:1.4em;
+    line-height:40px;
+    color:#fff;
+}
+
+/* NAV BAR */
+header .navi-main {
+    width:100%;
+    background-color:#222;
+    height:70px;color:#fff;
+    position:fixed;
+    top:20px;
+}
+
+header .navi-main ul li {
+    list-style-type:none;
+}
+
+header .navi-ul{
+    float:right; 
+}
+header .navi-li {
+    float:left; 
+}
+
+header .navi-ul {
+    margin-top:15px;
+    height:40px;
+    font-size:1.1em;
+    line-height:40px;
+    font-weight:300;
+}
+
+header .navi-item {
+    padding-top:24px;
+    padding-bottom:25px;
+    padding-left:20px;
+    padding-right:20px;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    text-decoration:none;
+}
+
+header .navi-ul li a:link {
+    color:#fff;
+}
+
+header .navi-ul li a:visited {
+    color:#fff;
+}
+header .navi-item:focus, .navi-item:hover{
+    background-color:#dc06bb;
+}
+
+header .navi-content {
+    position:absolute;
+    top:70px;
+    overflow:hidden;
+    background-color:#dc06bb;
+    color:#fff;
+    max-height:0;
+}
+
+header .navi-content a {
+    color:#fff;
+    text-decoration:none;
+}
+header .navi-content a:hover {
+    text-decoration:underline;
+}
+header .navi-sub {
+    padding: 10px 20px 15px 20px;
+}
+header .navi-sub ul {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+header .navi-sub ul > li > a {
+    display:inline-block;
+    padding:5px 0;
+}
+header .navi-item:focus ~ .navi-content {
+  display:block;
+  max-height:400px;
+  /* transition effect */
+  -webkit-transition:max-height 0.4s ease-in;
+  -moz-transition:max-height 0.4s ease-in;
+  transition:max-height 0.4s ease-in;
+}
+header .show {
+    background-color:#dc06bb;
+}
