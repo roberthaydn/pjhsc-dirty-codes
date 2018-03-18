@@ -1,0 +1,20 @@
+@media #{$small-and-down} {
+// styles for small screens and down
+.change-color {background-color:red;}
+}
+@media #{$medium-and-up} {
+// styles for medium screens and larger
+.change-color {background-color:blue;}
+}
+@media #{$medium-and-down} {
+// styles for medium screens and down
+//.change-color {background-color:yellow;}
+}
+@media #{$large-and-up} {
+// styles for large screens and up
+.change-color {background-color:pink;}
+}
+
+
+
+

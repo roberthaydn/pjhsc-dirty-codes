@@ -1,0 +1,41 @@
+.sass-color-1 {
+  //blue = background
+  @extend .blue, .lighten-4;
+  //color:red;
+}
+
+.sass-color-2 {
+ @extend .orange, .lighten-5;
+}
+
+.sass-color-3 {
+ @extend .deep-orange, .darken-4;
+}
+
+.sass-color-4 {
+ @extend .amber, .darken-3;
+}
+
+.sass-color-5 {
+ @extend .green, .darken-4;
+}
+
+.sass-color-6 {
+  @extend .cyan, .darken-2;
+}
+
+.sass-color-7 {
+  @extend .deep-purple, .accent-1;
+}
+
+.sass-color-8 {
+  @extend .brown, .lighten-3;
+}
+
+.sass-color-9 {
+  @extend .lime, .darken-4;
+}
+
+.sass-color-10 {
+  @extend .grey, .darken-3;
+}

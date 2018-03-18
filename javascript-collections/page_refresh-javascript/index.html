@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div class="helloworld">
+		<a href="https://facebook.com">facebook</a>
+	</div>
+	<div class="result">
+		
+	</div>
+
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			function hello() {
+				return (function worker() {
+				  $.ajax({
+				    url: 'test.php', 
+				    success: function(data) {
+				      $('.result').html(data);
+				    },
+				    complete: function() {
+				      // Schedule the next request when the current one's complete
+				      setTimeout(worker, 500);
+				    }
+				  });
+				})();
+			}
+			hello();
+		});
+	</script>
+</body>
+</html>

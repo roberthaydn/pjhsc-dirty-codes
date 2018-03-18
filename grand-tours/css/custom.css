@@ -1,0 +1,561 @@
+body {}
+
+/*
+#f57c00
+#ffe3c5
+#1c110b
+#5d5d5d
+#fff2e9
+*/
+
+/** 
+* Input Control Indicator - on focus
+*/
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search-md]:focus:not([readonly]),
+textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #f57c00;
+  box-shadow: 0 1px 0 0 #f57c00;
+}
+
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search-md]:focus:not([readonly]) + label,
+textarea.md-textarea:focus:not([readonly]) + label {
+ color:#f57c00;
+}
+/** 
+* Input Control Indicator - on focus
+*/
+
+
+/*
+* User Info
+*/
+header.header-user-info ul { 
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+header.header-user-info ul li {
+	display:inline-block;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+header.header-user-info ul li a:link, a:visited {
+	color:#1c110b;
+	margin-right:20px;
+	font-size:15px;
+}
+
+header.header-user-info ul li a:hover {
+	color:#f57c00;
+}
+
+header.header-user-info ul li a.active {
+	color:#f57c00;
+}
+
+/*
+#f57c00
+#ffe3c5
+#1c110b
+#5d5d5d
+#fff2e9
+*/
+
+/** 
+* Login Form
+*/
+section.login {
+	background-color:#F9E3CD;
+}
+
+.login-form {
+	padding:20px;
+	margin-top:60px;
+	margin-bottom:60px;
+	margin-left:40px;
+	margin-right:40px;
+	background-color:white;
+}
+
+.display-text
+{
+	padding-top:20px;
+	font-weight:bold;
+}
+/** 
+* Login Form
+*/
+
+/**
+* CLIENT
+*/
+section.panel-main {
+	background-color:#F9ECE1;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.table {
+	background-color:white;
+}
+
+td.date {
+	color:#474747;
+}
+
+.data-txt {
+	text-align:right;
+	font-weight:400;
+}
+
+.display-data-txt {
+	font-weight:400;
+}
+
+.txt-a {
+	font-size:15px;
+}
+
+.txt-b {
+	font-size:15px;
+	background-color:#ffffff;
+}
+
+.th {
+	font-size:20px;
+}
+
+.m-confirm-txt {
+	margin-bottom:5px;
+	font-size:14px;
+}
+
+.m-review-txt {
+	margin-top:5px;
+}
+
+.m-display-txt {
+	font-size:14px;
+	text-align:justify;
+	padding-left:55px;
+	border-bottom:1px solid #ffe3c5;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.m-display-txt:last-child {
+    border-bottom:1px solid #ffffff;
+}
+
+.top-response {
+	background-color:#ffffff;
+	margin-bottom:20px;
+	text-align:center;
+	padding:16px;
+	font-size:14px;
+	display:none;
+}
+
+.uname {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+/*
+* seat reservation add
+*/
+.m-response {
+	margin-top:16px;
+	margin-bottom:14px;
+	margin-left:30px;
+	font-size:15px;
+	color:green;
+	font-weight:400;
+}
+
+/*
+* seat reservation
+*/
+.seat-reservation {
+	background-color:#ffffff;
+	margin-bottom:20px;
+}
+
+.seat-reservation p {
+	font-size:14px;
+	font-weight:400;
+	padding:0;
+	margin:0;
+}
+
+.seat-reservation .seat-reservation-info {
+	padding:15px;
+}
+
+.seat-reservation a {
+	margin:0 auto;
+	text-align:center;
+	padding:5px;
+	/*display:block;*/
+}
+
+.seat-reservation .btn-proceed {
+	display:block;
+}
+
+.seat-reservation .btn-seat-reservation {
+	color:#ffffff;
+	font-weight:400;
+}
+
+.seat-reservation .vehicle {
+	font-weight:bold;
+	font-size:16px;
+	padding-bottom:5px;
+}
+
+.seat-reservation .destination {
+	background-color:#EFEFEF;
+	border:1px dashed #D8D8D8;
+	padding:5px;
+	font-size:12px;
+	text-align:center;
+	font-weight:500;
+}
+
+.seat-reservation .schedule {
+	font-size:14px;
+	padding:3px;
+	margin-top:8px;
+}
+
+.seat-reservation .fare {
+	font-size:14px;
+	padding:3px;
+}
+
+.seat-reservation .driver {
+	font-size:14px;
+	padding:3px;
+}
+
+.seat-reservation .date {
+	font-size:12px;
+	padding:3px;
+	color:#474747;
+}
+
+.seat-reservation .passengers {
+	font-size:14px;
+	padding:3px;
+	font-weight:500;
+}
+
+.seat-reservation .passengers span {
+	font-size:25px;
+	color:green;
+}
+
+.seat-reservation h5 {
+	padding:0;
+	margin:0;
+}
+
+.seat-reservation .txt-top {
+	font-size:16px;
+	padding:16px;
+	font-weight:400;
+}
+
+.seat-reservation .txt-top .fa-check {
+	color:#2BBBAD;
+}
+
+.seat-reservation .txt-top .fa-minus-circle {
+	color:#FF3547;
+}
+
+.seat-reservation span.msg {
+	font-weight:400;
+}
+
+.seat-reservation span.msg-save {
+	color:#218276;
+}
+
+.seat-reservation span.msg-del {
+	color:#FF3547;
+}
+
+.seat-reservation span.msg-default {
+	color:#f57c00;
+}
+
+.seat-reservation h5.txt-available {
+
+}
+
+.seat-reservation span.num {
+	background-color:#ffffff;
+	color:#000000;
+	border:1px solid #fff2e9;
+	border-radius:50%;
+	padding-left:12px;
+	padding-right:12px;
+	padding-top:5px;
+	padding-bottom:5px; 
+	font-weight:400;
+	font-size:15px;
+	position:relative;
+	top:0;left:-8px;
+}
+
+/*
+* Seat Reservation Passengers
+*/
+.seat-reservation-info-pax {
+	font-size:14px;
+	padding:5px;
+}
+
+.seat-reservation-breadcrumbs {
+	color:#000000;
+	padding:5px;
+	font-size:13px;
+}
+
+.seat-reservation-breadcrumbs a {
+	color:#000000;
+}
+
+.td-txt {
+	font-size:14px;
+}
+
+.color-hover:hover {
+	background:#f2f2f2;
+}
+
+.color-hover a:link {
+	color:#3a5f84;
+	font-weight:500;
+}
+
+.color-hover a:hover {
+	color:#1b5794;
+}
+
+/* Client side - Passengers */
+.passengers {
+	background-color:#ffffff;
+	background:#ffffff;
+}
+
+.passengers .seat {
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:5px;
+	/*padding-right:16px;*/
+	border:1px dashed lightgray;
+	margin:5px;
+}
+
+.passengers .seat .check-label {
+	font-size:14px;
+	font-weight:500;
+}
+
+.txt-success {
+	font-style:14px;
+	color:green;
+	padding:15px;
+	background-color:#ffffff;
+}
+
+.check-seat-selected {
+	padding-left:15px;
+	padding-bottom:5px;
+	font-weight:400;
+	font-size:14px;
+}
+
+.check-seat-selected .fa-check {
+	color:green;
+}
+
+.cancel-reservation {
+	padding-left:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+	font-size:13px;
+}
+
+.passengers .title {
+	font-size:16px;
+	font-weight:400;
+	padding-top:15px;
+	padding-left:15px;
+}
+
+.passengers .title span {
+	font-size:12px;
+	font-style:italic;
+	color:gray;
+}
+
+.passengers .title-destination {
+	font-size:16px;
+	font-weight:400;
+	padding-top:15px;
+	padding-left:15px;
+}
+
+.passengers .title-destination div {
+	font-size:12px;
+	font-weight:500;
+	color:blue;
+	padding-top:10px;
+}
+
+.passengers .radio-panel {
+	padding:5px;
+}
+
+.passengers .station-to-station {
+	font-style:italic;
+	color:gray;
+	font-size:12px;
+}
+
+.seat-reservation-info-parent {
+	
+}
+
+.seat-reservation-info-child {
+	font-size:14px;
+	font-weight:400;
+	padding:5px;
+	margin:4px;
+	border:1px dashed lightgray;
+}
+
+/* transaction */
+.txt-recent-transaction {
+	padding:15px;
+	font-weight:500;
+	font-size:14px;
+}
+
+/* msg-alert */
+.msg-alert {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9999;
+	background-color:#3e820b;
+	width:100%;
+}
+
+.msg-alert .txt-top {
+	text-align:center;
+	font-size:14px;
+	color:#ffffff;
+	font-weight:400;
+	margin-top:5px;
+}
+
+.msg-alert .msg-close:link, .msg-close:visited {
+	color:#ffffff;
+}
+
+/*
+* table search
+*/
+.table-search {
+	background-color:#feffec;
+}
+
+.table-total-income .total-income {
+	font-weight:bold;
+	color:blue;
+}
+
+/*
+* Receipt
+*/
+.r-wrapper {
+	border:1px dashed gray;
+	padding:10px;
+	margin:2px;
+	font-weight:500;
+}
+.r-content {
+	font-size:10px;
+	margin:0;
+	padding:0;
+}
+.r-address {
+	font-size:10px;
+	line-height:110%;
+	margin-bottom:8px;
+	font-weight:700;
+	background-color:#EDEDED;
+	padding:4px;
+}
+.r-time {
+
+}
+.r-date {
+	border-top:1px solid lightgray;
+	padding:2px;
+}
+.r-seat-no {
+	border-top:1px solid lightgray;
+	padding:2px;
+}
+.r-depart {
+	border-top:1px solid lightgray;
+	padding:2px;
+}
+.r-arrival {
+	border-top:1px solid lightgray;
+	padding:2px;
+}
+.r-driver {
+	border-top:1px solid lightgray;
+	padding:2px;
+}
+.r-plate-number {
+	border-top:1px solid lightgray;
+	padding:2px;
+}
+.r-name {
+	border:1px solid lightgray;
+	background-color:#D6D6D6;
+	padding:4px;
+}
+.r-span {
+	font-weight:700;
+	color:#000000;
+	font-size:11px;
+}

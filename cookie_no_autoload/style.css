@@ -1,0 +1,15 @@
+.a-loader
+{
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    display: none;
+    z-index: 1000;
+    height: 31px;
+    width: 31px;
+}
+
+.a-loader-wrapper
+{
+
+}

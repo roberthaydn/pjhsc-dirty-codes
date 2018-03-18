@@ -1,0 +1,26 @@
+
+
+<input type="checkbox" class="ids" name="ids[]" value="1">
+<input type="checkbox" class="ids" name="ids[]" value="2">
+<input type="checkbox" class="ids" name="ids[]" value="3">
+<input type="checkbox" class="ids" name="ids[]" value="4">
+<input type="checkbox" class="ids" name="ids[]" value="5">
+
+<div id="response"></div>
+<button id="submit">Submit</button>
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$('#submit').click(function() {
+	$.ajax({
+	url: "test.php",
+	type: "post",
+	data: $('.ids:checked').serialize(),
+	success: function(data) {
+		$('#response').html(data);
+	}
+	});
+});
+
+</script>

@@ -1,0 +1,13 @@
+<?php 
+namespace app\lib\sanitize {
+	class Sanitize {
+		/**
+		* Remove html/javascript/php tags
+		* @static
+		* @return string
+		*/
+		public static function Escape($string) {
+			return htmlentities($string, ENT_QUOTES, '');
+		}
+	}
+}
