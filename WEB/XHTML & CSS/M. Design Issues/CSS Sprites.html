@@ -1,0 +1,43 @@
+<!-- 
+
+CSS SPRITES
+
+When creating graphical buttons, you will often want to use a second version of the image when a user
+hovers over it (known as a rollover state), to make it clear when someone is hovering over an image that
+can be clicked on.
+
+Some CSS sprites take this even further and have one image that represents the different possible states
+thatall the buttons on your site may have.
+
+Another advantage of using sprites is that the browser is requesting only one image from the server,
+rather than many, which reduces the overhead on the web server.
+
+-->
+<style type="text/css">
+	#navigation li {
+	 list-style-type:none;
+	 font-size:2em;
+	}
+	#navigation li a {
+	 background-image: url("images/buttons.jpg");
+	 background-repeat:no-repeat;
+	 display:block;
+	 width:200px;
+	 height:70px;
+	 text-indent: -900%;
+	}
+	#navigation li a.buy {background-position:0px 0px;}
+	#navigation li a:hover.buy {background-position:0px -70px;}
+	#navigation li a.more {background-position:0px -140px;}
+	#navigation li a:hover.more {background-position:0px -210px;}
+	#navigation li a.login {background-position:0px -280px;}
+	#navigation li a:hover.login {background-position:0px -350px;
+	}	
+</style>
+
+<ul id="navigation">
+ <li><a class="buy" href="/buy/" title="Buy now"> Buy now </a></li>
+ <li><a class="more" href="/more/" title="View more"> View more</a></li>
+ <li><a class="login" href="/login/" title="Login"> Login </a></li>
+</ul>
+

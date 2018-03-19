@@ -1,0 +1,203 @@
+<!--
+SELECTOR
+A CSS selector is the part of a CSS rule set that actually selects the content you want to style. Let's look at all the different kinds of selectors available, with a brief description of each.
+==========================================================================================
+Universal Selector
+The Type Selector
+The Class Selector
+The ID Selector
+The Child Selector
+The Descendant Selector
+The Adjacent Sibling Selector
+The General Sibling Selector
+Attribute Selectors
+==========================================================================================
+Universal Selector
+Theuniversal selector is an asterisk; it is like a wildcard and matches all element types in the document.
+==========================================================================================
+* { }
+==========================================================================================
+If you want a rule to apply to all elements, you can use this selector. Sometimes it is used for default
+values that will apply to the whole of the document (such as a font - family andfont - size ) unless
+another more specific selector indicates that an element should use different values for these same
+properties.
+==========================================================================================
+The Type Selector
+==========================================================================================
+ex.
+h1, h2, h3 { }
+-->
+<h3>CSS selector</h3>
+<style>
+	* {  /*
+		margin:0;
+		padding:0; */
+	}
+</style>
+<p>Paragraph</p>
+<h1>Heading</h1>
+<div>Div</div>
+<ul>
+	<li>UL LI</li> 
+	<li>UL LI</li> 
+</ul>
+<table>
+	<tr><td>Table TR TD</td></tr>
+</table><hr>
+<!--
+==========================================================================================
+The Class Selector
+==========================================================================================
+<p class="BackgroundNote"> This paragraph contains an aside. </p>
+To apply:
+.BackgroundNote { } or
+p.BackgroundNote {}
+==
+<p class="important code">
+To apply:
+p.important.code { }
+-->
+<style type="text/css">
+	p.important { color:blue; }
+	p.important.code { font-size:2em; }
+	.important { font-family: verdana, "Tahoma", sans-serif; }
+</style>
+<h3>The Class Selector</h3>
+<p class="important code">Hello</p><hr>
+<!--
+==========================================================================================
+The ID Selector
+==========================================================================================
+#abstract #myId #HelloWorld
+-->
+<style type="text/css">
+	#person { color:green; }
+</style>
+<h3>The ID Selector</h3>
+<p id="person">I'm Bill</p><hr>
+<!--
+==========================================================================================
+The Child Selector
+==========================================================================================
+The child selector matches an element that is a direct child of another. In this case it matches any
+<p> elements that are direct children of <div> elements.
+-->
+<h3>The Child Selector</h3>
+<style type="text/css">
+	div > p { color:red; }
+</style>
+
+<div>
+	<p>Child1</p>
+	<p>Child2</p>
+	<p>Child3</p>
+</div>
+	<p>Child4</p><hr>
+
+<!--
+==========================================================================================
+The Descendant Selector
+table b { }
+The descendant selector matches an element type that is a descendant of another specified element (or
+nested inside another specified element), not just a direct child.
+-->
+<style type="text/css">
+	table tr td { font-size:35px;color:blue; }
+	table tr { color:orange; }
+</style>
+<h3>The Descendant Selector</h3>
+<table>
+	<tr>
+		<th>TH 1</th>
+		<td>TD 1</td>
+		<td>TD 2</td>
+		<td>TD 3</td>
+	</tr>
+</table>
+<!--
+==========================================================================================
+The Adjacent Sibling Selector
+Anadjacent sibling selector matches an element type that is the next sibling of another.
+-->
+<style type="text/css">
+	h1+p { color:red; }
+</style>
+
+<h1>h1</h1>
+<h1>h1</h1>
+<h1>h1</h1>
+<p>p</p>
+<h1>h1</h1>
+<p>p</p>
+<!--
+==========================================================================================
+The General Sibling Selector
+Thegeneral sibling selector matches an element type that is a sibling of another, although it does not have
+to be the directly preceding element. So, if you had two <p> elements that are siblings of an <h1>
+element, they would both use the rules of this selector.
+-->
+<h3>The General Sibling Selector</h3>
+<style type="text/css">
+	h1~p { color:red; }
+</style>
+<p>p1</p>
+<p>p2</p>
+<h1>h1</h1><hr>
+ 
+Using Child and Sibling Selectors To Reduce Dependence
+on Classes in Markup
+
+<style type="text/css">
+	p {font-family:arial, verdana, sans-serif;}
+	div > p {border:1px solid #000000;}
+	div.s p+p+p {background-color:#999999;}
+</style>
+<h3>Using Child and Sibling Selectors To Reduce Dependence on Classes in Markup</h3>
+<p> Paragraph One: not inside a div element.</p>
+ <div class="s">
+ <p> Paragraph One: inside a div element</p>
+ <p> Paragraph Two: inside a div element</p>
+ <p> Paragraph Three: inside a div element</p>
+ <p> Paragraph Four: inside a div element</p>
+ <p> Paragraph Five: inside a div element</p>
+</div><hr>
+<!--
+==========================================================================================
+Attribute Selectors
+
+Attribute selectors enable you to use the attributes that an element carries, and their values, in the
+selector. There are several types of attribute selector and they allow far more complex ways of selecting
+elements in a document.
+
+The use of attribute selectors is fairly limited because they have only been supported in the latest
+versions of browsers. Some of the attribute selectors in the following table are from CSS3, which has not
+yet been completed.
+======================================================================================================
+Name                          Example                        Matches
+======================================================================================================
+1. Existence selector            | p[id]                        | Any <p> element carrying an attribute called id.
+2. Equality selector             | p[id="summary"]              | Any <p> element carrying an attribute called id whose value issummary.
+3. Space selector                | p[class~="XHTML"]            | Any <p> element carrying an attribute called class, whose value is a list of space - separated words, one of which is exactly the same asXHTML.
+4. Hyphen selector               | p[language|="en"]  			 | Any <p> element carrying an attribute called language whose value begins withen and is followed with a hyphen (this particular selector is designed for use with language attributes). 
+5. Prefix selector (CSS3)        | p[attr^"b"]  				 | Any <p> element carrying any attribute whose value begins with b. (CSS3)
+6. Substring selector (CSS3)     | p[attr*"on"]  				 | Any <p> element carrying any attribute whose value contains the letters on . (CSS3)
+7. Suffix selector (CSS3)        | p[attr$"x"]  				 | Any <p> element carrying any attribute whose value contains the ends in the letter x. (CSS3)
+======================================================================================================
+-->
+<style type="text/css">
+	p[id] { border:3px solid #000000; }
+	p[id="summary"] { border:3px solid #000000; }
+	p[class~="XHTML"] { border:3px solid #000000; }
+	p[language|="en"] { border:3px solid #000000; }
+	p[class^="b"]{ border:3px solid #000000; }
+	p[class*="on"] { border:3px solid #000000; }
+	p[class$="x"] { border:3px solid #000000; }
+</style>
+<h2>Attribute Selectors</h2>
+ <!-- 1. --><p id="introduction"> Here's paragraph one; each paragraph has different attributes.</p>
+ <!-- 2. --><p id="summary"> Here's paragraph two; each paragraph has different attributes.</p>
+ <!-- 3. --><p class="important XHTML"> Here's paragraph three; each paragraph has different attributes.</p>
+ <!-- 4. --><p language="en-us"> Here's paragraph four; each paragraph has different attributes.</p>
+ <!-- 5. --><p class="begins"> Here's paragraph five; each paragraph has different attributes.</p>
+ <!-- 6.--><p class="contains"> Here's paragraph six; each paragraph has different attributes.</p>
+ <!-- 7. --><p class="suffix"> Here's paragraph seven; each paragraph has different attributes.</p><hr>

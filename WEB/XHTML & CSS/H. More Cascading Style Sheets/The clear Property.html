@@ -1,0 +1,38 @@
+<!-- The clear Property
+The clear property is especially helpful when working with boxes that are floated. 
+=======================================================================================================
+Value      |       Purpose
+=======================================================================================================
+left       |  The element with theclear property cannot have content on the left hand side of it.
+right      |  The element with theclear property cannot have content on the right hand side of it.
+both       |  The element with theclear property cannot have content to the left or right of it.
+none       |  Allows floating on either side.
+=======================================================================================================
+-->
+<style type="text/css">
+	p {
+	 background-color:#FFFFFF;
+	 border:2px solid #000000;
+	 padding:5px;
+	 margin:5px;
+	 width:500px;
+	 float:left;
+	}
+	p.s {clear:both;}
+</style>
+
+<p>1 To ensure that the second paragraph does not wrap around the pull quote, we use theclear property on
+the rule for the < p > elements indicating that nothing should appear to the left of it; you can see this new
+property is highlighted in the following code</p>
+
+<p>2 To ensure that the second paragraph does not wrap around the pull quote, we use theclear property on
+the rule for the < p > elements indicating that nothing should appear to the left of it; you can see this new
+property is highlighted in the following code</p>
+
+<p>3 To ensure that the second paragraph does not wrap around the pull quote, we use theclear property on
+the rule for the < p > elements indicating that nothing should appear to the left of it; you can see this new
+property is highlighted in the following code</p>
+
+<p class="s">4 To ensure that the second paragraph does not wrap around the pull quote, we use theclear property on
+the rule for the < p > elements indicating that nothing should appear to the left of it; you can see this new
+property is highlighted in the following code</p>

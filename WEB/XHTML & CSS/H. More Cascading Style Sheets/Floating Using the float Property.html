@@ -1,0 +1,62 @@
+<!-- Floating Using the float Property
+===============================================================================================================
+The float property allows you to take an element out of normal flow and place it as far to the left or
+right of a containing box as possible.
+
+Anything else that lives in the containing element will flow around the element that is associated with
+thefloat property (just like text and other elements can flow around an image).
+
+Whenever you specify afloat property on an element, you must also set awidth property indicating
+the width that the box should take up; otherwise, it will automatically take up 100 percent of the width
+of the containing box, leaving no space for things to flow around it and therefore making it appear just
+like a plain block- level element.
+
+To indicate that you want a box floated either to the left or the right of the containing box, you set the
+float property, which can take one of the values listed in the table that follows.
+
+===============================================================================================================
+Value            |         Purpose
+===============================================================================================================
+left             |   The box is floated to the left of the containing element and the content of the containing element will flow to the right of it.
+right            |   The box is floated to the right of the containing element and the content of the containing element will flow to the left of it.
+none             |   The box is not floated and remains where it would have been positioned in normal flow.
+inherit          |   The box takes the same property as its containing element.
+===============================================================================================================
+
+-->
+<style type="text/css">
+	body {
+	 color:#000000;
+	 background-color:#ffffff;
+	 font-size:12px;
+	 margin:10px;
+	 width:514px;
+	 border: 1px solid #000000;
+	}
+	p {
+	 background-color:#FFFFFF;
+	 border:2px solid #000000;
+	 padding:5px;
+	 margin:5px;
+	 width:500px;
+	}
+	.pullQuote {
+	 float:right;
+	 width:150px;
+	 background-color:yellow;
+	}
+</style>
+<body>
+ <h1> Heading </h1>
+
+ <p class="pullQuote"> Here is the pullquote. It will be removed from
+ normal flow and appear on the right of the page. </p>
+
+ <p> This is where the story starts and it will appear at the top of the
+ page under the heading. You can think of it as the first paragraph of an
+ article or story. In this example, the pull quote gets moved across to the
+ right of the page. There will be another paragraph underneath. </p>
+
+ <p> Here is another paragraph. This one will be at the bottom of the page. </p>
+ 
+</body>

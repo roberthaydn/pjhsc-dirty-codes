@@ -1,0 +1,44 @@
+<!-- Grouping Options with the < optgroup > Element -->
+<form action="grouping options with the optgroup element.html" method="get" name="frmInfo">
+ Please select the product you are interested in: <br />
+ <select name="selInformation">
+
+ <optgroup label="Hardware">
+	 <option value="Desktop">Desktop computers</option>
+	 <option value="Laptop">Laptop computers</option>
+ </optgroup>
+
+ <optgroup label="Software">
+	 <option value="OfficeSoftware">Office software</option>
+	 <option value="Games"> Games </option>
+
+ </optgroup>
+	 <optgroup label="Peripherals">
+	 <option value="Monitors"> Monitors </option >
+	 <option value="InputDevices">Input Devices</option>
+	 <option value="Storage"> Storage </option>
+ </optgroup >
+
+ </select >
+ <br/><br>
+
+<!------------------------------------------------------------------------------------------------------------- -->
+ <h4>An alternative option for grouping elements is to add an < option > element that carries thedisabled
+attribute, which you will learn about shortly (ch05_eg13.html ):</h4>
+
+<form action="grouping options with the optgroup element.html" method="get" name="frmInfo">
+ Please select the product you are interested in: <br />
+ <select name="selInformation">
+	 <option disabled="disabled" value=""> - Hardware - </option>
+	 <option value="Desktop">Desktop computers</option>
+	 <option value="Laptop">Laptop computers</option>
+	 <option disabled="disabled" value=""> - Software - </option>
+	 <option value="OfficeSoftware">Office software</option>
+	 <option value="Games"> Games </option>
+	 <option disabled="disabled" value=""> - Peripherals - </option>
+	 <option value="Monitors"> Monitors </option>
+	 <option value="InputDevices">Input Devices</option>
+	 <option value="Storage"> Storage </option>
+ </select>
+ <br /> <br /><input type="submit" value="Submit"/>
+ </form>

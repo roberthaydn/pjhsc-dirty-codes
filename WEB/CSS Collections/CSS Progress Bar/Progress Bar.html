@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Progress Bar</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="bar">
+			<span class="bar-fill"></span>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var bar = document.querySelector('.bar-fill');
+		var width = 0;
+		var interval = setInterval(function() {
+			width = width + 1;
+			bar.style.width = width + '%';
+			if(width >= 100) { 
+				clearInterval(interval);
+				width=0;
+			}
+		}, 50);
+	</script>
+</body>
+</html>
+
+

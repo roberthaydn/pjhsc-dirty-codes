@@ -1,0 +1,38 @@
+body {
+	font: 1em "Helvetica", sans-serif;
+}
+
+/* customize button */
+.button {
+	background-color:#e0e0e0;
+	border:0;
+	color:#333;
+	font-size:1em;
+	padding: 8px 12px; /*8px top and bottom ---- 12px left and right  */
+	text-decoration:none;
+	vertical-align:middle;
+	cursor:pointer;
+	border-radius: 3px;
+}
+
+/* button status */
+.button.success {
+	background-color:#88c425;
+	color:#fff;
+}
+
+.button.error {
+	background-color:red;
+	color:#fff;
+}
+
+/* sizing */
+.button.medium {
+	font-size:1.1em;
+	padding:10px 14px;
+}
+
+.button.large {
+	font-size:1.2em;
+	padding:12px 16px;
+}

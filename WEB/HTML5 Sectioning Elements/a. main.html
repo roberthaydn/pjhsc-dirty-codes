@@ -1,0 +1,33 @@
+<!-- 
+The main Element
+
+The <main> element should contain the main content for your web page. All of this content should be unique to the individual page, and should not appear elsewhere on the site. Any content that is repeated on multiple pages (logos, search boxes, footer links, etc.) should not be placed within the <main> element.
+
+The example below uses a <main> element to represent the main content for the page
+-->
+<body>
+  <header>
+    <div id="logo">Rocking Stone</div>
+    <nav>...</nav>
+  </header>
+  <main role="main">
+    <h1>Guitars</h1>
+    <p>The greatest guitars ever built.</p>
+
+    <article>
+      <h2>Gibson SG</h2>
+      <p>...</p>
+    </article>
+
+    <article>
+      <h2>Fender Telecaster</h2>
+      <p>...</p>
+    </article>
+  </main>
+</body>
+
+<!--
+Note: We’ve used the ARIA role=”main” attribute here is it indicates the significance of this element to programs that don’t yet support the <main> element (such as some screen readers).
+
+You should only use one <main> element on a page, and it shouldn’t be placed within an <article>, <aside>, <header>, <footer>, or <nav> element.
+-->

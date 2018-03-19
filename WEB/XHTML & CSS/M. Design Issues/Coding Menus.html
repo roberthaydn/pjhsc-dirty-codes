@@ -1,0 +1,75 @@
+<!--
+Coding for Menus
+
+-->
+
+
+<style type="text/css">
+/* 
+	The first step is to remove the bullet - style marker and padding from the list, and set all the list items to
+	be inline items so that they sit next to each other rather than on top of each other 
+*/
+	ul#navigation {
+	 list-style: none;
+	 margin: 0;
+	 float:right;
+	}
+	ul#navigation li {
+	 display:inline-block;
+	}
+/*
+	Next, let’ s change the default link styles to a new color text on a different background color, remove the
+	underline, and make the text a larger font in a different typeface:
+
+	We can make this easier to use and more attractive by adding padding to the <a> elements — this will
+	increase the clickable area. You could also add a border to the bottom of the boxes:
+*/
+	ul#navigation a {
+	 color:#ffffff;
+	 background-color:#000000;
+	 text-decoration:none;
+	 font-family:helvetica, times, serif;
+	 font-size:1.126em;
+	 padding:15px;
+	 border-bottom:3px solid #ff6600;
+	}
+
+/* 
+	The last step in transforming the list is to create different hover states for the links:
+*/
+	ul#navigation a:hover {
+	 color:#000000;
+	 background-color:#ff6600;
+	 border-bottom:3px solid #000000;
+	}
+
+/* CSS RESET */
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+</style>
+
+<ul id="navigation">
+ <li><a href="#"> Home </a></li>
+ <li><a href="#"> Products </a></li>
+ <li><a href="#"> Services </a></li>
+ <li><a href="#"> About </a></li>
+ <li><a href="#"> Contact </a></li>
+</ul>

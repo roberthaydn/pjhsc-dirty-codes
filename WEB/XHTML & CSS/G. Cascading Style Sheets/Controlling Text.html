@@ -1,0 +1,346 @@
+<!--
+==============================================================================================
+Controlling Text & Text Formatting
+==============================================================================================
+The font-weight Property
+The font-style Property
+The font-variant Property
+The font-stretch Property
+The color Property
+The text-align Property
+The vertical-align Property
+The text-decoration Property
+The text-indent Property
+The text-shadow Property
+The text-transform Property
+The letter-spacing Property
+The white-space Property
+The direction Property
+Text Pseudo-Classes
+==============================================================================================
+FONT
+==============================================================================================
+Property	     | Purpose
+==============================================================================================
+font             | === Allows you to combine several of the following properties into one
+font-family      | === Specifies the typeface or family of font that should be used
+font-size        | === Specifies the size of a font
+font-weight      | === Specifies whether the font should be normal or bold
+font-style       | === Specifies whether the font should be normal, italic, or oblique
+font-stretch     | === Allows you to control the width of the actual characters in a font
+font-variant     | === Specifies whether the font should be normal or small caps
+font-size-adjust | === Allows you to alter the aspect ratio of the size of the font's
+characters
+==============================================================================================
+A typeface is a family of fonts, such as the Arial family.
+A font is a specific member of that family, such as Arial 12 - point bold.
+==============================================================================================
+Generic font name  | Type of font | Example
+serif      === Fonts with serifs                     === Times
+sans-serif === Fonts without serifs                  ===  Arial
+monospace  === Fixed - width fonts                   === Courier
+cursive    === Fonts that emulate handwriting        === Comic Sans
+fantasy    === Decorative fonts for titles and so on === Impact
+==============================================================================================
+
+-->
+<style type="text/css">
+	p.one { font-family: arial, verdana, sans-serif; }
+	p.two { font-family: times, "times new roman", serif; }
+	p.three { font-family: courier, "courier new", monospace; }
+</style>
+
+<p class="one"> Here is some text in a sans-serif font. </p>
+<p class="two"> Here is some text in a serif font. </p>
+<p class="three"> Here is some text in a monospaced font. </p>
+<hr>
+<!-- 
+
+The font-size property enables you to specify a size for the font. You will often see the value for this
+property specified in pixels, like so:
+
+p.twelve {font-size:12px;}
+
+<style type="text/css">
+	p.a { font-size:xx-small; }
+	p.b { font-size:12px; }
+	p.c { font-size:3pc; }
+	p.d { font-size:10%; }
+</style>
+==============================================================================================
+The font-weight Property
+The possible values for font-weight 
+===
+normal bold bolder lighter 100 200 300 400 500 600 700 800 900
+===
+p.one { font-weight:normal; }        - 100
+p.two { font-weight:bold; }          - 200
+p.three { font-weight:normal; }      - 100
+p.three span { font-weight:bolder; } - 400
+p.four { font-weight:bold; }         - 200
+p.four span { font-weight:lighter; } - 
+p.five { font-weight:100; }          - 100  
+p.six { font-weight:200; }           - 200
+==============================================================================================
+The font-style Property
+The font- tyle property allows you to specify that a font should benormal ,italic , oroblique
+p.one {font-style:normal;}
+p.two {font-style:italic;}
+p.three {font-style:oblique;}
+==============================================================================================
+The font-variant Property
+There are two possible values for thefont - variant property:normal and small-caps.
+A small caps font looks like a smaller version of the uppercase letterset. 
+-->
+<style type="text/css">
+	p { font-variant:normal; }
+	span.smallcaps { font-variant:small-caps; }
+</style>
+
+<p>This is a normal font, but then <span class="smallcaps">There are some small caps</span> in the middle.</p>
+<hr>
+<!-- 
+============================================================================================== 
+The font-stretch Property
+===
+ultra-condensed extra-condensed condensed semi-condensed semi-expanded
+expanded extra-expanded ultra-expanded
+==
+Or it can take relative values, where the value is in relation to that of the containing element:
+===
+normal wider narrower
+===
+p {font-family:arial; font-stretch:condensed;}
+============================================================================================== 
+Text Formatting
+============================================================================================== 
+Property    |  Purpose
+============================================================================================== 
+color           === Specifies the color of the text
+text-align      === Specifies the horizontal alignment of the text within its containing element
+vertical-align  === Specifies the vertical alignment of text within containing element
+text-decoration === Specifies whether the text should be underlined, overlined, strikethrough, or blinking text
+text-indent     === Specifies an indent from the left border for the text
+text-transform  === Specifies that the content of the element should all be uppercase, lowercase, or capitalized
+text-shadow     === Specifies that the text should have a drop shadow
+letter-spacing  === Controls the width between letters (known to print designers as tracking)
+word-spacing    === Controls the amount of space between each word
+white-space     === Specifies whether the white space should be collapsed, preserved, or prevented from wrapping
+direction       === Specifies the direction of text (similar to thedir attribute)
+==============================================================================================
+The color Property
+The color property allows you to specify the color of the text. The value of this property can either be a
+hex code for a color or a color name. 
+
+p {color:#ff0000;}
+
+==============================================================================================
+The text-align Property
+==============================================================================================
+Value  | Purpose
+==============================================================================================
+left    | Aligns the text with the left border of the containing element
+right   | Aligns the text with the right border of the containing element
+center  | Centers the content in the middle of the containing element
+justify | Spreads the width across the whole width of the containing element
+==============================================================================================
+The vertical-align Property
+==============================================================================================
+Value  | Purpose
+==============================================================================================
+baseline    === Everything should be aligned on the baseline of the parent element (this is the default setting).
+sub         === Makes the element subscript. With images, the top of the image should be on the baseline. With text, the top of the font body should be on the baseline.
+super       === Makes the element superscript. With images, the bottom of the image should be level with the top of the font. With text, the bottom of the descender (the parts of letters such asg andp that go beneath the line of text) should align with the top of the font body.
+top         === The top of the text and the top of the image should align with the top of the tallest element on the line.
+text-top    === The top of the text and the top of the image should align with the top of the tallest text on the line.
+middle      === The vertical midpoint of the element should be aligned with the vertical midpoint of the parent.
+bottom      === The bottom of the text and the bottom of the image should align with the bottom of the lowest element on the line.
+text-bottom === The bottom of the text and the bottom of the image should align with the bottom of the lowest text on the line.
+==============================================================================================
+-->
+
+<style type="text/css">
+	p span.baseline {vertical-align:baseline;border:1px solid green;}
+	p span.sub {vertical-align:sub;border:1px solid green;}
+	p span.super {vertical-align:super;border:1px solid green;}
+	p span.top {vertical-align:top;border:1px solid green;}
+	p span.text-top {vertical-align:text-top;border:1px solid green;}
+	p span.middle {vertical-align:middle;border:1px solid green;}
+	p span.bottom {vertical-align:bottom;border:1px solid green;}
+	p span.text-bottom {vertical-align:text-bottom;border:1px solid green;}
+</style>
+<h3>The text-align Property</h3>
+<p><span class="baseline">baseline</span><img src="img.jpg"></p>
+<p><span class="sub">sub</span><img src="img.jpg"></p>
+<p><span class="super">super</span><img src="img.jpg"></p>
+<p><span class="top">top</span><img src="img.jpg"></p>
+<p><span class="text-top">text-top</span><img src="img.jpg"></p>
+<p><span class="middle">middle</span><img src="img.jpg" class="im"></p>
+<p><span class="bottom">bottom</span><img src="img.jpg"></p>
+<p><span class="text-bottom">text-bottom</span><img src="img.jpg"></p><hr>
+<!--
+==============================================================================================
+The text-decoration Property
+-->
+<style type="text/css">
+	p.underline {text-decoration:underline;}
+	p.overline {text-decoration:overline;}
+	p.line-through {text-decoration:line-through;}
+	p.blink {text-decoration:blink;}
+</style>
+<h3>The text-decoration Property</h3>
+<p class="underline">p.underline {text-decoration:underline;}</p>
+<p class="overline">p.overline {text-decoration:overline;}</p>
+<p class="line-through">p.line-through {text-decoration:line-through;}</p>
+<p class="blink">p.blink {text-decoration:blink;}</p><hr>
+<!--
+==============================================================================================
+The text-indent Property
+The text-indent property allows you to indent the first line of text within an element. 
+-->
+<style type="text/css">
+  .indent { text-indent:3em; }	
+  .indent1 { text-indent:300px; }
+</style>
+
+<h3>The text-indent Property</h3>
+<p>This paragraph should be aligned with the left-hand side of the browser.</p>
+<p class="indent"> Just the first line of this paragraph should be indented by 3 em, this should not apply to any subsequent lines in the same 
+<p class="indent1"> Just the first line of this paragraph should be indented by 300 pixels, this should not apply to any subsequent lines in the same 
+paragraph.</p><hr>
+<!-- 
+==============================================================================================
+The text-shadow Property
+Thetext-shadow property is supposed to create adrop shadow
+-->
+<style type="text/css">
+	/**********************************************/
+	.dropShadow {text-shadow: #999 4px 7px 10px;}	
+	/**********************************************
+     #999 - color
+	 4px  - x-coordinates
+	 7px  - y-coordinates
+	 10px - specifies how blurred the drop shadow should be.  
+	/**********************************************/
+	.dropShadow {font-size:4em;}
+	.dropShadow {font-family: Arial, Times ,sans-serif;}
+	.dropShadow {font-weight:bold;color:blue;}
+</style>
+<h3>text-shadow Property</h3>
+<p class="dropShadow">DROP-SHADOW</p><hr>
+<!-- 
+==============================================================================================
+The text-transform Property
+The text-transform property allows you to specify the case for the content of an element.
+==============================================================================================
+Value      |  Purpose
+==============================================================================================
+none       === No change should take place.
+capitalize === The first letter of every word should be capitalized.
+uppercase  === The entire content of the element should be uppercase.
+lowercase  === The entire content of the element should be lowercase.
+==============================================================================================
+-->
+<style type="text/css">
+	p.none {text-transform:none;}
+	p.capitalize {text-transform:capitalize;}
+	p.uppercase {text-transform:uppercase;}
+	p.lowercase {text-transform:lowercase;}
+</style>
+
+<h3>The text - transform Property</h3>
+<p class="none"> This text has not been transformed </p>
+<p class="capitalize"> The first letter of each word will be capiltalized </p>
+<p class="uppercase"> All of this text will be uppercase </p>
+<p class="lowercase" > ALL OF THIS TEXT WILL BE LOWERCASE </p><hr>
+<!--
+==============================================================================================
+The letter-spacing Property
+The letter-spacing property controls something that print designers refer to astracking : the gap
+between letters.
+-->
+<style type="text/css">
+	.x { letter-spacing:3px; }
+	.y { letter-spacing:0.5em; }
+	.z { letter-spacing:-1px; }
+</style>
+
+<h3>The letter-spacing Property</h3>
+<p class="x"> letter spacing 3 pixels </p>
+<p class="y"> letter spacing 0.5 emphasis</p>
+<p class="z"> letter spacing -1 pixels </p><hr>
+<!-- 
+==============================================================================================
+The white-space Property
+The white-space property controls whether or not
+white space is preserved, offering the same results as the XHTML < pre > element where white space is
+preserved and thenowrap attribute where text is only broken onto a new line if explicitly told to. See the
+table that follows for the possible values for this property.
+==============================================================================================
+Value   |  Meaning
+==============================================================================================
+normal  === Normal white space collapsing rules are followed.
+pre     === White space is preserved just as in the < pre > element of XHTML, but the formatting is whatever is indicated  for that element (it is not a monospaced font by default like the < pre > element).
+nowrap  === Text is broken onto a new line only if explicitly told to with a <br /> element; otherwise text does not wrap.
+==============================================================================================
+-->
+<style type="text/css">
+	.pre {white-space:pre;}
+	.nowrap {white-space:nowrap;}
+</style>
+<h3>white-space Property</h3>
+<p class="pre">For 
+example, you can use the white- 
+space property.</p>
+
+<p class="nowrap">For example,
+you can use thewhite - space property.</p><hr>
+<!--
+==============================================================================================
+The direction Property
+==============================================================================================
+Value  | Meaning
+==============================================================================================
+ltr     === The text flows from left to right.
+rtl     === The text flows from right to left.
+inherit === The text flows in the same direction as its parent element.
+==============================================================================================
+-->
+<style type="text/css">
+	p.ltr {direction:ltr;}
+	p.rtl {direction:rtl;}
+</style>
+<h3>The direction Property</h3>
+<p class="ltr">This text should flow left to right</p>
+<p class="rtl">This text should flow right to left</p><hr>
+<!--
+=============================================================================================
+Text Pseudo-Classes
+These pseudo-classes allow you to render either the first letter or the first line of an element in a different way
+than the rest of that element.
+==
+The first-letter Pseudo-Class
+Thefirst-letter pseudo - class allows you to specify a rule just for the first letter of an element.
+==
+The first-line Pseudo-Class 
+first-line pseudo-class should allow you to render the first line of any paragraph differently
+from the rest of the paragraph. (BOLD)
+-->
+<style type="text/css">
+	p.introduction:first-letter { font-size:46px; }
+	p.introduction:first-line { font-weight:bold; }	                                           
+	/* p.introduction { white-space:pre; }*/
+	p.introduction { white-space:nowrap; }
+</style>
+
+<p class="introduction">
+Once upon a time, there was a pseudo-class that allowed you to specify a<br> 
+different rule for the first letter of an element's content, and another that allowed
+you to specify a different rule for the whole of the first line. This example demonstrates
+the first-letter and first-line pseudo-classes.
+</p><hr>
+<!-- 
+=============================================================================================
+
+
+-->

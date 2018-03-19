@@ -1,0 +1,66 @@
+<!--
+Additional Rules
+=======================================================================================================
+@import imports another style sheet into the current style sheet.
+!important indicates that some rules should take precedence to others.
+@charset indicates the character set the style sheet uses.
+=======================================================================================================
+@import -> The@import rule allows you to import styles from another style sheet. It should appear right at the start
+of the style sheet before any of the rules, and its value is a URL.
+=======================================================================================================
+-->
+<style Type="text/css">
+/* @import "codeStyles.css"; */ 
+@import url("codeStyles.css");
+body {
+	background-color:#ffffff;
+	font-family:arial, verdana, helvetica, sans-serif;
+}
+h1 {
+	font-size:24pt;
+}
+
+</style>
+
+<h1>Example Using Imported Styles</h1>
+<p>The style sheet for this document used the @import rule to import styles from another style sheet The syntax is:</p>
+<p class="syntax">@import "codeStyles.css"</p><hr>
+<!--
+=======================================================================================================
+!important 
+!important -> When there is a chance that two style - sheet rules might conflict with each other, you can use
+the!important rule to indicate that this particular rule should take precedence over others. 
+
+This can be helpful if you are developing modular style sheets and you want to ensure that a rule in the
+included style sheets takes precedence over any conflicting rules in the style sheet containing the
+@import rule (which would otherwise have taken precedence).
+
+An !important declaration provides a way for a stylesheet author to give a CSS value more weight than it naturally has. 
+-->
+<!--
+CSS reads code from bottom to top.
+.-->
+
+<style type="text/css">
+	#example {
+		font-size: 50px !important;	
+	}
+
+	#example {
+		font-size: 10px;
+	}
+</style>
+
+<h3>!important</h3>
+<div id="container">
+	<p id="example">!important explained!</p>
+</div><hr>
+
+<h3>The @charset Rule</h3>
+<p>If you are writing your style sheet using a character set that features characters other than the basic Latin
+characters (the ASCII or ISO - 8859 - 1 character sets), you might want to set the@charset rule at the top of
+your style sheet to indicate what character set the style sheet is written in.</p>
+
+<p>The@charset rule must be written right at the beginning of the style sheet without even a space before
+it. The value is held in quotes and should be one of the language codes specified in Appendix G.
+@charset "iso-8859-1"</p>

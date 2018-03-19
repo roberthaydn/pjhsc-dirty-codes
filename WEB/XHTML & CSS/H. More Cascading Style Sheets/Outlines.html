@@ -1,0 +1,55 @@
+<!-- 
+Outlines
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Outlines are similar to the borders that you met in the last chapter, but there are two crucial differences:
+===============================================================================================================
+Property         |          Purpose
+===============================================================================================================
+outline-width    |  Specifies the width of the outline
+outline-style    |  Specifies the line style for the outline
+outline-color    |  Specifies the color of the outline
+outline          |  Shorthand for above properties
+===============================================================================================================
+The outline-width Property
+Theoutline - width property specifies the width of the outline to be added to the box. 
+
+input { border-width:2px; }
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-->
+<style type="text/css">
+	input {border-width:3px;}
+</style>
+<input type="text" value="hello!" />
+<!--
+
+The outline-width Property
+Theoutline-width property specifies the width of the outline to be added to the box. Its value should
+be a length or one of the valuesthin ,medium , orthick — just like theborder - width attribute.
+input {border-width:2px;}
+================================================================================================================
+The outline -style Property
+The outline-style property specifies the style for the line (solid ,dotted , ordashed ) that goes
+around the box. Its value should be one of the values used with the border.
+input {outline-style:solid;}
+================================================================================================================
+The outline-color Property
+The outline-color property allows you to specify the color of the outline. Its value should either be a
+color name, a hex color, or an RGB value, as with thecolor andborder - color properties.
+input {outline-color:#ffoooo;}
+================================================================================================================
+The outline Property (the Shorthand)
+Theoutline property is the shorthand that allows you to specify values for any of the three properties
+discussed previously in any order you like. 
+================================================================================================================
+<p>Inside this paragraph the word in <b>bold</b> is going to have an
+outline.</p>
+================================================================================================================
+There is a rule that says the contents of the <b> element should have an 8-pixel dashed red border
+around the edge (ch08_eg19.css ):
+b {outline: #ff0000 8px dashed;}
+================================================================================================================
+
+-->
+
+

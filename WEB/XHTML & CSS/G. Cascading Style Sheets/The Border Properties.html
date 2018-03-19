@@ -1,0 +1,201 @@
+<!-- 
+===============================================================================================
+The Border Properties
+===============================================================================================
+The border-style Property
+The border-width Property
+Border Properties Using Shorthand
+The padding Property
+The margin Property
+The height and width Properties
+The line-height Property
+The max-width and min-width Properties
+The min-height and max-height Properties
+===============================================================================================
+border-color - to indicate the color a border should be.
+border-style - to indicate whether a border should be a solid, dashed, or double line, or one of the other possible values.
+border-width - to indicate the width a border should be.
+===============================================================================================
+The border-color Property
+The border-color property allows you to change the color of the border surrounding a box.
+===============================================================================================
+For example:
+p { border-color:#ff0000; }
+===============================================================================================
+Color       |    Name hex               | RGB Values RGB Percentages
+===============================================================================================
+red         | #ff0000rgb (255 ,0 ,0 )   | rgb (100% ,0 ,0)
+green       | #00ff00rgb (0 ,255 ,0 )   | rgb (0 ,100% ,0)
+blue        | #0000ffrgb (0 ,0 ,255 )   | rgb (0 ,0 ,100%)
+===============================================================================================
+
+You can individually change the color of the bottom, left, top, and right sides of a box ’ s border using the
+following properties:
+	border-bottom-color
+	border-right-color
+	border-top-color
+	border-left-color
+===============================================================================================
+The border-style Property
+The border-style property allows you to specify the line style of the border:
+===============================================================================================
+For example
+p { border-style:solid; }	
+===============================================================================================
+Value               Description
+===============================================================================================
+none          |     No border. (Equivalent ofborder - width:0 ;)
+solid         |     Border is a single solid line.
+dotted        |     Border is a series of dots.
+dashed        |     Border is a series of short lines.
+double        |     Border is two solid lines; the value of theborder - width property creates the sum of the two lines and the space between them. 
+groove        |     Border looks as though it is carved into the page.
+ridge         |     Border looks the opposite ofgroove .
+inset         |     Border makes the box look like it is embedded in the page.
+outset        |     Border makes the box look like it is coming out of the canvas.
+hidden        |     Same asnone , except in terms of border - conflict resolution for table elements.
+===============================================================================================
+You can individually change the style of the bottom, left, top, and right borders of a box using the
+following properties:
+
+border-bottom-style
+border-right-style
+border-top-style
+border-left-style
+===============================================================================================
+The border-width Property
+The border-width property allows you to set the width of your borders; usually the width is specifiedin pixels.
+ex.
+p { border-style:solid; }
+p { border-width:4px; }
+
+border-bottom-width
+border-right-width
+border-top-width
+border-left- idth
+
+===============================================================================================
+Border Properties Using Shorthand
+p { border: 4px solid red; }
+
+border-bottom
+border-top
+border-left
+border-right
+
+===============================================================================================
+The padding Property
+Thepadding property allows you to specify how much space should appear between the content of an
+element and its border:
+td  {padding:5px; }
+
+You can specify different amounts of padding inside each side of a box using the following properties:
+
+padding-bottom
+padding-top
+padding-left
+padding-right
+
+===============================================================================================
+The margin Property
+The margin property controls the gap between boxes, and its value is either a length, a percentage, or inherit, 
+each of which has exactly the same meaning as it did for the padding property you just saw.
+p { margin:20px; }
+
+You can also set different values for the margin on each side of the box using the following properties:
+margin-bottom
+margin-top
+margin-left
+margin-right
+p {
+ margin-top:40px;
+ margin-bottom:30px;
+ margin-left:20px;
+ margin-right:20px;
+ border-style:solid;
+}
+===============================================================================================
+Dimensions of a Box
+===============================================================================================
+Property        |            Purpose
+height          |         Sets the height of a box
+width           |         Sets the width of a box
+line-height     |         Sets the height of a line of text (like leading in a layout program)
+max-height      |         Sets the maximum height for a box
+min-height      |         Sets the minimum height for a box
+max-width       |         Sets the maximum width for a box
+min-width       |         Sets the minimum width for a box
+===============================================================================================
+The height and width Properties
+The height and width properties allow you to set the height and width for boxes.
+p.one {
+ width:200px; 
+ height:100px;
+ padding:5px; 
+ margin:10px;
+ border-style:solid; 
+ border-color:#000000;
+ border-width:2px;
+}
+p.two {
+ width:300px; 
+ height:100px;
+ padding:5px; 
+ margin:10px;
+ border-style:solid; 
+ border-color:#000000; 
+ border-width:2px;
+}
+===============================================================================================
+The line-height Property
+The line-height property is one of the most important properties when laying out text. It allows you
+to increase the space between lines of text (known to print designers asleading).
+p.two { line-height:16px; }
+p.three { line-height:28px; }
+p.three { line-height:155%; }
+===============================================================================================
+The max-width and min-width Properties
+The max-width and min-width properties allow you to specify a maximum and a minimum width for a
+box. This should be particularly useful if you want to create parts of pages that stretch and shrink to fit
+the size of users ’ screens.
+-->
+<h3>The max-width and min-width Properties</h3>
+<style type="text/css">
+#a {
+ min-width:200px;
+ max-width:500px;
+ padding:5px;
+ border:1px solid #000000;
+}
+</style> 
+
+<div id="a">
+	You can see what this looks like in Figure 7 - 33, which shows two browser windows, and you can try it
+	for yourself usingch07_eg27.html in the code download. The first window is opened to over 500
+	pixels wide, and the box does not stretch wider than 500 pixels; the second window is closed to less than
+	200 pixels, at which point the browser starts to show a horizontal scrollbar because you cannot see the
+	full width of the box.
+</div><hr>
+
+<!--
+===============================================================================================
+The min-height and max-height Properties
+The min-height and max-height properties correspond with the min-width and max-width
+properties, but specify a minimum height and maximum height for the box.
+-->
+<style type="text/css">
+#b {
+ min-height:100px;
+ max-height:200px;
+ padding:5px;
+ border:1px solid #000000;
+}
+</style>
+<h3>The min-height and max-height Properties</h3>
+<div id="b">
+	You can see what this looks like in Figure 7 - 33, which shows two browser windows, and you can try it
+	for yourself usingch07_eg27.html in the code download. The first window is opened to over 500
+	pixels wide, and the box does not stretch wider than 500 pixels; the second window is closed to less than
+	200 pixels, at which point the browser starts to show a horizontal scrollbar because you cannot see the
+	full width of the box.
+</div>

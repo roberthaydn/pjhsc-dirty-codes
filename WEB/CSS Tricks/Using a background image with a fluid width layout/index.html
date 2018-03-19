@@ -1,0 +1,28 @@
+<!--Responsive background images with fixed or fluid aspect ratios-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div.column {
+		  /* The background image must be 800px wide */
+		  max-width: 800px;
+		}
+
+		figure.fixedratio {
+		  padding-top: 56.25%;  /* 450px/800px = 0.5625 */
+
+		  background-image: url("img.jpg");
+		  background-size: cover;
+		  -moz-background-size: cover;  /* Firefox 3.6 */
+		  background-position: center;  /* Internet Explorer 7/8 */
+		}
+	</style>
+</head>
+<body>
+	<div class="column">
+	  <figure class="fixedratio"></figure>
+	</div>
+</body>
+</html>

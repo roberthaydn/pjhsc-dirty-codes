@@ -1,0 +1,46 @@
+<!-- Liquid Layouts -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Liquid Layouts</title>
+	<style type="text/css">
+		#header {
+		 background-color:#cccccc;
+		 padding:10px;
+		 height:120px;
+		}
+		#navigation {
+		 background-color:#efefef;
+		 padding:10px;
+		 height:40px;
+		}
+		#footer {
+		 background-color:#cccccc;
+		 padding:10px;
+		 height:40px;
+		 clear:both;
+		 border-top:20px solid #ffffff;
+		}
+		/* 3 columns */
+		.column1of3, .column2of3, .column3of3 {
+		 float:left;
+		 width:28%;
+		 /* min-width:230px; */
+		 min-width:230px;
+		 margin-left:2%;
+		 background-color:#cccccc;
+		 padding:1%;
+		 margin-top:20px;
+		 height:175px;
+		}
+	</style>
+</head>
+<body>
+ <div id="header"> header </div>
+	 <div id="navigation"> navigation </div>
+		 <div class="column1of3">column 1 of 3</div>
+		 <div class="column2of3">column 2 of 3</div>
+		 <div class="column3of3">column 3 of 3</div>
+	 <div id="footer"> footer </div>
+</body>
+</html>

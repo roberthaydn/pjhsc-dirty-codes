@@ -1,0 +1,43 @@
+<!-- 
+	[•] Links
+		> Text Links
+		> Images as links
+=======================================
+Text Links
+=======================================
+By default, text links tend to be blue and underlined. Some experts on usability suggest that all links
+should be left to their default appearance. However, from your experience of the Web, you probably
+know that using a color that ’ s clearly different from the main text makes it easy enough for users to tell
+what text makes up a link.
+
+You have just seen an example of how to change the color and appearance of links, and also how to
+change their state when someone hovers a mouse over the link.
+
+When you use CSS to specify the color of links, the browser will not change the color of visited links
+anymore. To do this, you need to use the:visited pseudo class.
+
+ex.
+a {font-weight:bold; color:#ff0000; text-decoration:none;}
+a:hover {color:#FF9900; text-decoration:underline; background-color:#f9f0f0;}
+a:visited {color:#990000;}
+
+=======================================
+Images as Links
+=======================================
+Images are often used as links in menus, advertisements, photos to click on, graphical icons, and so on.
+Whenever you use an image as a link you should use two attributes on the image:
+
+alt = ”description of image or text on image ”: Use this to tell users who cannot see
+the image what the image is or what it says.
+
+title= ”where the link will take the user”: Use this to show users a tooltip that says
+where the link will take them; this is also used by screen readers.
+
+If you do not use CSS to control the border of images that are links (and set them to“ no
+border ” ), you should also add the border attribute:border=”0”. If you don’t use CSS to
+control borders or this attribute, you will get a border around the image in many browsers,
+which can look unsightly.
+
+=======================================
+
+-->

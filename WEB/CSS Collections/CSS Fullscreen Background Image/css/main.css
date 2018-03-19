@@ -1,0 +1,21 @@
+body,
+html {
+	min-height:100%;
+}
+
+body {
+	background-image:url("../img/nature.jpg");
+	background-repeat:no-repeat;
+	/*background-size:contain;*/
+	background-size:cover;
+}
+
+.top-header {
+	width:100%;
+	max-width:960px;
+	font:6em "Amatic SC", cursive;
+	color:#f0f0f0;
+	text-shadow: 2px 2px 5px #000000;
+	margin:40px auto;
+	text-align:center;
+}

@@ -1,0 +1,57 @@
+body {
+  font:1em 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  width:100%;
+  max-width:400px;
+}
+
+.accordion {
+  width:100%;
+  padding:0;
+  margin:0;
+  list-style-type:none;
+}
+
+.accordion-header {
+  display:block;
+  padding:15px 20px;
+  background:#abc;
+  color:#fff;
+  text-decoration:none;
+  font-size:1.2em;
+  text-transform:uppercase;
+  text-shadow:1px 1px 0 rgba(0, 0, 0, .1);
+  margin-bottom:5px;
+}
+
+.accordion-content p {
+  margin:20px;
+  text-align:justify;
+}
+
+.accordion-content p.inner {
+  margin:40px;
+  text-align:justify;
+  background-color:#eee;
+  padding:20px 30px;
+}
+
+/* hide content */
+.accordion-content {
+  padding:0;
+  height:0;
+  overflow:hidden;
+  /* transition effect */
+  -webkit-transition:height 400ms ease;
+  transition:height 400ms ease;
+}
+
+/* open content */
+.accordion-content:target {
+  /*height:auto;*/
+  padding:20px;
+  height:180px;
+  overflow-y:scroll;
+}

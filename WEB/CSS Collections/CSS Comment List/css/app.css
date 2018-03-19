@@ -1,0 +1,54 @@
+body {
+	font:  1em "Trebuchet MS", sans-serif;
+}
+
+.comments {
+	width:100%;
+	background:#eee;
+}
+
+.comment {
+	padding:10px 10px 0 10px; /* n - e - s - w */
+
+}
+
+.comment-reply {
+	margin-left:5%;
+}
+
+.comment:after {
+	content: "";
+	display: table;
+	clear:both;
+}
+
+/* comment image */
+.comment-image {
+	width:65px;
+}
+
+.comment-image img {
+	width: 50px;
+	border-radius:50px; 
+} 
+/* end comment image */
+
+.comment-image,
+.comment-body {
+	float:left;
+}
+
+/* comment body */
+.comment-body {
+	width:80%;
+}
+
+.comment-body p {
+	margin-top:10px;
+}
+
+.comment-info {
+	font-weight:bold;
+}
+/* end comment body */
+

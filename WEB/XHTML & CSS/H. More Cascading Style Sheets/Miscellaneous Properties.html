@@ -1,0 +1,129 @@
+<!-- 
+Miscellaneous Properties 
+===================================================================
+The cursor property
+The display property
+The visibility property
+===========================================================================================
+The cursor Property
+Thecursor property allows you to specify the type of mouse cursor that should be displayed to the
+user. For example, when an image is used for a submit button on a form, this property is often used to
+change the cursor from an arrow to a hand, providing a visual clue to users that they can click on it.
+===========================================================================================
+Value         |       Description
+===========================================================================================
+auto          |   Shape of the cursor depends on the context area it is over (a text cursor over text, a hand over a link, and so on).
+crosshair 	  |   A crosshair or plus sign. default Usually an arrow. 
+pointer       |   A pointing hand.
+move          |   A grasping hand (ideal if you are doing drag- and - drop script).
+===========================================================================================
+e-resize      |	  Indicate that an edge can be moved. For example, if you were stretching a box	
+ne-resize     |   with the mouse, these - resize cursor is used to indicate a movement starting from the southeast corner of the box.  
+nw-resize     |   
+n-resize      | 
+se-resize     |
+sw-resize     |
+s-resize      |
+w-resize      |
+text          | Similar to the vertical bar I.
+wait          | An hourglass.
+help          | A question mark or balloon, ideal for use over help buttons.
+<url>         | The source of a cursor image file.
+===========================================================================================
+
+-->
+<style type="text/css">
+	div.box {max-height:400px;min-height:200px;max-width:400px;max-height:200px;border:1px solid red;background-color:red;}
+	div.box {cursor:crosshair;}
+</style>
+<h3>The cursor Property</h3>
+<div class="box">
+	&nbsp;
+</div><hr>
+<!--
+===========================================================================================
+The display property can be used to force an element to be either a block - level or inline box. For
+example, to make an inline element such as a link into a block-level box you would use the following:
+a {display:block;}
+p {display:inline;}
+p {display:none;}
+==========================================================================
+Inline elements:
+==========================================================================
+1. respect left & right margins and padding, but not top & bottom
+2. cannot have a width and height set
+3. allow other elements to sit to their left and right.
+==========================================================================
+Block elements:
+==========================================================================
+1. respect all of those
+2. force a line break after the block element
+==========================================================================
+Inline-block elements:
+==========================================================================
+1. allow other elements to sit to their left and right
+2. respect top & bottom margins and padding
+3. respect height and width
+==========================================================================
+-->
+<style type="text/css">
+	p.a { width:100px;height:100px;border:1px solid black;background-color:green; }
+	p.b { width:100px;height:100px;border:1px solid black;background-color:green; }
+	p.c { width:100px;height:100px;border:1px solid black;background-color:green; }
+	p.a {display:block;}
+	p.b {display:inline;}
+	p.c {display:inline-block;}
+	p.n {display:none;}
+	div.b {max-width:500px;min-width:10px;border:1px solid red;}
+</style>
+<h3>The display property</h3>
+<div class="b">
+	<p class="a">display:block</p>
+	<p class="a">display:block</p>
+	<p class="a">display:block</p><hr>
+	<p class="b">display:Inline</p>
+	<p class="b">display:Inline</p>
+	<p class="b">display:Inline</p><hr>
+	<p class="c">display:Inline-block</p>
+	<p class="c">display:Inline-block</p>
+	<p class="c">display:Inline-block</p><hr>
+	<p class="n">Display none</p>
+</div>
+<!-- 
+=============================================================================================
+The visibility Property
+The visibility property allows you to hide a box from view.
+=============================================================================================
+When you give the visibility property
+a value of hidden you do not see the content of the element, but it still affects the layout of the page (it takes up the same amount of space that it would if you could see the element on the page — if you want
+to make something disappear without taking up space you should use the display property that you just met in the previous section). A common use of the visibility property would be to hide error
+messages that are displayed only if the user needs to see them. Thevisibility property can also take a value ofvisible to show the element (which is the default state for all elements).
+=============================================================================================
+Value       |       Purpose
+=============================================================================================
+visible     |   The box and its contents are shown to the user (the default state for all elements).
+hidden      |   The box and its contents are made invisible, although they still affect the layout of the page.
+=============================================================================================
+-->
+<style type="text/css">
+	p.invisible {visibility:hidden;}
+</style>
+<body>
+ <p> Here is a paragraph of text. </p>
+ <p> Here is a paragraph of text. </p>
+ <p class="invisible">This paragraph of text should be invisible.</p>
+ <p> Here is a paragraph of text. </p>
+</body>
+<!--
+=============================================================================================
+
+
+
+
+
+
+
+
+
+
+

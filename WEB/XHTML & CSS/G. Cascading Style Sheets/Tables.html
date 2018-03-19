@@ -1,0 +1,276 @@
+<!-- 
+Tables
+==================================================================================================
+The border-collapse Property
+The border-spacing Property
+The empty-cells Property
+The caption-side Property
+The table-layout Property
+==================================================================================================
+border to set the properties of the border of a table.
+__________________________________________________________________________________________________
+padding to set the amount of space between the border of a table cell and its content — this
+__________________________________________________________________________________________________
+property is very important to make tables easier to read. 
+__________________________________________________________________________________________________
+Properties to change text and fonts.
+__________________________________________________________________________________________________
+text-align to align writing to the left, right, or center of a cell.
+__________________________________________________________________________________________________
+vertical-align to align writing to the top, middle, or bottom of a cell.
+__________________________________________________________________________________________________
+width to set the width of a table or cell.
+__________________________________________________________________________________________________
+height to set the height of a cell (often used on a row as well).
+__________________________________________________________________________________________________
+background-color to change the background color of a table or cell.
+__________________________________________________________________________________________________
+background-image to add an image to the background of a table or cell.
+==================================================================================================
+Definition and Usage
+The <caption> tag defines a table caption.
+The <caption> tag must be inserted immediately after the <table> tag.
+Note: You can specify only one caption per table.
+Tip: By default, a table caption will be center-aligned above a table. However, the CSS properties text-align and caption-side can be used to align and place the caption.
+-->
+<style type="text/css">
+body {color:#000000; background-color:#ffffff;}
+h1 {font-size:18pt;}
+p {font-size:12pt;}
+table {
+ background-color:#efefef;
+ width:350px;
+ border-style:solid;
+ border-width:1px;
+ border-color:#999999;
+ font-family:arial, verdana, sans-serif;
+}
+caption {
+ font-weight:bold;
+ text-align:center;
+ border-style:solid; border-width:1px; border-color:#666666;
+ color:#666666;
+}
+th {
+ height:50px;
+ font-weight:bold;
+ text-align:left;
+ background-color:#cccccc;
+}
+td, th {padding:5px;}
+td.code {
+ width:150px;
+ font-family:courier, courier-new, serif;
+ font-weight:bold;
+ text-align:left;
+ vertical-align:top;
+}
+</style>
+<h3>Table</h3>
+<table>
+	<caption>Font properties</caption>
+	<tr>
+		<th>Property</th>
+		<th>Purpose</th>
+	</tr>
+	<tr>
+		<th>font-family</th>
+		<td class="code">Specifies the font used</td>
+	</tr>
+	<tr>
+		<th>font-size</th>
+		<td class="code">Specifies the size of the font used</td>
+	</tr>
+	<tr>	
+		<th>font-style</th>
+		<td class="code">Specifies whether the font should be normnal, italic, or oblique</td>
+	</tr>	
+	<tr>
+		<th>font-weight</th>
+		<td class="code">Specifies whether the font should be normal, bold, bolder, or lighter</td>
+	</tr>	
+</table><hr>
+<!--
+==================================================================================================
+The border-collapse Property
+==================================================================================================
+Value                 |    Purpose
+==================================================================================================
+collapse              |    Horizontal borders will be collapsed and vertical borders will abut one another.
+separate              |    Separate rules are observed. This value opens up additional properties to give you further control.
+==================================================================================================
+-->
+
+<style type="text/css">
+	table.one {border-collapse:collapse;}
+	table.two {border-collapse:separate;}
+	td.a {border-style:dotted; border-width:3px;border-color:#000000;padding:10px;}
+	td.b {border-style:solid; border-width:3px;border-color:#333333;padding:10px;}
+</style>
+<h3>The border-collapse Property</h3>
+<table class="one">
+	<tr>
+		<td class="a">Cell A collapse</td>
+		<td class="b">Cell B collapse</td>
+	</tr>
+</table>
+<table class="two">
+	<tr>
+		<td class="b">Cell B collapse</td>
+		<td class="a">Cell A collapse</td>
+	</tr>
+</table>
+<hr>
+<!-- 
+==================================================================================================
+The border-spacing Property
+The border-spacing property specifies the distance that separates adjacent cells ’ borders. If you
+provide one value, it will apply to both vertical and horizontal borders:
+
+-->
+<h3>The border-spacing Property</h3>
+<style type="text/css">
+	table.one1 {border-spacing:15px;}
+	table.two2 {border-spacing:2px 4px;}
+</style>
+	<table class="one1">
+		<tr>
+			<td>Cell A</td>
+			<td>Cell B</td>			
+		</tr>
+		<tr>
+			<td>Cell C</td>
+			<td>Cell D</td>
+		</tr>
+	</table>
+	<table class="two2">
+		<tr>
+			<td>Cell A</td>
+			<td>Cell B</td>			
+		</tr>
+		<tr>
+			<td>Cell C</td>
+			<td>Cell D</td>
+		</tr>
+	</table><hr>
+<!--
+==================================================================================================
+The empty-cells Property
+The empty-cells property indicates whether a cell without any content should have a border
+displayed. It can take one of three values, as you can see in the table that follows.
+==================================================================================================
+Value             |      Purpose
+==================================================================================================
+show              |  Borders will be shown even if the cell is empty (this is the default value).
+hide              |  Borders will be hidden if cell is empty.
+inherit           |  Borders will obey the rules of the containing table (only of use in nested tables).
+==================================================================================================
+
+-->
+<style type="text/css">
+	table.t {
+		width:350px;
+		border-collapse:separate;
+		empty-cells:hide;
+	}
+	td.h {padding:5px;
+		border-style:solid;
+		border-width:1px;
+		border-color:#999999;
+	}
+</style>
+
+<h3>The empty-cells Property</h3>
+<table class="t">
+	 <tr>
+		 <th> </th>
+		 <th>Title one</th>
+		 <th>Title two</th>
+	 </tr>
+	 <tr>
+		 <th>Row Title</th>
+		 <td class="h"> value </td>
+		 <td class="h"> value </td>
+	 </tr>
+	 <tr>
+	 	<th>Row Title</th>
+		 <td class="h"> value </td>
+		 <td class="h"> </td>
+	 </tr>
+ </table><hr>
+<!--
+==================================================================================================
+The caption-side Property
+Thecaption-side property is for use with the <caption> element to indicate on which side of the
+table the caption should go. The following table lists the possible values.
+==================================================================================================
+Value           |    Purpose
+==================================================================================================
+top             |  The caption will appear above the table (the default).
+right           |  The caption will appear to the right of the table.
+bottom          |  The caption will appear below the table.
+left            |  The caption will appear on the left side of the table.
+==================================================================================================
+
+-->
+<style type="text/css">
+	caption.cpt {caption-side:bottom;}
+</style>
+<h3>The caption-side Property</h3>
+<table>
+	<caption class="cpt">Font properties</caption>
+	<tr>
+		<th>Property</th>
+		<th>Purpose</th>
+	</tr>
+	<tr>
+		<th>font-family</th>
+		<td class="code">Specifies the font used</td>
+	</tr>
+	<tr>
+		<th>font-size</th>
+		<td class="code">Specifies the size of the font used</td>
+	</tr>
+	<tr>	
+		<th>font-style</th>
+		<td class="code">Specifies whether the font should be normnal, italic, or oblique</td>
+	</tr>	
+	<tr>
+		<th>font-weight</th>
+		<td class="code">Specifies whether the font should be normal, bold, bolder, or lighter</td>
+	</tr>	
+</table><hr>
+<!-- 
+The table-layout Property
+When you specify a width for a table or table cell, but the content does not fit into the space you have
+allowed, a browser can give the table more space to fit the content. 
+==========================================================================================================
+Value                |               Purpose
+==========================================================================================================
+auto                 | The browser looks through the entire table for the widest unbreakable content in the cells. This is slower at rendering, but more useful if you do not know the exact size of each column. This is the default value.
+fixed                | The width of a table cell only depends on the widths you specified for the table and its cells. This speeds up rendering.
+inherit              | Will obey the rules of the containing table (only of use in nested tables).
+==========================================================================================================
+-->
+<style type="text/css">
+	table.j {width:75px;}
+	table.k {width:75px;}
+	table.j {table-layout:auto;}
+	table.k {table-layout:fixed;}
+	td {
+		 padding:5px;
+		 border-style:solid;
+		 border-width:1px;
+		 border-color:#999999;
+	}
+</style>
+<table class="j">
+	 <tr>
+	 	<td>ABCDEFGHIJKLMNOPQRSTUVW XYZ</td>
+	 </tr>
+ </table>
+ <table class="k">
+	 <tr>
+	 	<td>ABCDEFGHIJKLMNOPQRSTUVW XYZ</td>
+	 </tr>
+ </table>

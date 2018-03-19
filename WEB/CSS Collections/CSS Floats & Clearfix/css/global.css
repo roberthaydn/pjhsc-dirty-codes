@@ -1,0 +1,34 @@
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: block;
+}
+
+.clearfix:after {
+	clear:both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.container {
+	 background:#ccc;
+}
+
+.box {
+	width:100px;
+	height:100px;
+	background:#222;
+	color:#fff;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}

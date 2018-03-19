@@ -1,0 +1,197 @@
+<!-- 
+Developing for mobile devices
+=======================================================================================================
+Understanding the Medium and How It Is Used
+=======================================================================================================
+Context: What the user is doing when using a mobile phone
+Relationship: How people treat their mobile phone
+Capabilities: The features and capabilities of mobile phones compared with desktop computers
+=======================================================================================================
+Context: What Is the Mobile User Doing?
+=======================================================================================================
+Mobile devices are being used on the move, often in a hurry, and sometimes one - handed. The result is
+that when mobile phones are used to access the Web, they are often used to achieve very different things
+than the same user might want to achieve in front of a desktop computer.
+=======================================================================================================
+Relationship: How Do Users Treat Their Mobile Phones?
+=======================================================================================================
+It is also worth comparing the relationship that people have with their mobile phones compared with
+desktop computers. It is far more common for people to have their own mobile phones whereas desktop
+computers are often shared between members of a family, or used at work and schools. This means that
+people have a more personal relationship with their mobile phones. It also means that it is possible to
+more accurately uniquely identify users and personalize services to them.
+=======================================================================================================
+=======================================================================================================
+Capabilities: How Do Features of Mobiles Compare with Desktop PCs?
+=======================================================================================================
+=======================================================================================================
+Allow for location specific services: Because they can use triangulation or (where installed)
+GPS to identify location of users.
+===
+Have a built-in payment system: Whether on contract or a pay-as-you-go scheme, the payment
+is integrated more than a desktop computer where a user must enter credit card information or
+set up an account with a service such as PayPal. The payment system is also available to those
+who are not old enough to have debit and credit cards. It has also been suggested that mobile
+phone owners are more used to (and willing to) pay for services accessed via their mobile than
+they are to pay for services accessed via a desktop computer.
+===
+Have a built-in camera: Only a handful of desktop machines will have a camera built in,
+and those that do are still used in a desk-based setting (rather than being carried around all
+the time).
+===
+Are integrated with voice data: Because they are phones as well, and although services such as
+Skype allow phone calls to be made through a computer, it is not inherent in the platform.
+Have other features: Such as SMS and MMS, which some users (particularly in Europe)
+use often.
+===
+Slower connection speeds: The connection speeds of mobile phones consistently trail behind
+those offered by broadband connections.
+===
+Connection can be intermittent: As users move about, for example when traveling in more
+isolated rural areas, or when going through tunnels in cities, their connection can be cut.
+===
+Screen are usually smaller: Because screens are small, it is not possible for users to scan as
+much information to find out what they are looking for.
+===
+Input devices are harder to use: Although many mobile users are adept at using their mobile
+phones, they are unlikely to achieve the same speed and accuracy of data input that they would
+achieve with a keyboard and mouse.
+===
+Less control over appearance: Several phones will remove your choice of font, size of text, and
+background images to show them in a manner they see fit for the device.
+=======================================================================================================
+How to Approach Mobile Development
+=======================================================================================================
+Just have one main web site (no separate mobile site)
+Provide a different view of the content on your site to those with mobile phones
+Create an entirely new site for mobile users
+=======================================================================================================
+Provide an Alternative View of Your Site
+=======================================================================================================
+The first approach is to add a second style sheet to the same pages, so that mobile devices can use a
+separate set of CSS rules to control how the pages appear to them:
+=====
+ <link href="mobile.css" rel="stylesheet" type="text/css" media="handheld"/>
+=====
+This can help you use a different layout, change the dimensions of the page, and attempt to control
+colors and sizes of fonts.
+=====
+Unfortunately, not all phones know to take this version of the style sheet, and those that do still have to
+download a page that is the same file size as the pages created for desktop computers (which means that
+they may take a long time to download).
+=====
+ I have seen style sheets for handheld devices that try to hide parts of the page (setting the CSSdisplay
+property on those elements tonone ), which has the advantage that it makes the interface simpler,
+although it does not make the file size smaller.
+=====
+The second approach is to use a different set of templates when someone arrives at your site via a mobile
+device. Rather than just using a new style sheet, some companies will use the same content, but design
+new pages to hold the information.
+====
+This approach allows a lot more flexibility because you can change the order in which items appear. You
+can also entirely remove some parts of the page (such as advertisements and secondary navigation), and
+therefore reduce bandwidth needed to load the pages.
+====
+Still, both of these methods still fail to address the context in which the phone is being used.
+=======================================================================================================
+Create a Separate Mobile-Optimized with Its Own Content
+=======================================================================================================
+If you have the resources available, users will often benefit from a site being specifically designed for use
+on a mobile phone. It allows you to address the requirements of users who are on the go (which are often
+different from those of a desktop PC user) and to understand the context in which visitors to your site
+use these devices.
+=======================================================================================================
+Languages for Creating Mobile Web Sites
+===
+Technically speaking, they tend to support one of two subsets of XHTML known as XHTML - Mobile
+Profile and XHTML Basic. A good rule of thumb, however, is just to stick to the most common XHTML
+features and then most phones will be able to handle it. Here is the DOCTYPE declaration for XHTML -
+ Mobile Profile:
+===
+<!DOCTYPE html PUBLIC “-//WAPFORUM//DTD XHTML Mobile 1.0//EN"
+ “http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >
+===
+While there is not enough space in this book to cover all the differences between XHTML - MP and
+XHTML, there are several resources on the Web that can help you with this, such as the Openwave
+developer’ s reference:
+===
+http://developer.openwave.com/documentation/xhtml_mp_css_reference/
+=======================================================================================================
+Design Tips
+===
+Content
+===
+ [•] Use clear concise language. Content should be available in small bite - size chunks that are easy to digest.
+
+ [•] Use semantic markup, such as headings in <hn> elements, paragraphs in <p> elements, and so on.
+
+ [•] User fewer images and graphics to save on download speeds.
+
+ [•] Consider using the title of pages to indicate the action that a user should take.
+===
+Color
+===
+ [•] Ensure that there is sufficient contrast in your designs.
+
+ [•] Avoid using backgrounds.
+===
+Navigation
+===
+[•] Consider having the main navigation on the homepage only (with a link back to the homepage
+	on every other page), or if you do have a navigation bar at the top of every page, have the
+	minimum number of options you can.
+
+[•] At the end of each page have home and back links, but don ’ t repeat the links that appear on the
+	bottom of the site used by desktop visitors (such asabout, help , andfaq ).
+===
+Links
+===
+[•] Stick to black text and blue links, and avoid using other colors for links. Remember that many
+ 	mobile phones are used outside where screens can be harder to read.
+
+[•] Make it clear which link is active because it is harder to get the right link.
+
+[•] For phones, while iPhone and the Mobile Opera browser automatically determine phone
+ 	numbers, you can put phone numbers in <a> tags, with thehref attribute starting with tel:
+
+ 	<a href="tel:+44 (0) 208 208 2080" > +44 (0) 208 208 2080 </a>	
+===
+Forms
+===
+Consider using links instead of form controls.
+
+ [•] Do not mask passwords. The use of dots or asterisks on password inputs was to prevent people
+	 looking over the shoulder of the user from seeing the password entered; this is not so much of
+	 an issue on mobile devices (and it is easier to make mistakes when typing on a mobile device).
+
+[•] If you have fields that only allow numbers (such as quantity fields), only allow people to enter
+	numbers into these form fields (this technique is sometimes known as an input mask).
+
+[•] Avoid logins unless absolutely necessary.
+
+============
+Testing
+============
+
+ With the number of mobile devices available today, no one would expect you to test a mobile site on
+every available phone. Some developers choose to run a few phones with varying capabilities (switching
+one SIM card between them), but you can always ask friends to see if they can access a site for you and
+show you what it looks like on their phones.
+
+ You can also use the following emulators, which mimic the abilities of phones:
+
+ [•] dotMobi emulator — simulates Sony Ericsson K750 and Nokia N70 (http://mtld.mobi/emulator.php)
+ [•] Opera Mini Simulator ( www.operamini.com/ )
+ [•] Nokia Mobile Browser Simulator ( www.forum.nokia.com/)
+ [•] Openwave phone simulator (http://developer.openwave.com/dvl/tools_and_sdk/phone_simulator/)
+ [•] iPhoney (www.marketcircle.com/iphoney/ )
+ [•] Blackberry (http://na.blackberry.com/eng/developers/resources/simulators.jsp )
+
+
+
+
+
+
+
+
+-->

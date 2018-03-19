@@ -1,0 +1,136 @@
+<!-- 
+The position Property
+==
+The position property -> allows you to specify how you want to control the position for a box
+=============================================================================================================================
+Value               |           Meaning
+=============================================================================================================================
+static  			| This is the same as normal flow, and is the default, so you will rarely (if ever) see it specified.
+relative 			| The position of the box can be offset from where it would be if it were left in normal flow.
+absolute 			| The box is positioned exactly using x and y coordinates from the top-left corner of the containing element.
+fixed  				| The position is calculated from the top-left corner of a browser window and does not change position if the user scrolls the window.
+=============================================================================================================================
+==
+Box Offset Properties
+=============================================================================================================================
+As you'll see in the coming sections, when box	position: relative;
+	top:100px;es have aposition property whose value is relative,
+absolute , orfixed , they will also usebox offset properties to indicate where these boxes should be
+positioned. The table that follows lists thebox offset properties.
+=============================================================================================================================
+Property  Meaning
+==================================================================================================
+top     | Offset position from the top of the containing element
+left    | Offset position from the left of the containing element
+bottom  | Offset position from the bottom of the containing element
+right   | Offset position from the right of the containing element
+==================================================================================================
+Each can take a value of a length, a percentage, or auto . Relative units, including percentages, are
+calculated with respect to the containing boxes ’ dimensions or properties.
+
+Relative Positioning
+The value of the box offsets is most commonly given in pixels or a percentage.
+-->
+<style type="text/css">
+	p {
+	border-style:solid;
+	 border-color:#000000;
+	 border-width:2px;
+	 padding:5px;
+	 background-color:#FFFFFF;
+	 width:270px;	
+	}
+	p.a {
+	 position:relative;
+	 background-color:yellow;
+	}
+
+	p.b {
+	 position:relative;
+	 left: 40px;
+	 top: -110px;
+	 width:270px;
+	 background-color:red;
+	}
+</style>
+<h3>Relative Positioning</h3>
+<p class="a">Relative positioning allows you to move a box in relation to where it would appear in normal flow. For
+example, you might move a box 30 pixels down from where it would appear in normal flow.</p>
+
+<p class="b">Relative positioning allows you to move a box in relation to where it would appear in normal flow. For
+example, you might move a box 30 pixels down from where it would appear in normal flow.</p>
+
+
+<hr>
+<!--
+Absolute Positioning
+Absolute positioning takes an element out of normal flow, allowing you to fix its position. You can
+specify that an element ’ s content should be absolutely positioned by giving it theposition property
+with a value ofabsolute ; then you use the box offset properties to position it where you want.
+
+==================================================================================================
+
+-->
+
+<style type="text/css">
+	div.page {
+	 position:absolute;
+	 left:50px;
+	 top: 420px;
+	 border-style:solid; border-width:2px; border-color:#000000;}
+	p {
+	 background-color:#FFFFFF;
+	 width:200px;
+	 padding:5px;
+	 border-style:solid; border-color:#000000; border-width:2px;}
+	p.two {
+	 position:absolute;
+	 left:50px;
+	 top: 350px;
+	}
+</style>
+<h3>Absolute positioning</h3>
+
+<div class="page"><b>DIV - ONE Absolute positioning takes an element out of normal flow, allowing you to fix its position. You can
+specify that an element's content should be absolutely positioned by giving it theposition property
+with a value ofabsolute; then you use the box offset properties to position it where you want.</b></div>
+
+<p>ONE Paragraph - Absolute positioning takes an element out of normal flow, allowing you to fix its position. You can
+specify that an element's content should be absolutely positioned by giving it theposition property
+with a value ofabsolute; then you use the box offset properties to position it where you want.</p>
+
+<p class="two">TWO Paragraph - Absolute positioning takes an element out of normal flow, allowing you to fix its position. You can
+specify that an element's content should be absolutely positioned by giving it theposition property
+with a value ofabsolute;then you use the box offset properties to position it where you want.</p><br><br><hr>
+
+<!--
+==================================================================================================
+Fixed Positioning
+The final value you need to be aware of for theposition property is the valuefixed . This value
+specifies that the content of the element should not only be completely removed from normal flow, but
+also that the box should not move when users scroll up or down a page.
+-->
+<style type="text/css">
+	div.header {
+	 position:fixed;
+	 top: 0px;
+	 left:0px;
+	 width:100%;
+	 padding:20px;
+	 font-size:28px;
+	 color:#ffffff; background-color:#666666;
+	 border-style:solid; border-width:2px; border-color:#000000;
+	}
+	p.u {
+	 width:300px;
+	 padding:5px;
+	 color:#000000; background-color:#FFFFFF;
+	 border-style:solid; border-color:#000000; border-width:2px;
+	}
+	p.x {margin-top:100px; }
+</style>
+
+<h3>Fixed Positioning</h3>
+<p>The final value you need to be aware of for the position property is the valuefixed . This value
+specifies that the content of the element should not only be completely removed from normal flow, but
+also that the box should not move when users scroll up or down a page.</p>

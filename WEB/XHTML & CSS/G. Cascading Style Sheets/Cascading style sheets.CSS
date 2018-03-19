@@ -1,0 +1,129 @@
+/*
+Cascading style sheets (or CSS for short) to take control of the style
+of your pages, including the colors and size of fonts, the width and colors of lines, and the amount of
+space between items on the page. 
+
+You can create a CSS style sheet in the same editor you are using to create your XHTML pages; once you
+have created a CSS file it is saved with the file extension .css.
+
+Introducing CSS
+
+CSS works by allowing you to associaterules with the elements that appear in a web page.
+
+The selector -> which indicates which element or elements the declaration applies...
+The declaration -> which sets out how the elements referred to in the selector should be styled.
+=================================================================================================
+
+/* This is a comment */
+/* Style sheet for ch07_eg01.html 
+
+td -> Selector
+{ width:360px; } -> Declaration
+width -> Property
+Value -> Value
+*/
+td { width:360px; }
+/*=================================================================================================
+A comma separates the name of each element that this rule will apply to. */
+
+h1, h2, h3 {
+ font-weight:bold;
+ font-family:arial;
+ color:#000000;
+ background-color:#FFFFFF;
+}
+/*=================================================================================================
+External Link 
+<link rel="stylesheet" type="text/css" href="ch07_eg01.css" />
+
+Internal Style
+<style type="text/css">
+  --Code goes here
+</style>
+=================================================================================================*/
+/*It specifies that the default color of any
+text and lines used on the page will be black and that the background of the page should be in white.
+The colors here are represented using a hex code It also states that typeface used throughout the document should be Arial. If Arial
+is not available, Verdana will be used instead; failing that, it will use its default font group that
+corresponds to that generic font group.*/
+
+body {
+ color: #000000;
+ background-color:#ffffff;
+ font-family:arial, verdana, sans-serif; 
+}
+/*=================================================================================================
+Specify the size of the contents of the <h1> and <p> elements */
+
+h1 { font-size:18pt; }
+p { font-size:12pt; }
+
+/* pt stands for points
+=================================================================================================
+Manipulating selector */
+
+table {
+	background-color:#efefef;
+	border-style:solid;
+	border-width:1px;
+	border-color:#999999;
+}
+
+/*or*/
+
+table {
+	border:1px solid #999999;
+}
+
+th {
+	background-color:#cccccc;
+	font-weight:bold;
+	padding:5px;
+}
+
+/* =================================================================================================
+Inheritance
+One of the powerful features of CSS is that, when a property has been applied to one element */
+/* Selector td and a Class code */
+td.code {
+ font-family:courier, courier-new, serif;
+ font-weight:bold;
+}
+
+<td class="code">font-size</td>
+
+/* =================================================================================================
+Where You Can Add CSS Rules
+CSS rules can also appear in two places inside the XHTML document
+<head>
+ <title>Internal Style sheet< title>
+ <style type="text/css">
+ body {
+	 color:#000000;
+	 background-color:#ffffff;
+	 font-family:arial, verdana, sans-serif; 
+ }
+ h1 { font-size:18pt; }
+ p { font-size:12pt; }
+ </style>
+ </head>
+=================================================================================================
+Inline style rules
+<td style="font-family:courier; padding:5px; border-style:solid;border-width:1px; border-color:#000000;">
+=================================================================================================
+The <link> Element
+<link> - The user does not have to click anything to activate the link.
+
+<link rel="stylesheet" type="text/css" href="../CSS/interface.css"/>
+
+The rel Attribute ==> rel="stylesheet"
+The type Attribute ==> type="text/css"
+The href Attribute ==> href="../stylesheets/interface.css"
+The hreflang Attribute ==> hreflang="en-US"
+
+=================================================================================================
+
+
+
+*/
+

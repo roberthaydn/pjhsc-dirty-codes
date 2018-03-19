@@ -1,0 +1,46 @@
+<!-- 
+The article Element
+
+The <article> element should contain a piece of self-contained content that could be distributed outside the context of the page. This includes things like news articles, blog posts, or user comments.
+-->
+<article>
+  <header>
+    <h1>Blog Post Title</h1>
+    <p>Posted 13th February 2014</p>
+  </header>
+  <p>
+    ...
+  </p>
+</article>
+<!-- 
+You can nest <article> elements within one another. In this case it’s implied that the nested elements are related to the outer <article> element.
+-->
+
+<article>
+  <header>
+    <h1>Blog Post Title</h1>
+    <p>Posted 13th February 2014</p>
+  </header>
+  <p>...</p>
+  <p>...</p>
+  <p>...</p>
+  <section>
+    <h2>Comments</h2>
+    <article>
+      <footer>
+        <p>Posted by: Joe Balochio</p>
+      </footer>
+      <p>This was a great article</p>
+    </article>
+    <article>
+      <footer>
+        <p>Posted by: Casey Brock</p>
+      </footer>
+      <p>How do you think this applies to the plan for world domination?</p>
+    </article>
+  </section>
+</article>
+
+<!-- 
+In this example we’ve used <article> elements to mark up the blog post, and each of the comments. This nesting pattern implies that the comments are related to the topic of the main blog post.
+-->

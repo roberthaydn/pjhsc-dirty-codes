@@ -1,0 +1,148 @@
+<!-- 
+Design Issues
+=========================================================
+	Typography
+	Navigation
+	Tables
+	Forms
+=========================================================
+Typography
+=========================================================
+
+ [•] Line length
+ [•] Relationship between sizes of letters
+ [•] Gaps between lines
+ [•] Spaces between letters and words
+ [•] Careful chunking
+ [•] Contrast
+ [•] Choice of fonts
+
+===
+Legible: Text is legible if it is recognizable; for example, when a font gets too small it may no longer be legible.
+===
+Readable: Text is readable if it is comfortable to read it for many minutes (without strain or difficulty).
+===
+Line Length — A Measure
+A measure is the name typographers give to the number of characters in a single line of text. 
+ 
+ [•] body text is considered to be 50-60 characters. or 45 and 75 characters.
+ [•] narrow column, your measure should be less — around 30 to 50 characters.
+
+===
+Font Sizes
+8pt 9pt 10pt 11pt 12pt 14pt 18pt 24pt 36pt 48pt 60pt 72pt
+
+	body {font-size: 12px;}
+	h1 {font-size: 24px;}
+	h2 {font-size: 18px;}
+	h3 {font-size: 16px;}
+	h4 {font-size: 14px;}
+=======================================================
+using PERCENTAGE
+=======================================================
+body {font-size: 75%;} /* 16 x .075 = 12 */
+h1 {font-size: 200%;}  /* 12 x 2 = 24 */
+h2 {font-size: 150%;}  /* 12 x 1.5 = 18 */
+h3 {font-size: 133%;}  /* 12 x 1.333 = 16 */
+h4 {font-size: 116%;}  /* 12 x 1.16 = 14 */
+=======================================================
+using EM
+=======================================================
+body {font-size: 100%;}  /* ensure IE scales correctly */
+p {font-size: 0.75em;}   /* 16 x 0.75 = 12 */
+h1 {font-size: 1.5em;}   /* 16 x 1.5 = 24 */
+h2 {font-size: 1.3em;}   /* 16 x 1.125 = 18 */
+h3 {font-size: 0.875em;} /* 16 x 0.875 = 14 */
+
+p {
+	font-size:1px;
+	font-size:1em;
+	font-size:1%;
+	font-size:1rem;
+}
+
+http://pxtoem.com/ <- Pixel to EM
+=======================================================
+Choosing Fonts
+=======================================================
+Sans-serif:  Arial, Helvetica, Verdana
+Serif:       Times, Times New Roman, Georgia
+Monospace:   Courier, Courier New
+=======================================================
+Line Height — Leading
+=======================================================
+is the vertical space between lines of text. Text sits on a baseline, and the
+height of letters such as a, e, and x are collectively known as the x height. The parts of letters that drop.
+(1.5 em is a good starting point.)
+
+=======================================================
+******************** CSS Resets ***********************
+=======================================================
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+=======================================================
+Space Between Letters —Tracking
+=======================================================
+Tracking is the term typographers use to describe the space between letters. You can control the space
+between letters using theletter - spacing property in CSS.
+
+For paragraphs of text in sentence case (where capitalization is the same as a normal sentence), you
+should not need to change the spacing between letters. (In fact, doing so may harm legibility.)
+
+This feature can, however, be particularly helpful when dealing with headings or text that is
+all uppercase. This is because text in capital letters is harder to read than text in sentence case;
+in such cases giving the letter - spacing property a value of 0.1em can help improve legibility
+(ch10_eg08.html).
+
+ex. h1.header_spacing { letter-spacing:0.1em; }
+=======================================================
+White Space
+=======================================================
+White space, ornegative space , is the name given to the space between elements on a page, but it does not
+have to be white; it just signifies the gaps between items on the page.
+
+[•] Macro white space is the space between the large elements on the page.
+[•] Micro white space is the amount of space between things such as text, headings, and list items.
+=======================================================
+Chunking
+=======================================================
+[•] Chunking, or grouping items together, is a very helpful tool in design. 
+[•] uses lines to indicate where groups of information sit together.
+=======================================================
+Contrast
+=======================================================
+It is very important to have enough contrast between any type and the background it is sitting on. It is not
+only people with color blindness and other visual impairments who suffer when there ’ s a lack of contrast.
+Those with a bad monitor, or sunlight on their screens, may have more difficulty reading the content.
+
+very good tool for checking contrast: www.snook.ca/technical/colour_contrast/colour.html 
+=======================================================
+
+
+
+
+
+-->

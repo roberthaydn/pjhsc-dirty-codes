@@ -1,0 +1,57 @@
+/* main nav */
+nav {
+  width:1000px;
+}
+
+nav ul li {
+  float:left;
+  padding:7px 22px 12px;
+  list-style-type:none;
+  border-left:1px dashed #dadada;
+  position:relative;
+}
+
+/* removed first child border(nav ul li) */
+nav ul li:nth-child(1) {
+  border-left:none;
+}
+
+nav ul li ul {
+  display:none;
+}
+
+nav ul li a {
+  text-decoration:none;
+  color:#666;
+}
+
+/* hover pop up sub nav */
+nav ul li:hover > ul {
+  display:block;
+  position:absolute;
+}
+
+nav ul {
+  padding: 0;
+}
+
+/* sub nav ul */
+nav ul li ul {
+  left:0;
+  width:403px;
+  margin-top:12px; 
+  padding-top:10px;
+  box-shadow:0 1px 1px rgba(85, 85, 85, 0.75);
+  border-top:1px dashed #dadada;
+}
+
+/* sub nav li */
+nav ul li ul li {
+  width:143px;
+  border:0;
+}
+
+.align-right {
+  left:auto;
+  right:0px;
+}

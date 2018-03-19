@@ -1,0 +1,43 @@
+<!--
+The Z-index Property
+Elements positioned using absolute and relative positioning often overlap other elements. When this
+happens the default behavior is to have the first elements underneath later ones. This is known as
+stacking context . You can specify which of the boxes appears on top using thez - index property. If you
+are familiar with graphic design packages, the stacking context is similar to using the“ bring to top " and
+ “ send to back " features
+
+ -->
+<style type="text/css">
+	p {
+	 width:200px;
+	 background-color:#ffffff;
+	 padding:5px; margin:10px;
+	 border-style:solid; border-color:#000000; border-width:2px;
+	}
+	p.one {
+	 z-index:3;
+	 position:absolute;
+	 left:0px; top:0px;
+	}
+	p.two {
+	 z-index:1;
+	 position:absolute;
+	 left:150px; top: 25px;
+	}
+	p.three {
+	 z-index:2;
+	 position:absolute;
+	 left:40px; top:35px;
+	}
+	p.p {background-color:yellow;}
+</style>
+<p class="p">paragraph</p>
+<p class="p">paragraph</p>
+<p class="p">paragraph</p>
+<p class="p">paragraph</p>
+<p class="p">paragraph</p>
+<p class="p">paragraph</p>
+<p class="p">paragraph</p>
+<p class="one">Here is paragraph <b>one</b>. This will be at the top of the page.</p>
+<p class="two">Here is paragraph <b>two</b>. This will be underneath the other elements.</p>
+<p class="three">Here is paragraph <b>three</b>. This will be at the bottom of the page.</p>

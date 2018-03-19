@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Em vs Rem</title>
+	<style type="text/css">
+		html {
+			font:100px helvetica, monospace, serif;
+		}
+		p {
+			font-size:12px;
+		}
+		.em {
+			font-size: 0.5em;
+		}
+		.rem {
+			font-size: 0.5rem;
+		}
+	</style>
+</head>
+<body>
+<p>
+	All "rem" nodes should have font-size:50px (100px & times; 0.2em), equal to the first "em node"
+</p>
+<div class="em">
+em
+	<div class="em">
+	em
+		<div class="em">
+		em	
+		</div>
+	</div>
+</div>
+
+<div class="rem">
+rem
+	<div class="rem">
+	rem
+		<div class="rem">
+		rem	
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!--
+Page Layout
+
+=> site map === you can group the information into related chunks and create.
+=> page layout === which involves the arrangement of the information on your pages.
+===========================================================================================
+Understanding the aims of the site correctly, and getting the information to fulfill these aims.
+Grouping the information into “ elements " (such as logos, navigation, product information, contact information, and so on)
+Creating a site map, which shows how many pages you need and how they relate.
+Deciding how to positioning the various elements within the page.
+How to use CSS to position the elements on the page.
+Developing for mobile phones.
+===========================================================================================
+Understanding the Site’s Audience
+===========================================================================================
+Who? Who will visit the site?
+Why? Why have they come to your site? They probably want to achieve something. 
+What? What sort of information do you think they would expect to find in order to satisfy their reason for coming to the site?
+How often? How often can you realistically expect them to visit?
+===========================================================================================
+>>> Who Will Visit the Site? 
+
+Throughout the design process, you must keep one thing in mind: You need to design the page for the
+target audience of the site — not just yourself or the site owner.
+
+Some of the following questions will help you define your target audience.
+ [•] What is the age range of your target audience?
+ [•] Will your site appeal more to men or women?
+ [•] Which country do your visitors live in?
+ [•] Do they live in an urban area or rural area?
+ [•] What is the income level of the visitors?
+ [•] What level of education do they have?
+ [•] What is their marital or family status?
+ [•] What is their occupation?
+ [•] How many hours do they work per week?
+ [•] How often do they use the Web?
+ [•] If your site is aimed at a business:
+ [•] What is the size of the company?
+ [•] What is the size of the department?
+ [•] What is the position on individuals in the company using the site?
+ [•] Will these individuals be using the item or information themselves?
+ [•] How large is the budget they control?
+
+>>> Why Have They Visited Your Site?
+While some people may happen across your site because they ’ re browsing and see a link that they think
+is interesting, the majority of visitors arrive at your site for a reason. Your design should be influenced
+by the goals of users, and therefore you should try and list all the goals that people might have in mind
+when visiting the site.
+
+>>> What Does a Visitor Need to Achieve a Goal?
+    you need to work out what you need to offer in order to help them achieve their goal quickly and effectively. 
+
+>>> How Often Will People Want to Visit?
+	There is a very simple reason for asking this: Some sites should change more often than others. If your
+	site is about something that people do not need to keep coming back for, why spend a lot of time and
+	money regularly adding new content to the site? For example, if you provide a service that people rarely
+	use (from wedding services to double glazing), I would hope that the same person would not need to
+	keep coming back to your site.
+
+	Conversely, if visitors have the potential to regularly return to the site, you will need to consider
+	updating the content regularly so that they want to keep coming back
+
+>>> Things You Want the Site to Do
+	By now you should have an idea of who is coming to your site, why they are coming, what they need in
+	order to satisfy their reason for visiting, and when they might come back. This will probably be quite a
+	long list already, but there is one more thing you need to add to it: information that the site owner wants
+	on the site, but which might not be part of the list already.
+
+	This may include things that users could find useful when they arrive on the site (even though they may
+	not have come for this reason), such as the ability to sign up for e - mail updates, subscribe to an RSS feed,
+	search the site, enter a competition, or find out about your new upcoming product. It may also include
+	information that is not really for the user (such as advertising).
+
+	Finally, if your list does not yet include such things, don ’ t forget that you will want to include your logo
+	or branding to most pages. You should also remember some boring yet necessary features such as a
+	copyright notice, terms and conditions, and a privacy policy (the latter is important if you collect
+	information about users or use a technology known ascookies for storing information on the user ’ s
+	computer).
+
+>>> Prioritizing Information	
+	Now that you have a list of what your visitors want to achieve and what the site owner wants to achieve,
+	you should start to prioritize that information. You have your fictional friends to help you work out
+	which tasks are most important. If one of them has not already asked about a piece of information, or it
+	will not help this person achieve a goal, itmay be lower priority.
+
+	I have come across plenty of site owners who want to push messages that are not aligned with what the
+	majority of visitors want to find out. With so many sites on the Web, if your site does not fulfill your
+	visitor s’ requirements quickly and easily they will go elsewhere. I ’ m not saying you should ignore
+	messages that the site owner wants featured, just that the needs of the visitors should usually be
+	considered of paramount importance.
+
+	At this point you might also look at other sites that address a similar topic — the competition — and
+	look at what they do and don ’ t do well and whether these sites meet the needs of the people you expect
+	to visit your site. One of the key points to think about here is what you can do differently or better —
+	something that makes you look better than the competition (rather than just copying them).
+
+>>> Identifying Key Elements for Each Page
+	You should create the list of the key elements of each page before you even start
+	thinking about where to position them, although it is very helpful if you have an
+	idea of how much space each element will take.
+
+>>> Page Size (and Screen Resolution)	
+>>> Understanding Screen Sizes
+>>> Deciding the Width of Your Page
+	As a general rule you will not want users to scroll horizontally, from left to right to view information on a
+	web page, so you should probably make the width of your page fit within a screen that is 1024 pixels wide.	
+	
+	The screen is 1024 pixels wide, your design should allow space for the window and scroll bars;
+	somewhere between 960 and 980 pixels is a more common width.
+
+>>> Deciding the Height of Your Page
+	While you should avoid expecting visitors to scroll horizontally, you can safely expect visitors to scroll
+	up and down the page vertically to find the information they are looking for. However, it is very
+	important that, when the page loads, the visitor has a good idea of what kind of information will be on
+	that page without having to scroll.
+
+>>> Fixed-Width vs. Liquid Designs	
+	Fixed-width designs - remain the same as you increase and shrink the size of the
+						  browser window, whereas the liquid layouts like Figures 9-5 and 9-6 stretch to 
+						  fill the entire width of the browser window.
+	Fixed-width designs are commonly used where the designers want to retain control over exactly how the
+	page looks. This is seen as particularly important when sites are heavily design-led (where the
+	presentation of information on the site is particularly important) or when they feature a lot of text.	
+	
+	Liquid (Stretchy) Page
+	In order to create a liquid layout that will stretch to fit the page, you specify proportions of a page using
+	percentage values.	
+
+	Here you can see how this effect can be created using a < div > element, which acts as
+	a container for the page:
+	==================================
+	xhtml codes
+	==================================
+	<body>
+	 <div id="page">
+		CONTENT OF PAGE GOES HERE 
+	 </div>
+	</body> 
+	==================================
+	div#page {
+		 width:80%;
+		 padding:5%;
+		 border:1px solid #666666;
+		 font-family:arial, verdana, sans-serif;
+		 font-size:12px;
+ 	}
+
+===========================================================================================
+Designing Pages
+	Composition and Grids - is the placement or arrangement of visual elements. In order to arrange the various items that
+							need to appear on a web page, many designers use agrid (a set of lines, which are sometimes shaded in)
+							and arrange the items that need to appear on a page according to the grid.
+
+	Sketching the Placement of Elements	- it is important that you focus just on making sure you include all of the 
+										  information a visitor needs and every item the user can interact with in 
+										  order to give it the necessary space. This process is referred to as creating a 
+										  wire frame .			
+
+===========================================================================================
+
+Common Page Elements and Templates
+
+Here are some terms often used to describe parts of pages:
+
+Headers -> The top part of the page on any site. In many cases the header will feature the logo and
+		   the primary navigation, which should be consistent across the entire site.
+
+Footers -> Appear on the bottom of every page. They often contain things like copyright notices,
+		   privacy policy, and terms and conditions. Again, they should usually be consistent across the
+		   entire site. Again, they should usually be consistent across the entire site.
+
+Body and content -> Describe the main part of the page between the header and footer where the
+					content sits.
+
+Templates -> Describe a layout for several pages that look the same but contain different
+			information. For example, an e-commerce site tends to use the same template to display each of
+			its products, which helps the user know where to find things like the price, dimensions, and
+			description of each product.	
+
+===========================================================================================
+Grouping Elements - Grouping or chunking items together helps reduce the number of elements that the user sees on the page.
+
+The following methods help make it clear to a user that several elements of a page are related:
+	Location: Making sure that similar elements of the design are near to each other
+	Color: Using blocks of background color to make it clear which items relate to each other
+	Borders and padding: Creating a gap between one group of elements and other items on the
+						 page to indicate which are grouped together
+	Headings: Giving related items a header, so that people know what will be in the block of
+			  information without necessarily reading each item in the block	
+	Styles: Using similar buttons for navigation items
+===========================================================================================
+creating a Visual Hierarchy and Prioritizing Information on a Page
+
+It is important to create avisual hierarchy in any design so that the most important 
+item on the page is most prominent. 
+
+1. To take up more space.
+2. Have more space between them and other items.		
+3. Use larger headings.
+==
+While it is tempting to put a lot of information on each page, if the screen is too cluttered it will be
+harder for the user to achieve the goal he or she had in mind when coming to your site. Therefore it is
+important to prioritize the information that appears on each page.
+
+Branding/logo: The company name or logo should appear on the same place in each page; it is
+			   commonly placed in the top left or top centered.
+
+Primary navigation: A link to the homepage and the main sections of the site — note that the
+                    homepage should almost always be the first item of navigation.
+
+Any secondary navigation: If the sections of the site are further divided into subsections, when
+                          you are in those sections you should be able to see enough of the navigation to tell that the
+                          subsections exist (although you do not need to be able to see all options).
+
+Page headings: With the exception of the homepage, every page should have a title or heading
+               that quickly lets the user know what that page is about.
+
+Content: Ideally you want enough of the content of the page to be above the fold so that the
+         users know whether this page is going to be relevant to them and, you hope, gets them
+         involved with the content of the page before they have to start scrolling.
+
+Search: A way for users to search for the information they want if they do not see it immediately.
+===========================================================================================
+How Visitors Look at a Page
+
+It is important to acknowledge that, no matter how much you would like your visitors to read every
+page on your site, and no matter how well written it is, they will not. Visitors scan web pages to find out
+whether that page is relevant to them.
+
+Text should be concise in particular headings. -> Where possible, the first couple of words in a
+												  heading or paragraph should describe the content the user would discover if he or she read on.
+												  Another renowned usability expert, Steve Krug, recommends that, when devising a web page,
+												  users look at the copy they started with and divide it in half. Then they should halve it again
+												  because most sites are far too wordy. By his own admission, the second one is an exaggeration,
+                                                  but his point is that most sites can get their message across in far fewer words if they really try.
+
+Use subheadings to split up text. -> If you have a lot of text, you should split it up with
+									 descriptive subheadings. Again make sure the first couple of 
+									 words of the heading give the reader information about 
+									 the content of the following text.
+
+Use bolding and other styles. -> Highlight keywords to help users scan pages for key terms,
+								 indicating whether the page is relevant to them.
+
+Make links descriptive. -> Where you have text links, ensure that the text describes what people
+                           will see if they click on the link. Links should also stand out from surrounding text (because
+                           many people will scan for links).
+
+Stimulate users with visuals. -> A lot of web users are attracted to (and navigate by) images. So if
+                                 you have a list of articles or products on your site, thumbnails will help turn lists into something
+                                 more visual and stimulating, in turn encouraging users to follow those links.
+
+
+-->

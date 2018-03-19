@@ -1,0 +1,32 @@
+<!-- Fireworks SPRITES === 
+
+Inserting slice = right click and select "Insert Rectangular Slice" or "shift + alt + u"
+Saving file = "Export" or "ctrl + shift + r"
+==============================================
+Export: CSS Sprites
+Options: 
+	   CSS Selector: •class(.) | id(#)
+              Pages: Current Page
+            Padding: 10px
+             Layout: Vertical
+Optimization Preset: PNG32
+==============================================
+-->
+
+<style type="text/css">
+.sprite{ background:url("sprite.png") top left no-repeat; float:left;margin:20px;}
+.contact3{ width:166px; height:73px; background-position:-10px -10px; }
+.contact2{ width:166px; height:73px; background-position:-10px -93px; }
+.contact1{ width:166px; height:73px; background-position:-10px -176px; }	
+
+.contact1:before {content: " Contact 1";position:relative;top:25px;left:47px;color:#fff;}
+.contact2:before {content: " Contact 2";position:relative;top:25px;left:47px;color:#fff;}
+.contact3:before {content: " Contact 3";position:relative;top:25px;left:47px;color:#000;}
+</style>
+<body>
+	<div class="sprite contact1"></div>
+	<div class="sprite contact2"></div>
+	<div class="sprite contact3"></div>
+</body>
+
+

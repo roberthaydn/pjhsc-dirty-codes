@@ -1,0 +1,23 @@
+html, body {
+	height:100%;
+	margin:0;
+}
+
+footer {
+	background-color:cornflowerblue;
+	text-align:center;
+}
+
+.wrapper {
+	min-height:100%;
+	margin-bottom:-150px;
+}
+
+.wrapper:after {
+	content: "";
+	display:block;
+}
+
+.wrapper:after, footer {
+	height:150px;
+}

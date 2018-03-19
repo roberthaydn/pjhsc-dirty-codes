@@ -1,0 +1,38 @@
+<!--
+The :focus and :active Pseudo - Classes
+=========================================================================================================
+When an element gains focus, browsers tend to give it a slightly different appearance. The:focus
+pseudo - class allows you to associate extra rules with an element when it gains focus to make it more
+pronounced. Meanwhile the:active pseudo - class allows you to associate further styles with elements
+when they are activated — such as when a user clicks a link.
+
+-->
+<style type="text/css">
+input {
+ border:none;
+ background-color:#dddddd;
+ height:1.999em;
+}
+input:focus {background-color:yellow;}	
+</style>
+<h3>The :focus and :active Pseudo - Classes</h3>
+Name: <input type="text" name="Hello World!"/>
+<!--
+=========================================================================================================
+The :before and :after Pseudo-Elements
+The :before and:after pseudo-elements work to a limited degree in IE7 or higher and have good
+support in Firefox.
+The:before and :after pseudo-elements enable you to add text before or after each instance of an
+element defined in a selector. 
+
+-->
+<style type="text/css">
+	p.abstract:after {content: "You need to register to read the full article.";color:#ff0000;}
+	/* you can use either after or before. */
+</style>
+<h3>The :before and :after Pseudo-Elements</h3>
+
+<p class="abstract">Here you can see that the pseudo- element:after is used at the end of the selector. Then, inside the
+declaration, you can see thecontent property; the text in quotes will be added to the end of the element.
+Thecontent property can add a number of types of content to the document, not just text, and you will
+see these in the next section.</p>

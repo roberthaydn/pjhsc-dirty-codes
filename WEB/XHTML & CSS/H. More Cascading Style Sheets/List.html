@@ -1,0 +1,120 @@
+<!-- 
+Lists
+ CSS properties you can use to control lists.
+===============================================================================================
+Property             |   Purpose
+===============================================================================================
+list-style-type      |   Allows you to control the shape or appearance of the marker (the marker is another name for the bullet point or number).
+list-style-position  |   When a list item takes up more than one line, this property specifies where the marker should appear in relation to the text.
+list-style-image     |   Specifies an image for the marker rather than a bullet point or number.
+list-style           |   Serves as shorthand for the preceding properties.
+marker-offset        |   Specifies the distance between a marker and the text in the list.
+===============================================================================================
+The list-style-type
+The list-style-type property allows you to control the shape or style of bullet point (also known as a
+marker ) in the case of unordered lists and the style of numbering characters in ordered lists.
+===============================================================================================
+The table that follows shows the standard styles for an unordered list.
+===============================================================================================
+Value 		        | 			Marker
+===============================================================================================
+none                |           None
+disc (default)  	| A filled - in circle
+circle  			| An empty circle
+square  			| A filled - in square
+===============================================================================================
+The table that follows shows values for ordered lists that are supported in most browsers.
+===============================================================================================
+Value  						| Meaning  						    | Example
+===============================================================================================
+decimal                     | Number                            | 1, 2, 3, 4, 5
+decimal-leading-zero        | 0 before the number               | 01, 02, 03, 04, 05
+lower-alpha                 | Lowercase alphanumeric characters | a, b, c, d, e
+upper-alpha                 | Uppercase alphanumeric characters | A, B, C, D, E
+lower-roman                 | Lowercase Roman numerals          | i, ii, iii, iv, v
+upper-roman                 | Uppercase Roman numerals          | I, II, III, IV, V
+===============================================================================================
+
+-->
+<style type="text/css">
+	li.a { list-style-type:none;}
+	li.b { list-style-type:disc;}
+	li.c { list-style-type:circle;}
+	li.d { list-style-type:square;}
+	li.e { list-style-type:decimal;}
+	li.f { list-style-type:lower-alpha;}
+	li.g { list-style-type:upper-alpha;}
+	li.h { list-style-type:lower-roman;}
+	li.i { list-style-type:upper-roman;}	
+</style>
+<h3>The list-style-type</h3>
+<ul>
+	<li class="a">List style one</li>
+	<li class="b">List style two</li>
+	<li class="c">List style three</li>
+	<li class="d" >List style four</li>
+	<li class="e">List style five</li>
+	<li class="f">List style six</li>
+	<li class="g">List style seven</li>
+	<li class="h">List style eight</li>
+	<li class="i">List style nine</li>
+</ul><hr>
+<!--
+===============================================================================================
+The list-style-position Property
+Lists are indented into the page, and thelist - style - position property indicates whether the marker
+should appear inside or outside of the box containing the main points. 
+===============================================================================================
+Value       |       Purpose
+===============================================================================================
+inside      |  The marker is inside the block of text (which is indented) .
+outside     |  The marker sits to the left of the block of text (this is the default value if this is not specified).
+===============================================================================================
+-->
+<style type="text/css">
+	ul li.x {list-style-position:outside;}
+	ul li.y {list-style-position:inside;}
+</style>
+
+<h3>The list-style-position Property</h3>
+<ul>
+	<li class="x">list-style-position:outside</li>
+
+	<li class="y">list-style-position:inside</li>
+</ul>
+<!--
+===============================================================================================
+The list-style-image Property
+The list-style-image property allows you to specify an image so that you can use your own bullet
+style. 
+-->
+<style type="text/css">
+	ul li.flash {
+		/*list-style-image: url("flash.jpg"); */
+	    background-image: url("flash.jpg");
+	    background-repeat: no-repeat;
+	    line-height: 40px;
+	    padding-left: 36px;
+	}	
+	ul li.flash { font-size:16px; list-style-type:none; }
+</style>
+<ul>
+	<li class="flash">list-style-position:outside</li>
+	<li class="flash">list-style-position:inside</li>
+</ul>
+<!--
+===============================================================================================
+The list-style Property (the Shorthand)
+Thelist-style property is a way of expressing more than one of these properties at once. They can
+appear in any order. 
+-->
+<style type="text/css">
+	ul.u { list-style: inside circle; }
+</style>
+
+<h3>The list-style Property (the Shorthand)</h3>
+<ul class="u">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>

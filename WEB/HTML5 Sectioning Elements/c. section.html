@@ -1,0 +1,32 @@
+<!-- 
+The section Element
+
+The <section> element is used to represent a group of related content. This is similar to the purpose of an <article> element with the main difference being that the content within a <section> element doesn’t necessarily need to make sense out of the context of the page.
+
+It’s advisable to use a heading element (<h1> – <h6>) to define the topic for the section.
+
+Using this blog post as an example, you could have <section> elements that represent each of the individual parts within the post.
+-->
+<article>
+  <h1>How to use HTML5 Sectioning Elements</h1>
+  <p>...</p>
+
+  <section>
+    <h2>The < main > Element</h2>
+    <p>...</p>
+  </section>
+  <section>
+    <h2>The < article > Element</h2>
+    <p>...</p>
+  </section>
+  <section>
+    <h2>The < section > Element</h2>
+    <p>...</p>
+  </section>
+  ...
+</article>
+<!--
+Here we’ve used an <article> element to represent the post as a whole, and then multiple <section> elements to represent each of the sub-topics discussed in the post.
+
+If you just need to group content together for styling purposes you should use a <div> element rather than a <section>.
+-->

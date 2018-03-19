@@ -1,0 +1,131 @@
+<!-- 
+Backgrounds
+CSS treats each element as if it were its own box. You can control the
+background of these boxes using the following properties.
+===================================================================================================================
+The background-color Property
+The background-image Property
+The background-repeat Property
+The background-position Property
+The background-attachment Property
+The background Property
+===================================================================================================================
+Property              |             Purpose
+===================================================================================================================
+background-color      | Specifies a background color.
+background-image      | Specifies an image to use as the background.
+background-repeat     | Indicates whether the background image should be repeated.
+background-attachment | Indicates a background image should be fixed in one position on the page, and whether it should stay inx that position when the user scrolls down the page.
+background-position   | Indicates where an image should be positioned background. A shorthand form that allows you to specify all of these properties.
+===================================================================================================================
+===================================================================================================================
+The background-color Property
+===================================================================================================================
+The background-color property allows you to specify a single solid color for the background of any element.
+The value of this property can be a color name, a hex code, or an RGB value.
+-->
+<style type="text/css">
+	body { background-color:#cccccc; color:#000000; }
+	b { background-color:#FF0000; color:#FFFFFF; }
+	p { background-color: rgb(255,255,255); }
+</style>
+<h3>The background-color Property</h3>
+<p> property for every style sheet I write because some people set their computers to have a background 
+other than plain white (often because it causes less strain on their eyes). When the background color of
+an operating system is changed, <b>browsers usually use that color</b>, too (along with applications such 
+as word processors). If you do not specify this property, you cannot guarantee that the visitors to the 
+site have the same background color as you want them to have.
+</p>
+
+<p> property for every style sheet Iwrite because some people set their computers to have a background 
+other than plain white (oftenbecause it causes less strain on their eyes). <b>When the background color 
+of an operating system</b> is changed, browsers usually use that color, too (along with applications such
+as word processors). If you do not specify this property, you cannot guarantee that the visitors to the 
+site have the same background color as you want them to have.
+</p>
+<!--
+===================================================================================================================
+The background-image Property
+As its name suggests, thebackground - image property enables you to add an image to the background
+of any box in CSS. This can be very useful in many situations, from adding a subtle texture or shading to
+adding a distinctive design to the back of elements or entire pages.
+-->
+<h3>The background-image Property</h3>
+<style type="text/css">
+	/*body { background-image: url("lighthouse.jpg"); }	*/
+	/*body { background-image: url("lighthouse.jpg"); }*/	
+</style>
+<!--
+The background-repeat Property
+When you specify a background-image, and the box is bigger than the image, then the image is
+repeated to fill up the whole box, creating what is affectionately known as wallpaper
+===================================================================================================================
+Value         |        Purpose
+===================================================================================================================
+repeat        |  This causes the image to repeat to cover the whole page (it is the default therefore rarely used).
+repeat-x      |  The image will be repeated horizontally across the page (not down the whole page vertically).
+repeat-y      |  The image will be repeated vertically down the page (not across horizontally).
+no-repeat     |  The image is displayed only once.
+===================================================================================================================
+ex.
+body {
+ background-image: url("images/background_small.gif");
+ background-repeat: repeat-x; 
+}
+===================================================================================================================
+The background-position Property (for Fixing Position of Backgrounds)
+You may want to alter the position of this image, and you can do this using thebackground - position
+property, which takes the values shown in the table that follows:
+===================================================================================================================
+Value                    |                  Meaning
+===================================================================================================================
+x% y%                    |   Percentages along thex (horizontal) andy (vertical) axis
+x y                      |   Absolute lengths along the x (horizontal) and y (vertical) axis in pixels
+left                     |   Shown to the left of the page or containing element 
+center                   |   Shown to the center of the page or containing element 
+right                    |   Shown to the right of the page or containing element
+top                      |   Shown at the top of the page or containing element
+center                   |   Shown at the center of the page or containing element
+bottom                   |   Shown at the bottom of the page or containing element
+===================================================================================================================
+ex.
+body {
+ background-image: url("images/background_small.gif");
+ background-position: 50% 20%; <<<========================================/* This image will be horizontally centered (because it should be 50 percent of the screen ’ s width from the
+ background-repeat: no-repeat;												 left - hand side of the page) and a fifth of the way down from the top of the screen (because it is
+ background-color: #eaeaea;											         positioned 20 percent of the window height from the top of the screen).*/
+ }
+
+ body { background-position: top right;}	
+===================================================================================================================	
+The background-attachment Property (for Watermarks)
+===================================================================================================================	
+Value         |        Purpose
+===================================================================================================================	
+fixed         | The image will not move if the user scrolls up and down the page.
+scroll        | The image stays in the same place on the background of the page. If the user scrolls up or down the page, the image moves, too.
+===================================================================================================================	
+ex.
+body {
+ background-image: url(“images/background_small.gif”);
+ /**/
+ background-attachment: fixed || scroll;
+ /**/
+ background-position: center;
+ background-repeat: no-repeat;
+ background-color: #eaeaea; 
+}
+===================================================================================================================
+The background Property (the Shorthand)
+The background property allows you to specify several of the background properties at once. The
+values can be given in any order, and if you do not supply one of the values, the default value will
+be used.
+   [•] background-color
+   [•] background-image
+   [•] background-repeat
+   [•] background-attachment
+   [•] background-position
+
+ ex.
+ body { background: #cc66ff; url("images/background_small.gif") fixed no-repeat center; }
+===================================================================================================================

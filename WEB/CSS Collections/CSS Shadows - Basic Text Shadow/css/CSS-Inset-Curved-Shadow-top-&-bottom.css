@@ -1,0 +1,42 @@
+body {
+	background:#ddd;
+	margin:0;
+}
+
+div {
+	background-color:#fff;
+	width:400px;
+	height:200px;
+	padding:15px;
+	margin:15px;
+	float:left;
+}
+
+.shadow4 {
+	position:relative;
+	overflow:hidden;
+}
+
+.shadow4:before {
+	content: "";
+	position:absolute;
+	width:96%;
+	height:15px;
+	top:-15px;
+	left:2%;
+	box-shadow: 0 0 39px rgba(0,0,0,0.8);
+	border-radius: 100px / 5px; /* 100px=horizontal radius | 5px=vertical radius */
+}
+
+.shadow4:after {
+	content: "";
+	position:absolute;
+	width:96%;
+	height:15px;
+	bottom:-15px;
+	left:2%;
+	box-shadow: 0 0 39px rgba(0,0,0,0.8);
+	border-radius: 100px / 5px;
+}
+
+

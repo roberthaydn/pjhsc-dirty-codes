@@ -1,0 +1,56 @@
+<!-- Backgrounds That Reach the Bottom of the page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Liquid Layouts</title>
+	<style type="text/css">
+		#header {
+		 background-color:#cccccc;
+		 padding:10px;
+		 height:120px;
+		}
+		#navigation {
+		 background-color:#efefef;
+		 padding:10px;
+		 height:40px;
+		}
+		#footer {
+		 background-color:#cccccc;
+		 padding:10px;
+		 height:40px;
+		 clear:both;
+		 border-top:20px solid #ffffff;
+		}
+		/* 3 columns */
+		.column1of3, .column2of3, .column3of3 {
+		 float:left;
+		 width:28%;
+		 /* min-width:230px; */
+		 min-width:230px;
+		 margin-left:2%;
+		 background-color:#cccccc;
+		 padding:1%;
+		 margin-top:20px;
+		}
+	</style>
+</head>
+<body>
+<div id="frame">
+	 <div id="header"> header </div>
+		 <div id="navigation"> navigation </div>
+			 <div class="column1of3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+			 <div class="column2of3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	 		 Quisque vel sem odio, et tincidunt magna. Nam malesuada justo non risus
+	 		 ullamcorper eget dignissim erat viverra.</div>
+
+			 <div class="column3of3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 Quisque vel sem odio, et tincidunt magna. Nam malesuada justo non risus
+			 ullamcorper eget dignissim erat viverra. Mauris viverra massa ac libero
+			 feugiat tempor. Cras scelerisque fermentum dui et feugiat. Class aptent taciti
+			 sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
+
+	<div id="footer"> footer </div>
+</div>
+</body>
+</html>
