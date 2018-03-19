@@ -1,0 +1,29 @@
+
+/* .student-profile */
+@media(max-width:767px) {
+.dropdown-menu {
+	li.page-scroll {
+			@include add-margin(8px, top);
+			@include add-margin(8px, bottom);
+			a:link {
+				color:#fff !important;
+				background-color:#3f8cc0;
+			}
+			a:visited {
+				color:#fff !important;
+				background-color:#3f8cc0;
+			}
+			a:hover {
+				color:#fff !important;
+				background-color:#2a80b9;
+			}
+		}
+	}
+}
+
+@media(max-width:767px) {
+	.img-logo {
+		width:20%;
+		height:20%;
+	}
+}
